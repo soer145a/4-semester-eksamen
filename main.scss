@@ -1,0 +1,544 @@
+$skycyan: #7cccea;
+$deepblue: #06729e;
+$aidred: #f74d48;
+$forestgreen: #40a345;
+$reddirt: #994a40;
+$softblack: #232a29;
+@font-face {
+  font-family: "fontBlack";
+  src: url("assets/fonts/InternacionalAlt-Black.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontBold";
+  src: url("assets/fonts/InternacionalAlt-Bold.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontLight";
+  src: url("assets/fonts/InternacionalAlt-Light.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontRegular";
+  src: url("assets/fonts/InternacionalAlt-Regular.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontSemiBold";
+  src: url("assets/fonts/InternacionalAlt-SemiBold.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontThin";
+  src: url("assets/fonts/InternacionalAlt-Thin.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: "fontUltraLight";
+  src: url("assets/fonts/InternacionalAlt-UltraLight.ttf")
+    format("truetype-variations");
+  font-weight: 1 999;
+}
+
+.reset {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  @extend .reset;
+  header {
+    @extend .reset;
+    position: absolute;
+    top: 0;
+
+    #splash {
+      height: 50vw;
+      #splashImage {
+        img {
+          width: 100vw;
+          height: 50vh;
+        }
+      }
+      #splashHeadline {
+        position: absolute;
+        top: 8vw;
+        left: 4vw;
+        #splashHeadlineText {
+          @extend .reset;
+          font-family: fontBlack;
+          letter-spacing: 1vw;
+          font-size: 2em;
+        }
+      }
+      #splashText {
+        position: absolute;
+        top: 50vw;
+        left: 8vw;
+        #splashTextTxt {
+          @extend .reset;
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          letter-spacing: 1vw;
+          font-size: 1.1em;
+        }
+      }
+      #goToCalc {
+        display: none;
+        position: relative;
+        width: 52vw;
+        height: 8vw;
+        left: 26vw;
+        bottom: 13vw;
+        background-color: black;
+        cursor: pointer;
+        #goToCalcText {
+          color: white;
+          @extend .reset;
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+          letter-spacing: 1vw;
+          font-size: 1.1em;
+          transform: translateY(1vw);
+          text-align: center;
+        }
+      }
+    }
+  }
+  main {
+    position: absolute;
+
+    top: 50vh;
+    .regular {
+      height: 15.5vh;
+    }
+    .expanded {
+      height: 80vh;
+    }
+    #goLeft {
+      z-index: 30;
+      opacity: 0;
+      top: 1vw;
+      position: absolute;
+      pointer-events: none;
+      width: 10vw;
+
+      #goLeftImg {
+        width: 100%;
+      }
+    }
+    #goRight {
+      z-index: 30;
+      position: absolute;
+      top: 1vw;
+      width: 10vw;
+      left: 90vw;
+      pointer-events: none;
+      opacity: 0;
+      #goRightImg {
+        width: 100%;
+        transform: rotate(180deg);
+      }
+    }
+    #calcCO2 {
+      z-index: -10vw;
+      border: solid black 2px;
+      transition: 1s;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0vw;
+      width: 100vw;
+      overflow-y: hidden;
+
+      .slide1 {
+        transform: translateX(-0vw);
+      }
+      .slide2 {
+        transform: translateX(-100vw);
+      }
+      .slide3 {
+        transform: translateX(-200vw);
+      }
+      .slide4 {
+        transform: translateX(-300vw);
+      }
+      #questionSlider {
+        z-index: 1;
+        transition: 0.5s;
+        width: 400vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .question {
+          width: 100vw;
+          height: 100%;
+        }
+        #questionID1 {
+          background-color: blue;
+          #start {
+            width: 4vw;
+            height: 4vw;
+            position: absolute;
+            right: 1vw;
+            top: 1vw;
+            background-color: white;
+            cursor: pointer;
+          }
+        }
+        #questionID2 {
+          background-color: green;
+        }
+        #questionID3 {
+          background-color: red;
+        }
+        #questionID4 {
+          background-color: hotpink;
+        }
+      }
+    }
+    .infoRegular {
+      top: 15vh;
+    }
+    .infoExpanded {
+      top: 79.5vh;
+    }
+    #info {
+      position: absolute;
+      transition: 1s;
+
+      #infoHeadline1 {
+        position: absolute;
+        width: 100vw;
+        top: 2vh;
+        #infoHeadline1Text {
+          @extend .reset;
+          text-align: center;
+        }
+      }
+      #grafikArea1 {
+        position: absolute;
+        top: 6vh;
+        left: 7.5vw;
+        width: 85vw;
+
+        display: grid;
+
+        grid-template-rows: repeat(4, 1fr);
+        .grafikElement1 {
+          background-color: black;
+          height: 30vh;
+          margin: 4vw;
+        }
+      }
+      #infoHeadline2 {
+        position: absolute;
+        top: 142vh;
+        width: 100vw;
+        #InfoHeadline2Text {
+          @extend .reset;
+          text-align: center;
+        }
+      }
+      #infoText {
+        position: absolute;
+        top: 145vh;
+        left: 10vw;
+        width: 80vw;
+        #infoTextTxt {
+          @extend .reset;
+          text-align: center;
+        }
+      }
+      #grafikArea2 {
+        position: absolute;
+        top: 160vh;
+        left: 7.5vw;
+        width: 85vw;
+        .grafikElement2 {
+          background-color: black;
+          height: 30vh;
+          margin: 4vw;
+        }
+      }
+    }
+    .collabHeadlineRegular {
+      top: 270vh;
+    }
+    .collabHeadlineExpanded {
+      top: 334.5vh;
+    }
+    #collabHeadline {
+      position: absolute;
+      transition: 1s;
+      width: 100vw;
+      #collabHeadlineText {
+        text-align: center;
+      }
+    }
+    .collaboratorsRegular {
+      top: 280vh;
+    }
+    .collaboratorsExpanded {
+      top: 344.5vh;
+    }
+
+    #collaborators {
+      position: absolute;
+      transition: 1s;
+      left: 15vw;
+      width: 70vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .collabElement {
+        background-color: black;
+        height: 15vh;
+        width: 15vh;
+        margin: 1vw;
+      }
+    }
+  }
+  .footerRegular {
+    top: 365vh;
+  }
+  .footerExpanded {
+    top: 429.5vh;
+  }
+  footer {
+    background-color: black;
+    position: absolute;
+    transition: 1s;
+    height: 30vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    #kontakt {
+      background-color: blue;
+    }
+    #toMainPage {
+      background-color: red;
+    }
+  }
+}
+@media only screen and (min-width: 1920px) {
+  body {
+    overflow-x: hidden;
+
+    header {
+      position: absolute;
+      top: 0;
+
+      #splash {
+        height: 100vw;
+        #splashImage {
+          img {
+            width: 100vw;
+            height: 100vh;
+          }
+        }
+        #splashHeadline {
+          position: absolute;
+          top: 8vw;
+          left: 4vw;
+          #splashHeadlineText {
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+              sans-serif;
+            letter-spacing: 1vw;
+            font-size: 2em;
+          }
+        }
+        #splashText {
+          position: absolute;
+          top: 20vh;
+          left: 8vw;
+          #splashTextTxt {
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+              sans-serif;
+            letter-spacing: 1vw;
+            font-size: 1.1em;
+          }
+        }
+        #goToCalc {
+          position: relative;
+          width: 18vw;
+          height: 4vw;
+          left: 41vw;
+          bottom: 5vw;
+          background-color: black;
+          cursor: pointer;
+          display: block;
+          #goToCalcText {
+            color: white;
+
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+              sans-serif;
+            letter-spacing: 1vw;
+            font-size: 0.8em;
+            transform: translateY(1vw);
+            text-align: center;
+          }
+        }
+      }
+    }
+    main {
+      position: absolute;
+      top: 100vh;
+      .expanded {
+        height: 80vh;
+      }
+      .regular {
+        height: 15.5vh;
+      }
+      #calcCO2 {
+        border: solid black 2px;
+        transition: 1s;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0vh;
+        width: 100vw;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        #questionSlider {
+          width: 400%;
+          height: 100%;
+          .question {
+            width: 100vw;
+            height: 100%;
+          }
+          #questionID1 {
+            background-color: blue;
+          }
+          #questionID2 {
+            background-color: green;
+          }
+          #questionID3 {
+            background-color: red;
+          }
+          #questionID4 {
+            background-color: hotpink;
+          }
+        }
+      }
+      .infoRegular {
+        top: 15vh;
+      }
+      .infoExpanded {
+        top: 79.5vh;
+      }
+      #info {
+        position: absolute;
+
+        #infoHeadline1 {
+          position: absolute;
+          width: 100vw;
+          top: 2vh;
+          #infoHeadline1Text {
+            text-align: center;
+          }
+        }
+        #grafikArea1 {
+          position: absolute;
+          top: 6vh;
+          left: 7.5vw;
+          width: 85vw;
+
+          display: grid;
+
+          grid-template-columns: repeat(4, 1fr);
+          .grafikElement1 {
+            background-color: black;
+            height: 30vh;
+            margin: 4vw;
+          }
+        }
+        #infoHeadline2 {
+          position: absolute;
+          top: 50vh;
+          width: 100vw;
+          #InfoHeadline2Text {
+            text-align: center;
+          }
+        }
+        #infoText {
+          position: absolute;
+          top: 55vh;
+          left: 10vw;
+          width: 80vw;
+          #infoTextTxt {
+            text-align: center;
+          }
+        }
+        #grafikArea2 {
+          position: absolute;
+          top: 60vh;
+          left: 7.5vw;
+          width: 85vw;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          .grafikElement2 {
+            background-color: black;
+            height: 30vh;
+            margin: 4vw;
+          }
+        }
+      }
+      .collabHeadlineRegular {
+        top: 140vh;
+      }
+      .collabHeadlineExpanded {
+        top: 204.5vh;
+      }
+      #collabHeadline {
+        position: absolute;
+      }
+      .collaboratorsRegular {
+        top: 150vh;
+      }
+      .collaboratorsExpanded {
+        top: 214.5vh;
+      }
+      #collaborators {
+        position: absolute;
+
+        left: 0;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .collabElement {
+          background-color: black;
+          height: 15vh;
+          width: 15vh;
+          margin: auto;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .footerRegular {
+      top: 280vh;
+    }
+    .footerExpanded {
+      top: 344.5vh;
+    }
+    footer {
+      background-color: black;
+      position: absolute;
+
+      height: 30vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      #kontakt {
+        background-color: blue;
+      }
+      #toMainPage {
+        background-color: red;
+      }
+    }
+  }
+}

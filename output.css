@@ -1,0 +1,560 @@
+@font-face {
+  font-family: "fontBlack";
+  src: url("assets/fonts/InternacionalAlt-Black.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontBold";
+  src: url("assets/fonts/InternacionalAlt-Bold.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontLight";
+  src: url("assets/fonts/InternacionalAlt-Light.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontRegular";
+  src: url("assets/fonts/InternacionalAlt-Regular.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontSemiBold";
+  src: url("assets/fonts/InternacionalAlt-SemiBold.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontThin";
+  src: url("assets/fonts/InternacionalAlt-Thin.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: "fontUltraLight";
+  src: url("assets/fonts/InternacionalAlt-UltraLight.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+.reset, body, body header, body header #splash #splashHeadline #splashHeadlineText, body header #splash #splashText #splashTextTxt, body header #splash #goToCalc #goToCalcText, body main #info #infoHeadline1 #infoHeadline1Text, body main #info #infoHeadline2 #InfoHeadline2Text, body main #info #infoText #infoTextTxt {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body header {
+  position: absolute;
+  top: 0;
+}
+
+body header #splash {
+  height: 50vw;
+}
+
+body header #splash #splashImage img {
+  width: 100vw;
+  height: 50vh;
+}
+
+body header #splash #splashHeadline {
+  position: absolute;
+  top: 8vw;
+  left: 4vw;
+}
+
+body header #splash #splashHeadline #splashHeadlineText {
+  font-family: fontBlack;
+  letter-spacing: 1vw;
+  font-size: 2em;
+}
+
+body header #splash #splashText {
+  position: absolute;
+  top: 50vw;
+  left: 8vw;
+}
+
+body header #splash #splashText #splashTextTxt {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1vw;
+  font-size: 1.1em;
+}
+
+body header #splash #goToCalc {
+  display: none;
+  position: relative;
+  width: 52vw;
+  height: 8vw;
+  left: 26vw;
+  bottom: 13vw;
+  background-color: black;
+  cursor: pointer;
+}
+
+body header #splash #goToCalc #goToCalcText {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1vw;
+  font-size: 1.1em;
+  transform: translateY(1vw);
+  text-align: center;
+}
+
+body main {
+  position: absolute;
+  top: 50vh;
+}
+
+body main .regular {
+  height: 15.5vh;
+}
+
+body main .expanded {
+  height: 80vh;
+}
+
+body main #goLeft {
+  z-index: 30;
+  opacity: 0;
+  top: 1vw;
+  position: absolute;
+  pointer-events: none;
+  width: 10vw;
+}
+
+body main #goLeft #goLeftImg {
+  width: 100%;
+}
+
+body main #goRight {
+  z-index: 30;
+  position: absolute;
+  top: 1vw;
+  width: 10vw;
+  left: 90vw;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body main #goRight #goRightImg {
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+body main #calcCO2 {
+  z-index: -10vw;
+  border: solid black 2px;
+  transition: 1s;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0vw;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+body main #calcCO2 .slide1 {
+  transform: translateX(0vw);
+}
+
+body main #calcCO2 .slide2 {
+  transform: translateX(-100vw);
+}
+
+body main #calcCO2 .slide3 {
+  transform: translateX(-200vw);
+}
+
+body main #calcCO2 .slide4 {
+  transform: translateX(-300vw);
+}
+
+body main #calcCO2 #questionSlider {
+  z-index: 1;
+  transition: 0.5s;
+  width: 400vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+body main #calcCO2 #questionSlider .question {
+  width: 100vw;
+  height: 100%;
+}
+
+body main #calcCO2 #questionSlider #questionID1 {
+  background-color: blue;
+}
+
+body main #calcCO2 #questionSlider #questionID1 #start {
+  width: 4vw;
+  height: 4vw;
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  background-color: white;
+  cursor: pointer;
+}
+
+body main #calcCO2 #questionSlider #questionID2 {
+  background-color: green;
+}
+
+body main #calcCO2 #questionSlider #questionID3 {
+  background-color: red;
+}
+
+body main #calcCO2 #questionSlider #questionID4 {
+  background-color: hotpink;
+}
+
+body main .infoRegular {
+  top: 15vh;
+}
+
+body main .infoExpanded {
+  top: 79.5vh;
+}
+
+body main #info {
+  position: absolute;
+  transition: 1s;
+}
+
+body main #info #infoHeadline1 {
+  position: absolute;
+  width: 100vw;
+  top: 2vh;
+}
+
+body main #info #infoHeadline1 #infoHeadline1Text {
+  text-align: center;
+}
+
+body main #info #grafikArea1 {
+  position: absolute;
+  top: 6vh;
+  left: 7.5vw;
+  width: 85vw;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+body main #info #grafikArea1 .grafikElement1 {
+  background-color: black;
+  height: 30vh;
+  margin: 4vw;
+}
+
+body main #info #infoHeadline2 {
+  position: absolute;
+  top: 142vh;
+  width: 100vw;
+}
+
+body main #info #infoHeadline2 #InfoHeadline2Text {
+  text-align: center;
+}
+
+body main #info #infoText {
+  position: absolute;
+  top: 145vh;
+  left: 10vw;
+  width: 80vw;
+}
+
+body main #info #infoText #infoTextTxt {
+  text-align: center;
+}
+
+body main #info #grafikArea2 {
+  position: absolute;
+  top: 160vh;
+  left: 7.5vw;
+  width: 85vw;
+}
+
+body main #info #grafikArea2 .grafikElement2 {
+  background-color: black;
+  height: 30vh;
+  margin: 4vw;
+}
+
+body main .collabHeadlineRegular {
+  top: 270vh;
+}
+
+body main .collabHeadlineExpanded {
+  top: 334.5vh;
+}
+
+body main #collabHeadline {
+  position: absolute;
+  transition: 1s;
+  width: 100vw;
+}
+
+body main #collabHeadline #collabHeadlineText {
+  text-align: center;
+}
+
+body main .collaboratorsRegular {
+  top: 280vh;
+}
+
+body main .collaboratorsExpanded {
+  top: 344.5vh;
+}
+
+body main #collaborators {
+  position: absolute;
+  transition: 1s;
+  left: 15vw;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body main #collaborators .collabElement {
+  background-color: black;
+  height: 15vh;
+  width: 15vh;
+  margin: 1vw;
+}
+
+body .footerRegular {
+  top: 365vh;
+}
+
+body .footerExpanded {
+  top: 429.5vh;
+}
+
+body footer {
+  background-color: black;
+  position: absolute;
+  transition: 1s;
+  height: 30vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body footer #kontakt {
+  background-color: blue;
+}
+
+body footer #toMainPage {
+  background-color: red;
+}
+
+@media only screen and (min-width: 1920px) {
+  body {
+    overflow-x: hidden;
+  }
+  body header {
+    position: absolute;
+    top: 0;
+  }
+  body header #splash {
+    height: 100vw;
+  }
+  body header #splash #splashImage img {
+    width: 100vw;
+    height: 100vh;
+  }
+  body header #splash #splashHeadline {
+    position: absolute;
+    top: 8vw;
+    left: 4vw;
+  }
+  body header #splash #splashHeadline #splashHeadlineText {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 1vw;
+    font-size: 2em;
+  }
+  body header #splash #splashText {
+    position: absolute;
+    top: 20vh;
+    left: 8vw;
+  }
+  body header #splash #splashText #splashTextTxt {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 1vw;
+    font-size: 1.1em;
+  }
+  body header #splash #goToCalc {
+    position: relative;
+    width: 18vw;
+    height: 4vw;
+    left: 41vw;
+    bottom: 5vw;
+    background-color: black;
+    cursor: pointer;
+    display: block;
+  }
+  body header #splash #goToCalc #goToCalcText {
+    color: white;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 1vw;
+    font-size: 0.8em;
+    transform: translateY(1vw);
+    text-align: center;
+  }
+  body main {
+    position: absolute;
+    top: 100vh;
+  }
+  body main .expanded {
+    height: 80vh;
+  }
+  body main .regular {
+    height: 15.5vh;
+  }
+  body main #calcCO2 {
+    border: solid black 2px;
+    transition: 1s;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0vh;
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  body main #calcCO2 #questionSlider {
+    width: 400%;
+    height: 100%;
+  }
+  body main #calcCO2 #questionSlider .question {
+    width: 100vw;
+    height: 100%;
+  }
+  body main #calcCO2 #questionSlider #questionID1 {
+    background-color: blue;
+  }
+  body main #calcCO2 #questionSlider #questionID2 {
+    background-color: green;
+  }
+  body main #calcCO2 #questionSlider #questionID3 {
+    background-color: red;
+  }
+  body main #calcCO2 #questionSlider #questionID4 {
+    background-color: hotpink;
+  }
+  body main .infoRegular {
+    top: 15vh;
+  }
+  body main .infoExpanded {
+    top: 79.5vh;
+  }
+  body main #info {
+    position: absolute;
+  }
+  body main #info #infoHeadline1 {
+    position: absolute;
+    width: 100vw;
+    top: 2vh;
+  }
+  body main #info #infoHeadline1 #infoHeadline1Text {
+    text-align: center;
+  }
+  body main #info #grafikArea1 {
+    position: absolute;
+    top: 6vh;
+    left: 7.5vw;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body main #info #grafikArea1 .grafikElement1 {
+    background-color: black;
+    height: 30vh;
+    margin: 4vw;
+  }
+  body main #info #infoHeadline2 {
+    position: absolute;
+    top: 50vh;
+    width: 100vw;
+  }
+  body main #info #infoHeadline2 #InfoHeadline2Text {
+    text-align: center;
+  }
+  body main #info #infoText {
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+    width: 80vw;
+  }
+  body main #info #infoText #infoTextTxt {
+    text-align: center;
+  }
+  body main #info #grafikArea2 {
+    position: absolute;
+    top: 60vh;
+    left: 7.5vw;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body main #info #grafikArea2 .grafikElement2 {
+    background-color: black;
+    height: 30vh;
+    margin: 4vw;
+  }
+  body main .collabHeadlineRegular {
+    top: 140vh;
+  }
+  body main .collabHeadlineExpanded {
+    top: 204.5vh;
+  }
+  body main #collabHeadline {
+    position: absolute;
+  }
+  body main .collaboratorsRegular {
+    top: 150vh;
+  }
+  body main .collaboratorsExpanded {
+    top: 214.5vh;
+  }
+  body main #collaborators {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body main #collaborators .collabElement {
+    background-color: black;
+    height: 15vh;
+    width: 15vh;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  body .footerRegular {
+    top: 280vh;
+  }
+  body .footerExpanded {
+    top: 344.5vh;
+  }
+  body footer {
+    background-color: black;
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body footer #kontakt {
+    background-color: blue;
+  }
+  body footer #toMainPage {
+    background-color: red;
+  }
+}
