@@ -313,6 +313,87 @@ body main #calcCO2 #questionSlider #questionID2 {
   background-color: green;
 }
 
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 {
+  display: block;
+  opacity: 100;
+  transition: 0.2s;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Headline {
+  text-align: center;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Headline .q1H2 {
+  font-size: 1.5em;
+  font-family: fontBlack;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1MainArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .goBackOnce4 {
+  width: 20vw;
+  height: 3vh;
+  background-color: hotpink;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
+  width: 20vw;
+  height: 3vh;
+  background-color: hotpink;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 {
+  display: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Headline {
+  text-align: center;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Headline .q1H2 {
+  font-size: 1.5em;
+  font-family: fontBlack;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3vw;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 {
+  height: 60%;
+  display: none;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .answerBoxHeadline {
+  font-size: 0.8em;
+  font-family: fontBlack;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBox {
+  background-color: white;
+  height: 20%;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .goBackOnce5 {
+  width: 20vw;
+  height: 3vh;
+  background-color: hotpink;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .next5 {
+  width: 20vw;
+  height: 3vh;
+  background-color: hotpink;
+}
+
 body main #calcCO2 #questionSlider #questionID3 {
   background-color: red;
 }

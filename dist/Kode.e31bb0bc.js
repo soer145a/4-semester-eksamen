@@ -5568,6 +5568,7 @@ var globalUserQuestionSheet = {
   diet: "-placeholder-",
   foodSelectionMeat: "-placeholder",
   foodSelectionVeg: "-placeholder",
+  gifts: "-placeholder-",
   totalCost: "-placeholder"
 };
 window.addEventListener("DOMContentLoaded", init);
@@ -5780,7 +5781,94 @@ function questionHandler3() {
     globalUserQuestionSheet.foodSelectionVeg = foodArrayVeg;
     console.log(globalUserQuestionSheet);
     changeDirection(1);
+    startQuestion2();
   });
+}
+
+function startQuestion2() {
+  var qBoxes = document.querySelectorAll(".ID2_1");
+  console.log(qBoxes);
+  qBoxes.forEach(function (item) {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", function () {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+    });
+  });
+  document.querySelector(".next4").addEventListener("click", function () {
+    questionHandler4(qBoxes);
+  });
+}
+
+function questionHandler4(array) {
+  var varr = [];
+  array.forEach(function (item) {
+    if (item.style.backgroundColor == "blue") {
+      varr.push(item.dataset.type);
+    }
+  });
+  displayQuestion4(varr);
+}
+
+function displayQuestion4(varr) {
+  console.log("Q 3");
+  document.querySelector("#questionID2_1").style.opacity = 0;
+  setTimeout(function () {
+    document.querySelector("#questionID2_1").style.display = "none";
+    chooseGiftType(varr);
+    document.querySelector("#questionID2_2").style.display = "block";
+    setTimeout(function () {
+      document.querySelector("#questionID2_2").style.opacity = 100;
+    }, 200);
+  }, 200);
+}
+
+function chooseGiftType(array) {
+  var qBoxes = document.querySelectorAll(".ID2_2");
+  qBoxes.forEach(function (item) {
+    array.forEach(function (varr) {
+      if (item.dataset.type == varr) {
+        item.style.display = "block";
+      }
+    });
+  });
+  questionHandler5();
+}
+
+function questionHandler5() {
+  var giftArray = [];
+  var qBoxes = document.querySelectorAll(".valueBox");
+  qBoxes.forEach(function (item) {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", function () {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+    });
+  });
+  giftArray = [];
+  console.log(giftArray);
+  globalUserQuestionSheet.gifts = giftArray;
+  console.log(globalUserQuestionSheet);
+  document.querySelector(".next5").addEventListener("click", function () {
+    qBoxes.forEach(function (item) {
+      if (item.style.backgroundColor == "blue") {
+        giftArray.push(item.dataset.type);
+        console.log(giftArray);
+      }
+    });
+    startQuestion3();
+    changeDirection(1);
+  });
+}
+
+function startQuestion3() {
+  console.log(globalUserQuestionSheet);
 }
 },{"gsap":"node_modules/gsap/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -5810,7 +5898,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64041" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50423" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

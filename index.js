@@ -4,6 +4,7 @@ let globalUserQuestionSheet = {
   diet: "-placeholder-",
   foodSelectionMeat: "-placeholder",
   foodSelectionVeg: "-placeholder",
+  gifts: "-placeholder-",
   totalCost: "-placeholder"
 };
 window.addEventListener("DOMContentLoaded", init);
@@ -194,5 +195,88 @@ function questionHandler3() {
     globalUserQuestionSheet.foodSelectionVeg = foodArrayVeg;
     console.log(globalUserQuestionSheet);
     changeDirection(1);
+    startQuestion2();
   });
+}
+function startQuestion2() {
+  let qBoxes = document.querySelectorAll(".ID2_1");
+  console.log(qBoxes);
+
+  qBoxes.forEach(item => {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", () => {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+    });
+  });
+  document.querySelector(".next4").addEventListener("click", () => {
+    questionHandler4(qBoxes);
+  });
+}
+function questionHandler4(array) {
+  let varr = [];
+  array.forEach(item => {
+    if (item.style.backgroundColor == "blue") {
+      varr.push(item.dataset.type);
+    }
+  });
+  displayQuestion4(varr);
+}
+function displayQuestion4(varr) {
+  console.log("Q 3");
+  document.querySelector("#questionID2_1").style.opacity = 0;
+  setTimeout(() => {
+    document.querySelector("#questionID2_1").style.display = "none";
+    chooseGiftType(varr);
+    document.querySelector("#questionID2_2").style.display = "block";
+    setTimeout(() => {
+      document.querySelector("#questionID2_2").style.opacity = 100;
+    }, 200);
+  }, 200);
+}
+function chooseGiftType(array) {
+  let qBoxes = document.querySelectorAll(".ID2_2");
+  qBoxes.forEach(item => {
+    array.forEach(varr => {
+      if (item.dataset.type == varr) {
+        item.style.display = "block";
+      }
+    });
+  });
+  questionHandler5();
+}
+function questionHandler5() {
+  let giftArray = [];
+  let qBoxes = document.querySelectorAll(".valueBox");
+  qBoxes.forEach(item => {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", () => {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+    });
+  });
+  giftArray = [];
+
+  console.log(giftArray);
+  globalUserQuestionSheet.gifts = giftArray;
+  console.log(globalUserQuestionSheet);
+  document.querySelector(".next5").addEventListener("click", () => {
+    qBoxes.forEach(item => {
+      if (item.style.backgroundColor == "blue") {
+        giftArray.push(item.dataset.type);
+        console.log(giftArray);
+      }
+    });
+    startQuestion3();
+    changeDirection(1);
+  });
+}
+function startQuestion3() {
+  console.log(globalUserQuestionSheet);
 }
