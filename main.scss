@@ -111,6 +111,12 @@ body {
     }
   }
   main {
+    .questionBox {
+      width: 20vw;
+      height: 10vh;
+      background-color: white;
+      margin: auto;
+    }
     position: absolute;
 
     top: 50vh;
@@ -154,6 +160,7 @@ body {
       top: 0vw;
       width: 100vw;
       overflow-y: hidden;
+      overflow-x: hidden;
 
       .slide1 {
         transform: translateX(-0vw);
@@ -180,6 +187,7 @@ body {
         }
         #questionID1 {
           background-color: blue;
+
           #start {
             width: 4vw;
             height: 4vw;
@@ -188,6 +196,93 @@ body {
             top: 1vw;
             background-color: white;
             cursor: pointer;
+          }
+
+          #questionID1_1 {
+            transition: 0.2s;
+            opacity: 100;
+            #questionID1_1Headline {
+              text-align: center;
+              .q1H2 {
+                font-size: 1.5em;
+                font-family: fontBlack;
+              }
+            }
+            #questionID1_1MainArea {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 5vw;
+            }
+            #questionID1_1Nav {
+              .goBackOnce1 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+              .next1 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+            }
+          }
+          #questionID1_2 {
+            display: none;
+            opacity: 0;
+            transition: 0.2s;
+            #questionID1_2Headline {
+              text-align: center;
+              .q1H2 {
+                font-size: 1.5em;
+                font-family: fontBlack;
+              }
+            }
+            #questionID1_2MainArea {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 5vw;
+            }
+            #questionID1_2Nav {
+              .goBackOnce2 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+              .next2 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+            }
+          }
+          #questionID1_3 {
+            display: none;
+            opacity: 0;
+            transition: 0.2s;
+            #questionID1_3Headline {
+              text-align: center;
+              .q1H2 {
+                font-size: 1.5em;
+                font-family: fontBlack;
+              }
+            }
+            #questionID1_3MainArea {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 5vw;
+            }
+            #questionID1_3Nav {
+              .goBackOnce3 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+              .next3 {
+                width: 20vw;
+                height: 3vh;
+                background-color: hotpink;
+              }
+            }
           }
         }
         #questionID2 {

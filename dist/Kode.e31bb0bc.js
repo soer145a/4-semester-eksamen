@@ -5564,6 +5564,12 @@ var _gsap = _interopRequireDefault(require("gsap"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var globalUserQuestionSheet = {
+  diet: "-placeholder-",
+  foodSelectionMeat: "-placeholder",
+  foodSelectionVeg: "-placeholder",
+  totalCost: "-placeholder"
+};
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -5593,6 +5599,7 @@ function expandPageElements() {
   footer.classList.add("footerExpanded");
   document.querySelector("#goRight").style.opacity = 100;
   document.querySelector("#goRight").style.pointerEvents = "all";
+  startCalc();
   makeCalcButtons();
 }
 
@@ -5660,6 +5667,121 @@ function changeDirection(dir) {
       console.log("DETTE ER SLIDE 4");
   }
 }
+
+function startCalc() {
+  var qBoxes = document.querySelectorAll(".ID1_1");
+  qBoxes.forEach(function (item) {
+    item.addEventListener("click", function () {
+      qBoxes.forEach(function (box) {
+        box.style.backgroundColor = "white";
+      });
+      questionHandler1(item);
+    });
+  });
+}
+
+function questionHandler1(item) {
+  console.log(item);
+  item.style.backgroundColor = "blue";
+  globalUserQuestionSheet.diet = item.dataset.type;
+  console.log(globalUserQuestionSheet);
+  document.querySelector(".next1").addEventListener("click", function () {
+    displayQuestion2(item.dataset.type);
+  });
+}
+
+function displayQuestion2(food) {
+  console.log("Q 2");
+  document.querySelector("#questionID1_1").style.opacity = 0;
+  setTimeout(function () {
+    document.querySelector("#questionID1_1").style.display = "none";
+
+    if (food == "vegetar" || food == "veganer") {
+      document.querySelector("#questionID1_3").style.display = "block";
+      setTimeout(function () {
+        document.querySelector("#questionID1_3").style.opacity = 100;
+        questionHandler3();
+      }, 200);
+    } else {
+      document.querySelector("#questionID1_2").style.display = "block";
+      setTimeout(function () {
+        document.querySelector("#questionID1_2").style.opacity = 100;
+        questionHandler2();
+      }, 200);
+    }
+  }, 200);
+}
+
+function questionHandler2() {
+  var qBoxes = document.querySelectorAll(".ID1_2");
+  console.log(qBoxes);
+  var foodArrayMeat = [];
+  qBoxes.forEach(function (item) {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", function () {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+
+      foodArrayMeat = [];
+      qBoxes.forEach(function (obj) {
+        if (obj.style.backgroundColor == "blue") {
+          foodArrayMeat.push(obj.dataset.type);
+          console.log(foodArrayMeat);
+        }
+      });
+    });
+  });
+  document.querySelector(".next2").addEventListener("click", function () {
+    globalUserQuestionSheet.foodSelectionMeat = foodArrayMeat;
+    console.log(globalUserQuestionSheet);
+    displayQuestion3();
+  });
+}
+
+function displayQuestion3() {
+  console.log("Q 3");
+  document.querySelector("#questionID1_2").style.opacity = 0;
+  setTimeout(function () {
+    document.querySelector("#questionID1_2").style.display = "none";
+    document.querySelector("#questionID1_3").style.display = "block";
+    setTimeout(function () {
+      document.querySelector("#questionID1_3").style.opacity = 100;
+      questionHandler3();
+    }, 200);
+  }, 200);
+}
+
+function questionHandler3() {
+  var qBoxes = document.querySelectorAll(".ID1_3");
+  console.log(qBoxes);
+  var foodArrayVeg = [];
+  qBoxes.forEach(function (item) {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", function () {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+
+      foodArrayVeg = [];
+      qBoxes.forEach(function (obj) {
+        if (obj.style.backgroundColor == "blue") {
+          foodArrayVeg.push(obj.dataset.type);
+          console.log(foodArrayVeg);
+        }
+      });
+    });
+  });
+  document.querySelector(".next3").addEventListener("click", function () {
+    globalUserQuestionSheet.foodSelectionVeg = foodArrayVeg;
+    console.log(globalUserQuestionSheet);
+    changeDirection(1);
+  });
+}
 },{"gsap":"node_modules/gsap/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5688,7 +5810,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53770" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64041" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

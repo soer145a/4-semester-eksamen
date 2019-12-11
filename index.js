@@ -1,5 +1,11 @@
 "use strict";
 import gsap from "gsap";
+let globalUserQuestionSheet = {
+  diet: "-placeholder-",
+  foodSelectionMeat: "-placeholder",
+  foodSelectionVeg: "-placeholder",
+  totalCost: "-placeholder"
+};
 window.addEventListener("DOMContentLoaded", init);
 function init() {
   console.log("Hello World!");
@@ -27,7 +33,7 @@ function expandPageElements() {
   footer.classList.add("footerExpanded");
   document.querySelector("#goRight").style.opacity = 100;
   document.querySelector("#goRight").style.pointerEvents = "all";
-
+  startCalc();
   makeCalcButtons();
 }
 function makeCalcButtons() {
@@ -82,4 +88,111 @@ function changeDirection(dir) {
       slider.classList.add("slide4");
       console.log("DETTE ER SLIDE 4");
   }
+}
+function startCalc() {
+  let qBoxes = document.querySelectorAll(".ID1_1");
+  qBoxes.forEach(item => {
+    item.addEventListener("click", () => {
+      qBoxes.forEach(box => {
+        box.style.backgroundColor = "white";
+      });
+
+      questionHandler1(item);
+    });
+  });
+}
+function questionHandler1(item) {
+  console.log(item);
+  item.style.backgroundColor = "blue";
+  globalUserQuestionSheet.diet = item.dataset.type;
+  console.log(globalUserQuestionSheet);
+  document.querySelector(".next1").addEventListener("click", () => {
+    displayQuestion2(item.dataset.type);
+  });
+}
+function displayQuestion2(food) {
+  console.log("Q 2");
+  document.querySelector("#questionID1_1").style.opacity = 0;
+  setTimeout(() => {
+    document.querySelector("#questionID1_1").style.display = "none";
+    if (food == "vegetar" || food == "veganer") {
+      document.querySelector("#questionID1_3").style.display = "block";
+      setTimeout(() => {
+        document.querySelector("#questionID1_3").style.opacity = 100;
+        questionHandler3();
+      }, 200);
+    } else {
+      document.querySelector("#questionID1_2").style.display = "block";
+      setTimeout(() => {
+        document.querySelector("#questionID1_2").style.opacity = 100;
+        questionHandler2();
+      }, 200);
+    }
+  }, 200);
+}
+function questionHandler2() {
+  let qBoxes = document.querySelectorAll(".ID1_2");
+  console.log(qBoxes);
+  let foodArrayMeat = [];
+  qBoxes.forEach(item => {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", () => {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+      foodArrayMeat = [];
+      qBoxes.forEach(obj => {
+        if (obj.style.backgroundColor == "blue") {
+          foodArrayMeat.push(obj.dataset.type);
+          console.log(foodArrayMeat);
+        }
+      });
+    });
+  });
+  document.querySelector(".next2").addEventListener("click", () => {
+    globalUserQuestionSheet.foodSelectionMeat = foodArrayMeat;
+    console.log(globalUserQuestionSheet);
+    displayQuestion3();
+  });
+}
+function displayQuestion3() {
+  console.log("Q 3");
+  document.querySelector("#questionID1_2").style.opacity = 0;
+  setTimeout(() => {
+    document.querySelector("#questionID1_2").style.display = "none";
+    document.querySelector("#questionID1_3").style.display = "block";
+    setTimeout(() => {
+      document.querySelector("#questionID1_3").style.opacity = 100;
+      questionHandler3();
+    }, 200);
+  }, 200);
+}
+function questionHandler3() {
+  let qBoxes = document.querySelectorAll(".ID1_3");
+  console.log(qBoxes);
+  let foodArrayVeg = [];
+  qBoxes.forEach(item => {
+    item.style.backgroundColor = "white";
+    item.addEventListener("click", () => {
+      if (item.style.backgroundColor == "white") {
+        item.style.backgroundColor = "blue";
+      } else {
+        item.style.backgroundColor = "white";
+      }
+      foodArrayVeg = [];
+      qBoxes.forEach(obj => {
+        if (obj.style.backgroundColor == "blue") {
+          foodArrayVeg.push(obj.dataset.type);
+          console.log(foodArrayVeg);
+        }
+      });
+    });
+  });
+  document.querySelector(".next3").addEventListener("click", () => {
+    globalUserQuestionSheet.foodSelectionVeg = foodArrayVeg;
+    console.log(globalUserQuestionSheet);
+    changeDirection(1);
+  });
 }
