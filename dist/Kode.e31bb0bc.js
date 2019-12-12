@@ -5566,10 +5566,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var globalUserQuestionSheet = {
   diet: "-placeholder-",
-  foodSelectionMeat: "-placeholder",
-  foodSelectionVeg: "-placeholder",
+  foodSelectionMeat: "-placeholder-",
+  foodSelectionVeg: "-placeholder-",
   gifts: "-placeholder-",
-  totalCost: "-placeholder"
+  travel: "-placeholder-",
+  travelMethod: "-placeholder-",
+  energy: "-placeholder-",
+  energyTypes: "-placeholder-",
+  totalCost: "-placeholder-"
 };
 window.addEventListener("DOMContentLoaded", init);
 
@@ -5869,6 +5873,134 @@ function questionHandler5() {
 
 function startQuestion3() {
   console.log(globalUserQuestionSheet);
+  var qBoxes = document.querySelectorAll(".ID3_1");
+  qBoxes.forEach(function (item) {
+    item.addEventListener("click", function () {
+      qBoxes.forEach(function (obj) {
+        obj.classList = "";
+        obj.classList.add("ID3_1", "questionBox");
+      });
+      item.classList.toggle("ID3_1Selected");
+    });
+  });
+  document.querySelector(".next6").addEventListener("click", function () {
+    questionHandler6(qBoxes);
+  });
+}
+
+function questionHandler6(arr) {
+  var selected = document.querySelector(".ID3_1Selected").dataset.type;
+
+  if (selected == "julHjemme") {
+    globalUserQuestionSheet.travel = selected;
+    changeDirection(1);
+    startQuestion4();
+  } else {
+    globalUserQuestionSheet.travel = selected;
+    displayQuestion5();
+  }
+}
+
+function displayQuestion5() {
+  console.log("Q 5");
+  document.querySelector("#questionID3_1").style.opacity = 0;
+  setTimeout(function () {
+    document.querySelector("#questionID3_1").style.display = "none";
+    questionHandler7();
+    document.querySelector("#questionID3_2").style.display = "block";
+    setTimeout(function () {
+      document.querySelector("#questionID3_2").style.opacity = 100;
+    }, 200);
+  }, 200);
+}
+
+function questionHandler7() {
+  var qBoxes = document.querySelectorAll(".ID3_2");
+  qBoxes.forEach(function (item) {
+    item.addEventListener("click", function () {
+      qBoxes.forEach(function (obj) {
+        obj.classList = "";
+        obj.classList.add("ID3_2", "questionBox");
+      });
+      item.classList.toggle("ID3_2Selected");
+    });
+  });
+  document.querySelector(".next7").addEventListener("click", function () {
+    globalUserQuestionSheet.travelMethod = document.querySelector(".ID3_2Selected").dataset.type;
+    console.log(globalUserQuestionSheet);
+    changeDirection(1);
+    startQuestion4();
+  });
+}
+
+function startQuestion4() {
+  var qBoxes = document.querySelectorAll(".ID4_1");
+  qBoxes.forEach(function (item) {
+    item.addEventListener("click", function () {
+      qBoxes.forEach(function (obj) {
+        obj.classList = "";
+        obj.classList.add("ID4_1", "questionBox");
+      });
+      item.classList.toggle("ID4_1Selected");
+    });
+  });
+  document.querySelector(".next8").addEventListener("click", function () {
+    globalUserQuestionSheet.energy = document.querySelector(".ID4_1Selected").dataset.type;
+    displayQuestion6(document.querySelector(".ID4_1Selected").dataset.type);
+  });
+}
+
+function displayQuestion6(varr) {
+  console.log(varr);
+  console.log("Q 6");
+  document.querySelector("#questionID4_1").style.opacity = 0;
+  setTimeout(function () {
+    document.querySelector("#questionID4_1").style.display = "none";
+
+    if (varr == "el") {
+      questionHandler8();
+      document.querySelector("#questionID4_2").style.display = "block";
+      setTimeout(function () {
+        document.querySelector("#questionID4_2").style.opacity = 100;
+      }, 200);
+    } else {
+      questionHandler9();
+      document.querySelector("#questionID4_3").style.display = "block";
+      setTimeout(function () {
+        document.querySelector("#questionID4_3").style.opacity = 100;
+      }, 200);
+    }
+  }, 200);
+}
+
+function questionHandler8() {
+  document.querySelector(".next9").addEventListener("click", function () {
+    var powerSelection = {
+      ovn: document.querySelector("#ovn").value,
+      led: document.querySelector("#led").value,
+      lamp: document.querySelector("#lamp").value,
+      radiator: document.querySelector("#radiator").value
+    };
+    globalUserQuestionSheet.energyTypes = powerSelection;
+    displayEndCard();
+  });
+}
+
+function questionHandler9() {
+  document.querySelector(".next10").addEventListener("click", function () {
+    var powerSelection = {
+      ovnF: document.querySelector("#ovnF").value,
+      ledF: document.querySelector("#radiatorF").value
+    };
+    globalUserQuestionSheet.energyTypes = powerSelection;
+    displayEndCard();
+  });
+}
+
+function displayEndCard() {
+  console.log(globalUserQuestionSheet);
+  document.querySelector("#endCard").classList.remove("up");
+  document.querySelector("#endCard").classList.add("down");
 }
 },{"gsap":"node_modules/gsap/index.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -5898,7 +6030,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50423" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62624" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
