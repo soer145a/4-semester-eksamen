@@ -40,16 +40,15 @@
   font-weight: 1 999;
 }
 
-.reset, body, body header, body header #splash #splashHeadline #splashHeadlineText, body header #splash #splashText #splashTextTxt, body header #splash #goToCalc #goToCalcText, body main #info #infoHeadline1 #infoHeadline1Text, body main #info #infoHeadline2 #InfoHeadline2Text, body main #info #infoText #infoTextTxt {
+body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 body header {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
 }
@@ -58,32 +57,61 @@ body header #splash {
   height: 50vw;
 }
 
-body header #splash #splashImage img {
+body header #splash #splashMobilImage img {
   width: 100vw;
-  height: 50vh;
+  height: auto;
+}
+
+body header #splash #splashDesktopImage {
+  display: none;
 }
 
 body header #splash #splashHeadline {
   position: absolute;
-  top: 8vw;
-  left: 4vw;
+  top: 5vw;
+  width: 100%;
 }
 
 body header #splash #splashHeadline #splashHeadlineText {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   font-family: fontBlack;
-  letter-spacing: 1vw;
   font-size: 2em;
+  color: #f74d48;
+}
+
+body header #splash #splashHeadline #SplashedHeadlineText2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: fontBold;
+  font-size: 1.4em;
+  color: white;
+  position: relative;
+  top: 4vh;
+}
+
+body header #splash #splashHeadline #SplashedHeadlineText2 #green {
+  color: green;
 }
 
 body header #splash #splashText {
   position: absolute;
-  top: 50vw;
-  left: 8vw;
+  top: 22vw;
+  left: 5vw;
+  line-height: 2em;
+  margin-top: 6vh;
+  padding-left: 11vw;
+  padding-right: 11vw;
+  color: white;
 }
 
 body header #splash #splashText #splashTextTxt {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 1vw;
+  margin: 0;
+  padding: 0;
+  font-family: fontRegular;
+  letter-spacing: 0.1vw;
   font-size: 1.1em;
 }
 
@@ -93,13 +121,15 @@ body header #splash #goToCalc {
   width: 52vw;
   height: 8vw;
   left: 26vw;
-  bottom: 13vw;
+  bottom: 5vw;
   background-color: black;
   cursor: pointer;
 }
 
 body header #splash #goToCalc #goToCalcText {
   color: white;
+  margin: 0;
+  padding: 0;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   letter-spacing: 1vw;
   font-size: 1.1em;
@@ -125,6 +155,34 @@ body main .regular {
 
 body main .expanded {
   height: 80vh;
+}
+
+body main #goLeft {
+  z-index: 30;
+  opacity: 0;
+  top: 1vw;
+  position: absolute;
+  pointer-events: none;
+  width: 10vw;
+}
+
+body main #goLeft #goLeftImg {
+  width: 100%;
+}
+
+body main #goRight {
+  z-index: 30;
+  position: absolute;
+  top: 1vw;
+  width: 10vw;
+  left: 90vw;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body main #goRight #goRightImg {
+  width: 100%;
+  transform: rotate(180deg);
 }
 
 body main #calcCO2 {
@@ -644,43 +702,74 @@ body main #info #infoHeadline1 {
 }
 
 body main #info #infoHeadline1 #infoHeadline1Text {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 body main #info #grafikArea1 {
   position: absolute;
-  top: 6vh;
+  top: 2vh;
   left: 7.5vw;
   width: 85vw;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 body main #info #grafikArea1 .grafikElement1 {
-  background-color: black;
-  height: 30vh;
+  /* background-color: black;
+          height: 30vh; */
   margin: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main #info #grafikArea1 .grafikElement1 #Stig_1 {
+  width: 58vw;
+  position: relative;
+  top: 8vh;
+  margin: auto;
+}
+
+body main #info #grafikArea1 .grafikElement1 #Stig_2 {
+  width: 25vw;
+  margin: auto;
+}
+
+body main #info #grafikArea1 .grafikElement1 #Stig_3 {
+  width: 38vw;
+  margin: auto;
 }
 
 body main #info #infoHeadline2 {
   position: absolute;
-  top: 142vh;
+  top: 103vh;
   width: 100vw;
 }
 
 body main #info #infoHeadline2 #InfoHeadline2Text {
+  margin: 0;
+  padding: 0;
   text-align: center;
+  font-family: fontBold;
+  color: #f74d48;
 }
 
 body main #info #infoText {
   position: absolute;
-  top: 145vh;
-  left: 10vw;
+  top: 110vh;
+  left: 13vw;
   width: 80vw;
+  line-height: 1.8em;
 }
 
 body main #info #infoText #infoTextTxt {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: fontRegular;
+  letter-spacing: 0.1vw;
+  font-size: 1.1em;
 }
 
 body main #info #grafikArea2 {
@@ -691,9 +780,34 @@ body main #info #grafikArea2 {
 }
 
 body main #info #grafikArea2 .grafikElement2 {
-  background-color: black;
   height: 30vh;
   margin: 4vw;
+  margin-top: -20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main #info #grafikArea2 .grafikElement2 #Pakke_1 {
+  width: 30vw;
+  margin: auto;
+}
+
+body main #info #grafikArea2 .grafikElement2 #Pakke_2 {
+  width: 40vw;
+  margin: auto;
+}
+
+body main #info #grafikArea2 .grafikElement2 #Pakke_3 {
+  width: 50vw;
+  margin: auto;
+}
+
+body main #info #grafikArea2 #PakkeTekst {
+  font-family: fontBold;
+  text-align: center;
+  position: relative;
+  top: -15vw;
 }
 
 body main .collabHeadlineRegular {
@@ -712,6 +826,8 @@ body main #collabHeadline {
 
 body main #collabHeadline #collabHeadlineText {
   text-align: center;
+  font-family: fontBold;
+  color: #f74d48;
 }
 
 body main .collaboratorsRegular {
@@ -728,22 +844,50 @@ body main #collaborators {
   left: 15vw;
   width: 70vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 body main #collaborators .collabElement {
-  background-color: black;
-  height: 15vh;
-  width: 15vh;
-  margin: 1vw;
+  height: 30vh;
+  margin: 4vw;
+  margin-top: -10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body main #collaborators .collabElement #collab_1 {
+  width: 35vw;
+  margin: auto;
+}
+
+body main #collaborators .collabElement #collab_2 {
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  top: -15vw;
+}
+
+body main #collaborators .collabElement #collab_3 {
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  top: -35vw;
+}
+
+body main #collaborators .collabElement #collab_4 {
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  top: -55vw;
 }
 
 body .footerRegular {
-  top: 365vh;
+  top: 420vh;
 }
 
 body .footerExpanded {
-  top: 429.5vh;
+  top: 480vh;
 }
 
 body footer {
@@ -764,7 +908,7 @@ body footer #toMainPage {
   background-color: red;
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1820px) {
   body {
     overflow-x: hidden;
   }
@@ -773,45 +917,59 @@ body footer #toMainPage {
     top: 0;
   }
   body header #splash {
-    height: 100vw;
+    height: 200%;
   }
-  body header #splash #splashImage img {
+  body header #splash #splashDesktopImage {
+    display: block;
+  }
+  body header #splash #splashDesktopImage img {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+  }
+  body header #splash #splashMobilImage {
+    display: none;
   }
   body header #splash #splashHeadline {
     position: absolute;
-    top: 8vw;
-    left: 4vw;
+    top: 4vw;
   }
   body header #splash #splashHeadline #splashHeadlineText {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    letter-spacing: 1vw;
-    font-size: 2em;
+    font-family: fontBold;
+    letter-spacing: 0.1vw;
+    font-size: 3em;
+    text-align: center;
+  }
+  body header #splash #splashHeadline #SplashedHeadlineText2 {
+    font-family: fontBold;
+    letter-spacing: 0.1vw;
+    font-size: 4em;
+    position: relative;
+    top: 13vh;
   }
   body header #splash #splashText {
     position: absolute;
-    top: 20vh;
-    left: 8vw;
+    top: 35vh;
+    left: 17vw;
+    right: 17vw;
   }
   body header #splash #splashText #splashTextTxt {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    letter-spacing: 1vw;
-    font-size: 1.1em;
+    font-family: fontRegular;
+    font-size: 1.6em;
+    line-height: 1.4em;
   }
   body header #splash #goToCalc {
     position: relative;
     width: 18vw;
     height: 4vw;
     left: 41vw;
-    bottom: 5vw;
+    top: -100vw;
     background-color: black;
     cursor: pointer;
     display: block;
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -876,83 +1034,159 @@ body footer #toMainPage {
   }
   body main #info #grafikArea1 {
     position: absolute;
-    top: 6vh;
+    top: 8vh;
     left: 7.5vw;
     width: 85vw;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   body main #info #grafikArea1 .grafikElement1 {
-    background-color: black;
     height: 30vh;
     margin: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #info #grafikArea1 .grafikElement1 #Stig_1 {
+    width: 20vw;
+    margin: auto;
+  }
+  body main #info #grafikArea1 .grafikElement1 #Stig_2 {
+    width: 10vw;
+    margin: auto;
+  }
+  body main #info #grafikArea1 .grafikElement1 #Stig_3 {
+    width: 12vw;
   }
   body main #info #infoHeadline2 {
     position: absolute;
-    top: 50vh;
+    top: 95vh;
     width: 100vw;
   }
   body main #info #infoHeadline2 #InfoHeadline2Text {
     text-align: center;
+    font-size: 2vw;
   }
   body main #info #infoText {
     position: absolute;
-    top: 55vh;
-    left: 10vw;
-    width: 80vw;
+    top: 105vh;
+    width: 50vw;
+    line-height: 1.8em;
+    left: 26vw;
+    right: 17vw;
   }
   body main #info #infoText #infoTextTxt {
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: fontRegular;
+    letter-spacing: 0.1vw;
+    font-size: 1.1em;
+    font-family: fontRegular;
+    font-size: 1.6em;
+    line-height: 1.4em;
   }
   body main #info #grafikArea2 {
     position: absolute;
-    top: 60vh;
+    top: 175vh;
     left: 7.5vw;
     width: 85vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
   body main #info #grafikArea2 .grafikElement2 {
-    background-color: black;
     height: 30vh;
     margin: 4vw;
+    margin-top: -20vw;
   }
-  body main .collabHeadlineRegular {
+  body main #info #grafikArea2 .grafikElement2 #Pakke_1 {
+    width: 10vw;
+    margin: auto;
+    position: relative;
+    right: -5vw;
+  }
+  body main #info #grafikArea2 .grafikElement2 #Pakke_2 {
+    width: 20vw;
+    margin: auto;
+    position: relative;
+    right: -5vw;
+  }
+  body main #info #grafikArea2 .grafikElement2 #Pakke_3 {
+    width: 20vw;
+    margin: auto;
+    position: relative;
+    right: -5vw;
+  }
+  body main #info #grafikArea2 #PakkeTekst_1 {
+    font-family: fontBold;
+    text-align: center;
+    position: relative;
+    top: 10vw;
+    left: -2vw;
+  }
+  body main #info #grafikArea2 #PakkeTekst_2 {
+    font-family: fontBold;
+    text-align: center;
+    position: relative;
+    top: 10vw;
+    left: -6vw;
+  }
+  body main #info #grafikArea2 #PakkeTekst_3 {
+    font-family: fontBold;
+    text-align: center;
+    position: relative;
+    top: 10vw;
+    left: -5vw;
+  }
+  body main #info .collabHeadlineRegular {
     top: 140vh;
   }
-  body main .collabHeadlineExpanded {
+  body main #info .collabHeadlineExpanded {
     top: 204.5vh;
   }
-  body main #collabHeadline {
+  body main #info #collabHeadline {
     position: absolute;
   }
-  body main .collaboratorsRegular {
+  body main #info .collaboratorsRegular {
     top: 150vh;
   }
-  body main .collaboratorsExpanded {
+  body main #info .collaboratorsExpanded {
     top: 214.5vh;
   }
-  body main #collaborators {
+  body main #info #collaborators {
     position: absolute;
     left: 0;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
   }
-  body main #collaborators .collabElement {
-    background-color: black;
-    height: 15vh;
-    width: 15vh;
+  body main #info #collaborators .collabElement {
     margin: auto;
     box-sizing: border-box;
+    position: absolute;
   }
-  body .footerRegular {
+  body main #info #collaborators .collabElement #collab_1 {
+    width: 10vw;
+    margin: auto;
+  }
+  body main #info #collaborators .collabElement #collab_2 {
+    width: 10vw;
+    margin: auto;
+  }
+  body main #info #collaborators .collabElement #collab_3 {
+    width: 10vw;
+    margin: auto;
+  }
+  body main #info #collaborators .collabElement #collab_4 {
+    width: 10vw;
+    margin: auto;
+  }
+  body main .footerRegular {
     top: 280vh;
   }
-  body .footerExpanded {
+  body main .footerExpanded {
     top: 344.5vh;
   }
-  body footer {
+  body main footer {
     background-color: black;
     position: absolute;
     height: 30vh;
@@ -960,10 +1194,10 @@ body footer #toMainPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  body footer #kontakt {
+  body main footer #kontakt {
     background-color: blue;
   }
-  body footer #toMainPage {
+  body main footer #toMainPage {
     background-color: red;
   }
 }
