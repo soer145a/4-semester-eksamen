@@ -5580,11 +5580,14 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   console.log("Hello World!");
+  getRestDBData();
   document.querySelector("#start").addEventListener("click", function () {
     document.querySelector("#start").style.display = "none";
     expandPageElements();
   });
 }
+
+function getRestDBData() {}
 
 function expandPageElements() {
   console.log("OPEN");
@@ -6106,6 +6109,7 @@ function calcTotal() {
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
 
+  globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
   console.log(totalCO2);
   sendToRestDB();
 }

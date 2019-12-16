@@ -15,11 +15,13 @@ let globalUserQuestionSheet = {
 window.addEventListener("DOMContentLoaded", init);
 function init() {
   console.log("Hello World!");
+  getRestDBData();
   document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#start").style.display = "none";
     expandPageElements();
   });
 }
+function getRestDBData() {}
 function expandPageElements() {
   console.log("OPEN");
   let questionArea = document.querySelector("#calcCO2");
@@ -495,6 +497,7 @@ function calcTotal() {
     let bilValue = parseInt(globalUserQuestionSheet.travelMiles);
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
+  globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
 
   console.log(totalCO2);
   sendToRestDB();
