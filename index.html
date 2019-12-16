@@ -6,22 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Julekampagne 2019 KEA Eksamen</title>
     <link rel="stylesheet" href="output.css" />
-    <link rel="shortcut icon" href="assets/imgs/ClimaiderFavIcon.png" type="image/x-icon">
   </head>
   <body>
     <header>
       <div id="splash">
-        <div id="splashImage">
-          <img src="assets/imgs/placeholder.jpg" alt="Billede af X" />
+        <div id="splashMobilImage">
+          <img
+            src="assets/imgs/Background.jpg"
+            alt="Billede af MobilBaggrund"
+          />
+        </div>
+        <div id="splashDesktopImage">
+          <img
+            src="assets/imgs/BackgroundDesktop.jpg"
+            alt="Billede af DesktopBaggrund"
+          />
         </div>
         <div id="splashHeadline">
           <h2 id="splashHeadlineText">
-            Headline Text
+            Climaider
+          </h2>
+
+          <h2 id="SplashedHeadlineText2">
+            Bidrag Til En <span id="green">Grønnere</span> Jul
           </h2>
         </div>
         <div id="splashText">
           <p id="splashTextTxt">
-            Lidt om vores vision?
+            Julen er forbrugernes højtid! Gaver, mad og juletræer høre til. Men
+            hvad betyder det for klimaet? Prøv vores CO2 beregner og find ud af
+            hvad dit forbrug udgør i CO2!
           </p>
         </div>
         <div id="goToCalc">
@@ -30,7 +44,12 @@
       </div>
     </header>
     <main>
-     
+      <div id="goRight">
+        <img src="assets/imgs/arrow.png" id="goRightImg" />
+      </div>
+      <div id="goLeft">
+        <img src="assets/imgs/arrow.png" id="goLeftImg" />
+      </div>
       <div id="calcCO2" class="regular">
         <div id="questionSlider">
           <div class="question" id="questionID1">
@@ -189,22 +208,46 @@
                   </div>
                   <div class="valueBox" id="valueBox_1" data-type="telefon">
                     <div class="incrementalCounter">
-                      <label for="telefon">Antal Telefoner </label><input id="telefon" type="number" placeholder="0" class="valueInput"/>
+                      <label for="telefon">Antal Telefoner </label
+                      ><input
+                        id="telefon"
+                        type="number"
+                        placeholder="0"
+                        class="valueInput"
+                      />
                     </div>
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="TV">
                     <div class="incrementalCounter">
-                      <label for="TV">Antal TV </label><input id="TV" type="number" placeholder="0" class="valueInput"/>
+                      <label for="TV">Antal TV </label
+                      ><input
+                        id="TV"
+                        type="number"
+                        placeholder="0"
+                        class="valueInput"
+                      />
                     </div>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="hvidvare">
                     <div class="incrementalCounter">
-                      <label for="hvidvare">antal Hvivare </label><input id="hvidvare" type="number" placeholder="0" class="valueInput"/>
+                      <label for="hvidvare">antal Hvivare </label
+                      ><input
+                        id="hvidvare"
+                        type="number"
+                        placeholder="0"
+                        class="valueInput"
+                      />
                     </div>
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="konsoller">
                     <div class="incrementalCounter">
-                      <label for="console">Antal Konsoller </label><input id="console" type="number" placeholder="0" class="valueInput"/>
+                      <label for="console">Antal Konsoller </label
+                      ><input
+                        id="console"
+                        type="number"
+                        placeholder="0"
+                        class="valueInput"
+                      />
                     </div>
                   </div>
                 </div>
@@ -213,10 +256,22 @@
                     <h2>Legetøj</h2>
                   </div>
                   <div class="valueBox" id="valueBox_1" data-type="lToej">
-                    <label for="lToej">Antal lejetøj (småt) </label><input id="lToej" type="number" placeholder="0" class="valueInput"/>
+                    <label for="lToej">Antal lejetøj (småt) </label
+                    ><input
+                      id="lToej"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="sToej">
-                    <label for="sToej">Antal lejetøj (stort) </label><input id="sToej" type="number" placeholder="0" class="valueInput"/>
+                    <label for="sToej">Antal lejetøj (stort) </label
+                    ><input
+                      id="sToej"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                 </div>
                 <div id="answerBox3" class="ID2_2" data-type="digital">
@@ -224,13 +279,31 @@
                     <h2>Digital</h2>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="fGift">
-                    <label for="fGift">Antal Gavekort(fysisk) </label><input id="fGift" type="number" placeholder="0" class="valueInput"/>
+                    <label for="fGift">Antal Gavekort(fysisk) </label
+                    ><input
+                      id="fGift"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="dGift">
-                    <label for="dGift">Antal Gavekort(digitalt) </label><input id="dGift" type="number" placeholder="0" class="valueInput"/>
+                    <label for="dGift">Antal Gavekort(digitalt) </label
+                    ><input
+                      id="dGift"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="sub">
-                    <label for="sub">Online Abonnementer </label><input id="sub" type="number" placeholder="0" class="valueInput"/>
+                    <label for="sub">Online Abonnementer </label
+                    ><input
+                      id="sub"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                 </div>
                 <div id="answerBox4" class="ID2_2" data-type="toej">
@@ -238,13 +311,31 @@
                     <h2>Tøj</h2>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="recycle">
-                    <label for="recycle">Mængde genbrugs tøj </label><input id="recycle" type="number" placeholder="0" class="valueInput"/>
+                    <label for="recycle">Mængde genbrugs tøj </label
+                    ><input
+                      id="recycle"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="discount">
-                    <label for="discount">Mængde discount tøj </label><input id="discount" type="number" placeholder="0" class="valueInput"/>
+                    <label for="discount">Mængde discount tøj </label
+                    ><input
+                      id="discount"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="designer">
-                    <label for="designer">Mængde discount tøj </label><input id="designer" type="number" placeholder="0" class="valueInput"/>
+                    <label for="designer">Mængde discount tøj </label
+                    ><input
+                      id="designer"
+                      type="number"
+                      placeholder="0"
+                      class="valueInput"
+                    />
                   </div>
                 </div>
               </div>
@@ -271,116 +362,118 @@
                   <div class="goBackOnce6"><p>Tilbage</p></div>
                   <div class="next6"><p>Næste</p></div>
                 </div>
+              </div>
+            </div>
+            <div id="questionID3_2" class="subquestion">
+              <div id="questionID3_2Headline">
+                <div class="q1H2">Hvordan rejser du?</div>
+              </div>
+              <div id="questionID3_2MainArea">
+                <div class="questionBox ID3_2" data-type="fly">
+                  <p>Med Fly</p>
+                </div>
+                <div class="questionBox ID3_2" data-type="bil">
+                  <p>I Bil</p>
+                </div>
+                <div class="questionBox ID3_2" data-type="tog">
+                  <p>Med Tog</p>
+                </div>
+                <label for="miles">Antal Kilometer (ca) </label
+                ><input id="miles" type="number" placeholder="0" />
+              </div>
+              <div id="questionID3_2Nav">
+                <div class="goBackOnce7"><p>Tilbage</p></div>
+                <div class="next7"><p>Næste</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="question" id="questionID4">
+            <h1 id="q4Headline">Fjerde Kategori</h1>
+            <div id="questionID4_1" class="subquestion">
+              <div id="questionID4_1Headline">
+                <div class="q1H2">Hvilken form for Energi bruger du?</div>
+              </div>
+              <div id="questionID4_1MainArea">
+                <div class="questionBox ID4_1" data-type="el">
+                  <p>Primært EL</p>
+                </div>
+                <div class="questionBox ID4_1" data-type="varme">
+                  <p>Primært Fjernvarme</p>
                 </div>
               </div>
-              <div id="questionID3_2" class="subquestion">
-                <div id="questionID3_2Headline">
-                  <div class="q1H2">Hvordan rejser du?</div>
-                </div>
-                <div id="questionID3_2MainArea">
-                  <div class="questionBox ID3_2" data-type="fly">
-                    <p>Med Fly</p>
-                  </div>
-                  <div class="questionBox ID3_2" data-type="bil">
-                    <p>I Bil</p>
-                  </div>
-                  <div class="questionBox ID3_2" data-type="tog">
-                    <p>Med Tog</p>
-                  </div>
-                  <label for="miles">Antal Kilometer (ca) </label><input id="miles" type="number" placeholder="0"/>
-                  
-                  </div>
-                  <div id="questionID3_2Nav">
-                    <div class="goBackOnce7"><p>Tilbage</p></div>
-                    <div class="next7"><p>Næste</p></div>
-                  </div>
-                </div>
-              
+              <div id="questionID4_1Nav">
+                <div class="goBackOnce8"><p>Tilbage</p></div>
+                <div class="next8"><p>Næste</p></div>
+              </div>
             </div>
-            <div class="question" id="questionID4">
-              <h1 id="q4Headline">Fjerde Kategori</h1>
-              <div id="questionID4_1" class="subquestion">
-                <div id="questionID4_1Headline">
-                  <div class="q1H2">Hvilken form for Energi bruger du?</div>
+            <div id="questionID4_2" class="subquestion">
+              <div id="questionID4_2Headline">
+                <div class="q1H2">Hvilken form for Energi bruger du?</div>
+              </div>
+              <div id="questionID4_2MainArea">
+                <div class="incrementalCounter">
+                  <label for="ovn">Timer EL med Ovn: </label
+                  ><input id="ovn" type="number" placeholder="0" />
                 </div>
-                <div id="questionID4_1MainArea">
-                  <div class="questionBox ID4_1" data-type="el">
-                    <p>Primært EL</p>
-                  </div>
-                  <div class="questionBox ID4_1" data-type="varme">
-                    <p>Primært Fjernvarme</p>
-                  </div>
-                  
+                <div class="incrementalCounter">
+                  <label for="led">Timer EL med LED: </label
+                  ><input id="led" type="number" placeholder="0" />
                 </div>
-                <div id="questionID4_1Nav">
-                    <div class="goBackOnce8"><p>Tilbage</p></div>
-                    <div class="next8"><p>Næste</p></div>
+                <div class="incrementalCounter">
+                  <label for="lamp">Timer EL med lamper: </label
+                  ><input id="lamp" type="number" placeholder="0" />
                 </div>
+                <div class="incrementalCounter">
+                  <label for="radiator">Timer EL med radiator: </label
+                  ><input id="radiator" type="number" placeholder="0" />
                 </div>
-                <div id="questionID4_2" class="subquestion">
-                  <div id="questionID4_2Headline">
-                    <div class="q1H2">Hvilken form for Energi bruger du?</div>
-                  </div>
-                  <div id="questionID4_2MainArea">
-                    <div class="incrementalCounter">
-                      <label for="ovn">Timer EL med Ovn: </label><input id="ovn" type="number" placeholder="0"/>
-                    </div>
-                    <div class="incrementalCounter">
-                      <label for="led">Timer EL med LED: </label><input id="led" type="number" placeholder="0"/>
-                    </div>
-                    <div class="incrementalCounter">
-                      <label for="lamp">Timer EL med lamper: </label><input id="lamp" type="number" placeholder="0"/>
-                    </div>
-                    <div class="incrementalCounter">
-                      <label for="radiator">Timer EL med radiator: </label><input id="radiator" type="number" placeholder="0"/>
-                    </div>
-                    
-                  </div>
-                  <div id="questionID4_2Nav">
-                      <div class="goBackOnce9"><p>Tilbage</p></div>
-                      <div class="next9"><p>Næste</p></div>
-                  </div>
+              </div>
+              <div id="questionID4_2Nav">
+                <div class="goBackOnce9"><p>Tilbage</p></div>
+                <div class="next9"><p>Næste</p></div>
+              </div>
+            </div>
+            <div id="questionID4_3" class="subquestion">
+              <div id="questionID4_3Headline">
+                <div class="q1H2">Hvilken form for Energi bruger du?</div>
+              </div>
+              <div id="questionID4_3MainArea">
+                <div class="incrementalCounter">
+                  <label for="ovnF">Timer Fjernvarme med Ovn: </label>
+                  <input id="ovnF" type="number" placeholder="0" />
                 </div>
-                <div id="questionID4_3" class="subquestion">
-                  <div id="questionID4_3Headline">
-                    <div class="q1H2">Hvilken form for Energi bruger du?</div>
-                  </div>
-                  <div id="questionID4_3MainArea">
-                    <div class="incrementalCounter">
-                      <label for="ovnF">Timer Fjernvarme med Ovn: </label>
-                      <input id="ovnF" type="number" placeholder="0" />
-                    </div>
-                    <div class="incrementalCounter">
-                      <label for="radiatorF">Timer Fjernvarme med radiator: </label>
-                      <input id="radiatorF" type="number" placeholder="0" />
-                    </div>
-                  </div>
-                  <div id="questionID4_3Nav">
-                      <div class="goBackOnce10"><p>Tilbage</p></div>
-                      <div class="next10"><p>Næste</p></div>
-                  </div>
-                  </div>
+                <div class="incrementalCounter">
+                  <label for="radiatorF">Timer Fjernvarme med radiator: </label>
+                  <input id="radiatorF" type="number" placeholder="0" />
+                </div>
+              </div>
+              <div id="questionID4_3Nav">
+                <div class="goBackOnce10"><p>Tilbage</p></div>
+                <div class="next10"><p>Næste</p></div>
+              </div>
             </div>
           </div>
-          <div id="endCard" class="up">
-            <div id="endCardHeadline">
-              <h2>End of Calc</h2>
-            </div>
-            <div id="endCardMain"></div>
-            <div id="linkToRenSti"></div>
+        </div>
+        <div id="endCard" class="up">
+          <div id="endCardHeadline">
+            <h2>End of Calc</h2>
           </div>
-          
+          <div id="endCardMain"></div>
+          <div id="linkToRenSti"></div>
         </div>
       </div>
       <div id="info" class="infoRegular">
-        <div id="infoHeadline1">
-          <h2 id="infoHeadline1Text">Information Headline 1</h2>
-        </div>
+        <div id="infoHeadline1"></div>
         <div id="grafikArea1">
-          <div class="grafikElement1" id="grafikElement1_1"></div>
-          <div class="grafikElement1" id="grafikElement1_2"></div>
-          <div class="grafikElement1" id="grafikElement1_3"></div>
-          <div class="grafikElement1" id="grafikElement1_4"></div>
+          <div class="grafikElement1" id="grafikElement1_1">
+            <img id="Stig_1" src="assets/imgs/Infografic_1.png" alt="Stig_1" />
+          </div>
+          <div class="grafikElement1" id="grafikElement1_2">
+            <img id="Stig_2" src="assets/imgs/Infografic_2.png" alt="Stig_2" />
+          </div>
+          <div class="grafikElement1" id="grafikElement1_3">
+            <img id="Stig_3" src="assets/imgs/Infografic_3.png" alt="Stig_3" />
+          </div>
         </div>
         <div id="infoHeadline2"><h2 id="InfoHeadline2Text">Hvordan?</h2></div>
         <div id="infoText">
@@ -389,29 +482,70 @@
             perspiciatis nesciunt sint blanditiis ipsa facilis! Quasi dolorum
             voluptatibus ab, nam iusto fuga? Doloremque id cum numquam natus.
             Temporibus, id error! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quos accusantium sunt sequi repellat voluptates
-            cupiditate sapiente, consequuntur repellendus pariatur totam, fugit
-            fugiat id exercitationem modi dolorum temporibus repudiandae
-            doloribus iure? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Autem dolorem accusamus qui ut dolor laborum provident
-            similique eos, quo molestias in! Perferendis modi facere suscipit
-            reiciendis praesentium culpa! Harum, veritatis.
+            adipisicing elit.
           </p>
         </div>
         <div id="grafikArea2">
-          <div class="grafikElement2" id="grafikElement2_1"></div>
-          <div class="grafikElement2" id="grafikElement2_2"></div>
-          <div class="grafikElement2" id="grafikElement2_3"></div>
+          <div class="grafikElement2" id="grafikElement2_1">
+            <img
+              id="Pakke_1"
+              src="assets/imgs/Lille Pakke.png"
+              alt="Lille Pakke"
+            />
+            <h3 id="PakkeTekst_1">Stor Pakke</h3>
+          </div>
+
+          <div class="grafikElement2" id="grafikElement2_2">
+            <img
+              id="Pakke_2"
+              src="assets/imgs/Mellem Pakke.png"
+              alt="Mellem Pakke"
+            />
+            <h3 id="PakkeTekst_2">Større Pakke</h3>
+          </div>
+
+          <div class="grafikElement2" id="grafikElement2_3">
+            <img
+              id="Pakke_3"
+              src="assets/imgs/Stor Pakke.png"
+              alt="Stor Pakke"
+            />
+            <h3 id="PakkeTekst_3">Største Pakke</h3>
+          </div>
         </div>
       </div>
       <div id="collabHeadline" class="collabHeadlineRegular">
         <h2 id="collabHeadlineText">Samarbejdspartnere</h2>
       </div>
       <div id="collaborators" class="collaboratorsRegular">
-        <div class="collabElement"></div>
-        <div class="collabElement"></div>
-        <div class="collabElement"></div>
-        <div class="collabElement"></div>
+        <div class="collabElement">
+          <img
+            id="collab_1"
+            src="assets/imgs/cphfw-monogram-black.png"
+            alt="Copenhagen Fashion Week"
+          />
+        </div>
+        <div class="collabElement">
+          <img
+            id="collab_2"
+            src="assets/imgs/hoodheroes-RenSti-300x151.png"
+            alt="HoodHeroes"
+          />
+        </div>
+        <div class="collabElement">
+          <img
+            id="collab_3"
+            src="assets/imgs/Tuborgfondet-RenSti-300x151.png"
+            alt="TuborgFondet"
+          />
+        </div>
+        <div class="collabElement">
+          <img
+            id="collab_4"
+            src="assets/imgs/Eon-RenSti-300x151.png"
+            alt="Eon"
+          />
+        </div>
       </div>
     </main>
     <footer class="footerRegular">

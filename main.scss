@@ -47,45 +47,68 @@ $softblack: #232a29;
   font-weight: 1 999;
 }
 
-.reset {
-  margin: 0;
-  padding: 0;
-}
 body {
   overflow-x: hidden;
-  @extend .reset;
+  margin: 0;
+  padding: 0;
   header {
-    @extend .reset;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 0;
 
     #splash {
       height: 50vw;
-      #splashImage {
+      #splashMobilImage {
         img {
           width: 100vw;
-          height: 50vh;
+          height: auto;
         }
+      }
+      #splashDesktopImage {
+        display: none;
       }
       #splashHeadline {
         position: absolute;
-        top: 8vw;
-        left: 4vw;
+        top: 5vw;
+        width: 100%;
         #splashHeadlineText {
-          @extend .reset;
+          margin: 0;
+          padding: 0;
+          text-align: center;
           font-family: fontBlack;
-          letter-spacing: 1vw;
+          // letter-spacing: 1vw;
           font-size: 2em;
+          color: $aidred;
+        }
+        #SplashedHeadlineText2 {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          font-family: fontBold;
+          font-size: 1.4em;
+          color: white;
+          position: relative;
+          top: 4vh;
+          #green {
+            color: green;
+          }
         }
       }
       #splashText {
         position: absolute;
-        top: 50vw;
-        left: 8vw;
+        top: 22vw;
+        left: 5vw;
+        line-height: 2em;
+        margin-top: 6vh;
+        padding-left: 11vw;
+        padding-right: 11vw;
+        color: white;
         #splashTextTxt {
-          @extend .reset;
-          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-          letter-spacing: 1vw;
+          margin: 0;
+          padding: 0;
+          font-family: fontRegular;
+          letter-spacing: 0.1vw;
           font-size: 1.1em;
         }
       }
@@ -95,12 +118,13 @@ body {
         width: 52vw;
         height: 8vw;
         left: 26vw;
-        bottom: 13vw;
+        bottom: 5vw;
         background-color: black;
         cursor: pointer;
         #goToCalcText {
           color: white;
-          @extend .reset;
+          margin: 0;
+          padding: 0;
           font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
           letter-spacing: 1vw;
           font-size: 1.1em;
@@ -126,7 +150,31 @@ body {
     .expanded {
       height: 80vh;
     }
+    #goLeft {
+      z-index: 30;
+      opacity: 0;
+      top: 1vw;
+      position: absolute;
+      pointer-events: none;
+      width: 10vw;
 
+      #goLeftImg {
+        width: 100%;
+      }
+    }
+    #goRight {
+      z-index: 30;
+      position: absolute;
+      top: 1vw;
+      width: 10vw;
+      left: 90vw;
+      pointer-events: none;
+      opacity: 0;
+      #goRightImg {
+        width: 100%;
+        transform: rotate(180deg);
+      }
+    }
     #calcCO2 {
       z-index: -10vw;
       border: solid black 2px;
@@ -567,42 +615,66 @@ body {
         width: 100vw;
         top: 2vh;
         #infoHeadline1Text {
-          @extend .reset;
+          margin: 0;
+          padding: 0;
           text-align: center;
         }
       }
       #grafikArea1 {
         position: absolute;
-        top: 6vh;
+        top: 2vh;
         left: 7.5vw;
         width: 85vw;
 
         display: grid;
-
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         .grafikElement1 {
-          background-color: black;
-          height: 30vh;
+          /* background-color: black;
+          height: 30vh; */
           margin: 4vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #Stig_1 {
+            width: 58vw;
+            position: relative;
+            top: 8vh;
+            margin: auto;
+          }
+          #Stig_2 {
+            width: 25vw;
+            margin: auto;
+          }
+          #Stig_3 {
+            width: 38vw;
+            margin: auto;
+          }
         }
       }
       #infoHeadline2 {
         position: absolute;
-        top: 142vh;
+        top: 103vh;
         width: 100vw;
         #InfoHeadline2Text {
-          @extend .reset;
+          margin: 0;
+          padding: 0;
           text-align: center;
+          font-family: fontBold;
+          color: $aidred;
         }
       }
       #infoText {
         position: absolute;
-        top: 145vh;
-        left: 10vw;
+        top: 110vh;
+        left: 13vw;
         width: 80vw;
+        line-height: 1.8em;
         #infoTextTxt {
-          @extend .reset;
-          text-align: center;
+          margin: 0;
+          padding: 0;
+          font-family: fontRegular;
+          letter-spacing: 0.1vw;
+          font-size: 1.1em;
         }
       }
       #grafikArea2 {
@@ -611,9 +683,30 @@ body {
         left: 7.5vw;
         width: 85vw;
         .grafikElement2 {
-          background-color: black;
           height: 30vh;
           margin: 4vw;
+          margin-top: -20vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          #Pakke_1 {
+            width: 30vw;
+            margin: auto;
+          }
+          #Pakke_2 {
+            width: 40vw;
+            margin: auto;
+          }
+          #Pakke_3 {
+            width: 50vw;
+            margin: auto;
+          }
+        }
+        #PakkeTekst {
+          font-family: fontBold;
+          text-align: center;
+          position: relative;
+          top: -15vw;
         }
       }
     }
@@ -629,6 +722,8 @@ body {
       width: 100vw;
       #collabHeadlineText {
         text-align: center;
+        font-family: fontBold;
+        color: $aidred;
       }
     }
     .collaboratorsRegular {
@@ -644,21 +739,46 @@ body {
       left: 15vw;
       width: 70vw;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
 
       .collabElement {
-        background-color: black;
-        height: 15vh;
-        width: 15vh;
-        margin: 1vw;
+        height: 30vh;
+        margin: 4vw;
+        margin-top: -10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #collab_1 {
+          width: 35vw;
+          margin: auto;
+        }
+        #collab_2 {
+          width: 50vw;
+          margin: auto;
+          position: relative;
+          top: -15vw;
+        }
+        #collab_3 {
+          width: 50vw;
+          margin: auto;
+          position: relative;
+          top: -35vw;
+        }
+        #collab_4 {
+          width: 50vw;
+          margin: auto;
+          position: relative;
+          top: -55vw;
+        }
       }
     }
   }
   .footerRegular {
-    top: 365vh;
+    top: 420vh;
   }
   .footerExpanded {
-    top: 429.5vh;
+    top: 480vh;
   }
   footer {
     background-color: black;
@@ -676,7 +796,7 @@ body {
     }
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1820px) {
   body {
     overflow-x: hidden;
 
@@ -685,33 +805,44 @@ body {
       top: 0;
 
       #splash {
-        height: 100vw;
-        #splashImage {
+        height: 200%;
+        #splashDesktopImage {
+          display: block;
           img {
             width: 100vw;
-            height: 100vh;
+            height: auto;
           }
+        }
+        #splashMobilImage {
+          display: none;
         }
         #splashHeadline {
           position: absolute;
-          top: 8vw;
-          left: 4vw;
+          top: 4vw;
+
           #splashHeadlineText {
-            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
-              sans-serif;
-            letter-spacing: 1vw;
-            font-size: 2em;
+            font-family: fontBold;
+            letter-spacing: 0.1vw;
+            font-size: 3em;
+            text-align: center;
+          }
+          #SplashedHeadlineText2 {
+            font-family: fontBold;
+            letter-spacing: 0.1vw;
+            font-size: 4em;
+            position: relative;
+            top: 13vh;
           }
         }
         #splashText {
           position: absolute;
-          top: 20vh;
-          left: 8vw;
+          top: 35vh;
+          left: 17vw;
+          right: 17vw;
           #splashTextTxt {
-            font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
-              sans-serif;
-            letter-spacing: 1vw;
-            font-size: 1.1em;
+            font-family: fontRegular;
+            font-size: 1.6em;
+            line-height: 1.4em;
           }
         }
         #goToCalc {
@@ -719,10 +850,11 @@ body {
           width: 18vw;
           height: 4vw;
           left: 41vw;
-          bottom: 5vw;
+          top: -100vw;
           background-color: black;
           cursor: pointer;
           display: block;
+
           #goToCalcText {
             color: white;
 
@@ -794,101 +926,177 @@ body {
         }
         #grafikArea1 {
           position: absolute;
-          top: 6vh;
+          top: 8vh;
           left: 7.5vw;
           width: 85vw;
 
           display: grid;
-
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           .grafikElement1 {
-            background-color: black;
             height: 30vh;
             margin: 4vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #Stig_1 {
+              width: 20vw;
+              margin: auto;
+            }
+            #Stig_2 {
+              width: 10vw;
+              margin: auto;
+            }
+            #Stig_3 {
+              width: 12vw;
+            }
           }
         }
         #infoHeadline2 {
           position: absolute;
-          top: 50vh;
+          top: 95vh;
           width: 100vw;
           #InfoHeadline2Text {
             text-align: center;
+            font-size: 2vw;
           }
         }
         #infoText {
           position: absolute;
-          top: 55vh;
-          left: 10vw;
-          width: 80vw;
+          top: 105vh;
+          width: 50vw;
+          line-height: 1.8em;
+          left: 26vw;
+          right: 17vw;
+
           #infoTextTxt {
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: fontRegular;
+            letter-spacing: 0.1vw;
+            font-size: 1.1em;
+
+            font-family: fontRegular;
+            font-size: 1.6em;
+            line-height: 1.4em;
           }
         }
         #grafikArea2 {
           position: absolute;
-          top: 60vh;
+          top: 175vh;
           left: 7.5vw;
           width: 85vw;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+
           .grafikElement2 {
-            background-color: black;
             height: 30vh;
             margin: 4vw;
+            margin-top: -20vw;
+
+            #Pakke_1 {
+              width: 10vw;
+              margin: auto;
+              position: relative;
+              right: -5vw;
+            }
+            #Pakke_2 {
+              width: 20vw;
+              margin: auto;
+              position: relative;
+              right: -5vw;
+            }
+            #Pakke_3 {
+              width: 20vw;
+              margin: auto;
+              position: relative;
+              right: -5vw;
+            }
+          }
+          #PakkeTekst_1 {
+            font-family: fontBold;
+            text-align: center;
+            position: relative;
+            top: 10vw;
+            left: -2vw;
+          }
+          #PakkeTekst_2 {
+            font-family: fontBold;
+            text-align: center;
+            position: relative;
+            top: 10vw;
+            left: -6vw;
+          }
+          #PakkeTekst_3 {
+            font-family: fontBold;
+            text-align: center;
+            position: relative;
+            top: 10vw;
+            left: -5vw;
+          }
+        }
+        .collabHeadlineRegular {
+          top: 140vh;
+        }
+        .collabHeadlineExpanded {
+          top: 204.5vh;
+        }
+        #collabHeadline {
+          position: absolute;
+        }
+        .collaboratorsRegular {
+          top: 150vh;
+        }
+        .collaboratorsExpanded {
+          top: 214.5vh;
+        }
+        #collaborators {
+          position: absolute;
+          left: 0;
+          width: 100vw;
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+          .collabElement {
+            margin: auto;
+            box-sizing: border-box;
+            position: absolute;
+            #collab_1 {
+              width: 10vw;
+              margin: auto;
+            }
+            #collab_2 {
+              width: 10vw;
+              margin: auto;
+            }
+            #collab_3 {
+              width: 10vw;
+              margin: auto;
+            }
+            #collab_4 {
+              width: 10vw;
+              margin: auto;
+            }
           }
         }
       }
-      .collabHeadlineRegular {
-        top: 140vh;
+      .footerRegular {
+        top: 280vh;
       }
-      .collabHeadlineExpanded {
-        top: 204.5vh;
+      .footerExpanded {
+        top: 344.5vh;
       }
-      #collabHeadline {
+      footer {
+        background-color: black;
         position: absolute;
-      }
-      .collaboratorsRegular {
-        top: 150vh;
-      }
-      .collaboratorsExpanded {
-        top: 214.5vh;
-      }
-      #collaborators {
-        position: absolute;
-
-        left: 0;
+        height: 30vh;
         width: 100vw;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-
-        .collabElement {
-          background-color: black;
-          height: 15vh;
-          width: 15vh;
-          margin: auto;
-          box-sizing: border-box;
+        grid-template-columns: 1fr 1fr;
+        #kontakt {
+          background-color: blue;
         }
-      }
-    }
-    .footerRegular {
-      top: 280vh;
-    }
-    .footerExpanded {
-      top: 344.5vh;
-    }
-    footer {
-      background-color: black;
-      position: absolute;
-
-      height: 30vh;
-      width: 100vw;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      #kontakt {
-        background-color: blue;
-      }
-      #toMainPage {
-        background-color: red;
+        #toMainPage {
+          background-color: red;
+        }
       }
     }
   }
