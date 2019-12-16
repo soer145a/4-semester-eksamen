@@ -684,37 +684,51 @@ body {
         width: 85vw;
         .grafikElement2 {
           height: 30vh;
-          margin: 4vw;
-          margin-top: -20vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          margin: auto;
+
           #Pakke_1 {
-            width: 30vw;
+            width: 100%;
             margin: auto;
+
+            transform: scale(0.4);
           }
           #Pakke_2 {
-            width: 40vw;
+            width: 100%;
             margin: auto;
+            margin-top: 10vh;
+            transform: scale(0.7);
           }
           #Pakke_3 {
-            width: 50vw;
+            width: 100%;
             margin: auto;
+            margin-top: 12vh;
+            transform: scale(0.8.5);
           }
         }
-        #PakkeTekst {
+        #PakkeTekst_1 {
           font-family: fontBold;
           text-align: center;
           position: relative;
-          top: -15vw;
+          top: -25vw;
+        }
+        #PakkeTekst_2 {
+          font-family: fontBold;
+          text-align: center;
+          position: relative;
+          top: -8vw;
+        }
+        #PakkeTekst_3 {
+          font-family: fontBold;
+          text-align: center;
+          position: relative;
         }
       }
     }
     .collabHeadlineRegular {
-      top: 270vh;
+      top: 295vh;
     }
     .collabHeadlineExpanded {
-      top: 334.5vh;
+      top: 355vh;
     }
     #collabHeadline {
       position: absolute;
@@ -727,10 +741,10 @@ body {
       }
     }
     .collaboratorsRegular {
-      top: 280vh;
+      top: 305vh;
     }
     .collaboratorsExpanded {
-      top: 344.5vh;
+      top: 365vh;
     }
 
     #collaborators {
@@ -775,10 +789,10 @@ body {
     }
   }
   .footerRegular {
-    top: 420vh;
+    top: 440vh;
   }
   .footerExpanded {
-    top: 480vh;
+    top: 495vh;
   }
   footer {
     background-color: black;
@@ -796,7 +810,7 @@ body {
     }
   }
 }
-@media only screen and (min-width: 1820px) {
+@media only screen and (min-width: 1920px) {
   body {
     overflow-x: hidden;
 
@@ -1034,70 +1048,92 @@ body {
             left: -5vw;
           }
         }
-        .collabHeadlineRegular {
-          top: 140vh;
+      }
+      .collabHeadlineRegular {
+        top: 210vh;
+      }
+      .collabHeadlineExpanded {
+        top: 280vh;
+      }
+      #collabHeadline {
+        position: absolute;
+        transition: 1s;
+        width: 100vw;
+        #collabHeadlineText {
+          text-align: center;
+          font-family: fontBold;
+          color: $aidred;
+          font-size: 2.5em;
         }
-        .collabHeadlineExpanded {
-          top: 204.5vh;
-        }
-        #collabHeadline {
-          position: absolute;
-        }
-        .collaboratorsRegular {
-          top: 150vh;
-        }
-        .collaboratorsExpanded {
-          top: 214.5vh;
-        }
-        #collaborators {
-          position: absolute;
-          left: 0;
-          width: 100vw;
-          display: grid;
-          grid-template-rows: repeat(4, 1fr);
-          .collabElement {
+      }
+      .collaboratorsRegular {
+        top: 250vh;
+      }
+      .collaboratorsExpanded {
+        top: 315vh;
+      }
+      #collaborators {
+        position: absolute;
+        left: 6vw;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .collabElement {
+          height: 30vh;
+          margin: 4vw;
+          margin-top: -10vw;
+          display: block;
+
+          #collab_1 {
+            width: 9vw;
             margin: auto;
-            box-sizing: border-box;
-            position: absolute;
-            #collab_1 {
-              width: 10vw;
-              margin: auto;
-            }
-            #collab_2 {
-              width: 10vw;
-              margin: auto;
-            }
-            #collab_3 {
-              width: 10vw;
-              margin: auto;
-            }
-            #collab_4 {
-              width: 10vw;
-              margin: auto;
-            }
+            position: relative;
+            top: 0vh;
+          }
+          #collab_2 {
+            width: 13vw;
+            margin: auto;
+            position: relative;
+            top: 0vh;
+          }
+          #collab_3 {
+            width: 10vw;
+            margin: auto;
+            position: relative;
+            top: 0vh;
+          }
+          #collab_4 {
+            width: 10vw;
+            margin: auto;
+            position: relative;
+            top: 0vh;
           }
         }
       }
-      .footerRegular {
-        top: 280vh;
-      }
-      .footerExpanded {
-        top: 344.5vh;
-      }
-      footer {
-        background-color: black;
-        position: absolute;
-        height: 30vh;
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        #kontakt {
-          background-color: blue;
-        }
-        #toMainPage {
-          background-color: red;
-        }
-      }
+    }
+  }
+  .footerRegular {
+    top: 370vh !important;
+  }
+  .footerExpanded {
+    top: 344.5vh;
+  }
+  footer {
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    #kontakt {
+      background-color: $skycyan !important;
+      font-family: fontBold;
+      font-family: fontBold;
+      text-align: center;
+    }
+    #toMainPage {
+      background-color: $skycyan !important;
+      font-family: fontBold;
+      text-align: center;
     }
   }
 }
