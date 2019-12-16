@@ -781,41 +781,55 @@ body main #info #grafikArea2 {
 
 body main #info #grafikArea2 .grafikElement2 {
   height: 30vh;
-  margin: 4vw;
-  margin-top: -20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 
 body main #info #grafikArea2 .grafikElement2 #Pakke_1 {
-  width: 30vw;
+  width: 100%;
   margin: auto;
+  transform: scale(0.4);
 }
 
 body main #info #grafikArea2 .grafikElement2 #Pakke_2 {
-  width: 40vw;
+  width: 100%;
   margin: auto;
+  margin-top: 10vh;
+  transform: scale(0.7);
 }
 
 body main #info #grafikArea2 .grafikElement2 #Pakke_3 {
-  width: 50vw;
+  width: 100%;
   margin: auto;
+  margin-top: 12vh;
+  transform: scale(0.8 0.5);
 }
 
-body main #info #grafikArea2 #PakkeTekst {
+body main #info #grafikArea2 #PakkeTekst_1 {
   font-family: fontBold;
   text-align: center;
   position: relative;
-  top: -15vw;
+  top: -25vw;
+}
+
+body main #info #grafikArea2 #PakkeTekst_2 {
+  font-family: fontBold;
+  text-align: center;
+  position: relative;
+  top: -8vw;
+}
+
+body main #info #grafikArea2 #PakkeTekst_3 {
+  font-family: fontBold;
+  text-align: center;
+  position: relative;
 }
 
 body main .collabHeadlineRegular {
-  top: 270vh;
+  top: 295vh;
 }
 
 body main .collabHeadlineExpanded {
-  top: 334.5vh;
+  top: 355vh;
 }
 
 body main #collabHeadline {
@@ -831,11 +845,11 @@ body main #collabHeadline #collabHeadlineText {
 }
 
 body main .collaboratorsRegular {
-  top: 280vh;
+  top: 305vh;
 }
 
 body main .collaboratorsExpanded {
-  top: 344.5vh;
+  top: 365vh;
 }
 
 body main #collaborators {
@@ -883,11 +897,11 @@ body main #collaborators .collabElement #collab_4 {
 }
 
 body .footerRegular {
-  top: 420vh;
+  top: 440vh;
 }
 
 body .footerExpanded {
-  top: 480vh;
+  top: 495vh;
 }
 
 body footer {
@@ -908,7 +922,7 @@ body footer #toMainPage {
   background-color: red;
 }
 
-@media only screen and (min-width: 1820px) {
+@media only screen and (min-width: 1920px) {
   body {
     overflow-x: hidden;
   }
@@ -1137,68 +1151,89 @@ body footer #toMainPage {
     top: 10vw;
     left: -5vw;
   }
-  body main #info .collabHeadlineRegular {
-    top: 140vh;
+  body main .collabHeadlineRegular {
+    top: 210vh;
   }
-  body main #info .collabHeadlineExpanded {
-    top: 204.5vh;
-  }
-  body main #info #collabHeadline {
-    position: absolute;
-  }
-  body main #info .collaboratorsRegular {
-    top: 150vh;
-  }
-  body main #info .collaboratorsExpanded {
-    top: 214.5vh;
-  }
-  body main #info #collaborators {
-    position: absolute;
-    left: 0;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  body main #info #collaborators .collabElement {
-    margin: auto;
-    box-sizing: border-box;
-    position: absolute;
-  }
-  body main #info #collaborators .collabElement #collab_1 {
-    width: 10vw;
-    margin: auto;
-  }
-  body main #info #collaborators .collabElement #collab_2 {
-    width: 10vw;
-    margin: auto;
-  }
-  body main #info #collaborators .collabElement #collab_3 {
-    width: 10vw;
-    margin: auto;
-  }
-  body main #info #collaborators .collabElement #collab_4 {
-    width: 10vw;
-    margin: auto;
-  }
-  body main .footerRegular {
+  body main .collabHeadlineExpanded {
     top: 280vh;
   }
-  body main .footerExpanded {
+  body main #collabHeadline {
+    position: absolute;
+    transition: 1s;
+    width: 100vw;
+  }
+  body main #collabHeadline #collabHeadlineText {
+    text-align: center;
+    font-family: fontBold;
+    color: #f74d48;
+    font-size: 2.5em;
+  }
+  body main .collaboratorsRegular {
+    top: 250vh;
+  }
+  body main .collaboratorsExpanded {
+    top: 315vh;
+  }
+  body main #collaborators {
+    position: absolute;
+    left: 6vw;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body main #collaborators .collabElement {
+    height: 30vh;
+    margin: 4vw;
+    margin-top: -10vw;
+    display: block;
+  }
+  body main #collaborators .collabElement #collab_1 {
+    width: 9vw;
+    margin: auto;
+    position: relative;
+    top: 0vh;
+  }
+  body main #collaborators .collabElement #collab_2 {
+    width: 13vw;
+    margin: auto;
+    position: relative;
+    top: 0vh;
+  }
+  body main #collaborators .collabElement #collab_3 {
+    width: 10vw;
+    margin: auto;
+    position: relative;
+    top: 0vh;
+  }
+  body main #collaborators .collabElement #collab_4 {
+    width: 10vw;
+    margin: auto;
+    position: relative;
+    top: 0vh;
+  }
+  .footerRegular {
+    top: 370vh !important;
+  }
+  .footerExpanded {
     top: 344.5vh;
   }
-  body main footer {
-    background-color: black;
+  footer {
     position: absolute;
     height: 30vh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  body main footer #kontakt {
-    background-color: blue;
+  footer #kontakt {
+    background-color: #7cccea !important;
+    font-family: fontBold;
+    font-family: fontBold;
+    text-align: center;
   }
-  body main footer #toMainPage {
-    background-color: red;
+  footer #toMainPage {
+    background-color: #7cccea !important;
+    font-family: fontBold;
+    text-align: center;
   }
 }
 
