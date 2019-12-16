@@ -45,6 +45,9 @@ function getRestDBData() {
       console.log(roundedTotal);
 
       totalSales = `${roundedTotal}DKK,-`;
+      document.querySelector(
+        "#infoHeadline1"
+      ).textContent = `Der er i alt blevet samlet ${totalSales} ind.`;
     });
 }
 function expandPageElements() {
@@ -382,10 +385,37 @@ function displayEndCard() {
   console.log(globalUserQuestionSheet);
   document.querySelector("#endCard").classList.remove("up");
   document.querySelector("#endCard").classList.add("down");
-  document.querySelector("#buy").addEventListener("click", () => {
-    sendToRestDB();
+
+  let gaver = document.querySelectorAll(".present");
+  gaver.forEach(item => {
+    item.addEventListener("click", () => {
+      gaver.forEach(item => {
+        item.classList = "present";
+      });
+      item.classList.add("presentSelected");
+    });
   });
+
   calcTotal();
+  document.querySelector("#buy").addEventListener("click", () => {
+    displayPurchase(document.querySelector(".presentSelected").id);
+  });
+}
+function displayPurchase(ID) {
+  document.querySelector("#payment").classList.remove("paymentUp");
+  document.querySelector("#payment").classList.add("paymentDown");
+
+  document
+    .querySelector("#mc-embedded-subscribe")
+    .addEventListener("click", () => {
+      sendToRestDB();
+      displayThanks();
+    });
+}
+function displayThanks() {
+  document.querySelector("#thankYou").classList.remove("thankYouUp");
+  document.querySelector("#thankYou").classList.add("thankYouDown");
+  document.querySelector("#thankYou").style.opacity = "100";
 }
 function calcTotal() {
   let totalCO2 = 0;
@@ -525,7 +555,8 @@ function calcTotal() {
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
   globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
-
+  document.querySelector("#present_4").textContent =
+    globalUserQuestionSheet.totalCost;
   console.log(totalCO2);
 }
 function sendToRestDB() {
