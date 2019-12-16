@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Julekampagne 2019 KEA Eksamen</title>
     <link rel="stylesheet" href="/output.c16d2514.css">
+    <link rel="shortcut icon" href="/ClimaiderFavIcon.0cea28dd.png" type="image/x-icon">
   <script src="/output.c16d2514.js"></script></head>
   <body>
     <header>
@@ -29,12 +30,7 @@
       </div>
     </header>
     <main>
-      <div id="goRight">
-        <img src="/arrow.d0badd7a.png" id="goRightImg">
-      </div>
-      <div id="goLeft">
-        <img src="/arrow.d0badd7a.png" id="goLeftImg">
-      </div>
+     
       <div id="calcCO2" class="regular">
         <div id="questionSlider">
           <div class="question" id="questionID1">
@@ -156,16 +152,24 @@
                     <h2>Elektronik</h2>
                   </div>
                   <div class="valueBox" id="valueBox_1" data-type="telefon">
-                    <p>Telefon</p>
+                    <div class="incrementalCounter">
+                      <label for="telefon">Antal Telefoner </label><input id="telefon" type="number" placeholder="0" class="valueInput">
+                    </div>
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="TV">
-                    <p>TV</p>
+                    <div class="incrementalCounter">
+                      <label for="TV">Antal TV </label><input id="TV" type="number" placeholder="0" class="valueInput">
+                    </div>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="hvidvare">
-                    <p>Hvidvare</p>
+                    <div class="incrementalCounter">
+                      <label for="hvidvare">antal Hvivare </label><input id="hvidvare" type="number" placeholder="0" class="valueInput">
+                    </div>
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="konsoller">
-                    <p>Konsoller</p>
+                    <div class="incrementalCounter">
+                      <label for="console">Antal Konsoller </label><input id="console" type="number" placeholder="0" class="valueInput">
+                    </div>
                   </div>
                 </div>
                 <div id="answerBox2" class="ID2_2" data-type="toy">
@@ -173,10 +177,10 @@
                     <h2>Legetøj</h2>
                   </div>
                   <div class="valueBox" id="valueBox_1" data-type="lToej">
-                    <p>Lille Legetøj</p>
+                    <label for="lToej">Antal lejetøj (småt) </label><input id="lToej" type="number" placeholder="0" class="valueInput">
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="sToej">
-                    <p>Stort Legetøj</p>
+                    <label for="sToej">Antal lejetøj (stort) </label><input id="sToej" type="number" placeholder="0" class="valueInput">
                   </div>
                 </div>
                 <div id="answerBox3" class="ID2_2" data-type="digital">
@@ -184,13 +188,13 @@
                     <h2>Digital</h2>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="fGift">
-                    <p>Fysisk Gavekort</p>
+                    <label for="fGift">Antal Gavekort(fysisk) </label><input id="fGift" type="number" placeholder="0" class="valueInput">
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="dGift">
-                    <p>Digitalt Gavekort</p>
+                    <label for="dGift">Antal Gavekort(digitalt) </label><input id="dGift" type="number" placeholder="0" class="valueInput">
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="sub">
-                    <p>Online Abonnement</p>
+                    <label for="sub">Online Abonnementer </label><input id="sub" type="number" placeholder="0" class="valueInput">
                   </div>
                 </div>
                 <div id="answerBox4" class="ID2_2" data-type="toej">
@@ -198,13 +202,13 @@
                     <h2>Tøj</h2>
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="recycle">
-                    <p>Genbrugs Tøj</p>
+                    <label for="recycle">Mængde genbrugs tøj </label><input id="recycle" type="number" placeholder="0" class="valueInput">
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="discount">
-                    <p>Nyt Tøj (discount)</p>
+                    <label for="discount">Mængde discount tøj </label><input id="discount" type="number" placeholder="0" class="valueInput">
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="designer">
-                    <p>Nyt Tøj (designer)</p>
+                    <label for="designer">Mængde discount tøj </label><input id="designer" type="number" placeholder="0" class="valueInput">
                   </div>
                 </div>
               </div>
@@ -247,6 +251,7 @@
                   <div class="questionBox ID3_2" data-type="tog">
                     <p>Med Tog</p>
                   </div>
+                  <label for="miles">Antal Kilometer (ca) </label><input id="miles" type="number" placeholder="0">
                   
                   </div>
                   <div id="questionID3_2Nav">

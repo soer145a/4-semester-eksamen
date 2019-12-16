@@ -126,31 +126,7 @@ body {
     .expanded {
       height: 80vh;
     }
-    #goLeft {
-      z-index: 30;
-      opacity: 0;
-      top: 1vw;
-      position: absolute;
-      pointer-events: none;
-      width: 10vw;
 
-      #goLeftImg {
-        width: 100%;
-      }
-    }
-    #goRight {
-      z-index: 30;
-      position: absolute;
-      top: 1vw;
-      width: 10vw;
-      left: 90vw;
-      pointer-events: none;
-      opacity: 0;
-      #goRightImg {
-        width: 100%;
-        transform: rotate(180deg);
-      }
-    }
     #calcCO2 {
       z-index: -10vw;
       border: solid black 2px;
@@ -212,6 +188,12 @@ body {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 5vw;
+              .ID1_1Selected {
+                background-color: blue !important;
+              }
+              .ID1_1 {
+                background-color: white;
+              }
             }
             #questionID1_1Nav {
               .goBackOnce1 {
@@ -241,6 +223,12 @@ body {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 5vw;
+              .ID1_2Selected {
+                background-color: blue !important;
+              }
+              .ID1_2 {
+                background-color: white;
+              }
             }
             #questionID1_2Nav {
               .goBackOnce2 {
@@ -270,6 +258,9 @@ body {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 5vw;
+              .ID1_3Selected {
+                background-color: blue;
+              }
             }
             #questionID1_3Nav {
               .goBackOnce3 {
@@ -302,6 +293,9 @@ body {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 5vw;
+              .ID2_1Selected {
+                background-color: blue;
+              }
             }
             #questionID2_1Nav {
               .goBackOnce4 {
@@ -338,7 +332,9 @@ body {
                   font-size: 0.8em;
                   font-family: fontBlack;
                 }
-
+                .valueBoxSelected {
+                  background-color: blue !important;
+                }
                 .valueBox {
                   background-color: white;
                   height: 20%;

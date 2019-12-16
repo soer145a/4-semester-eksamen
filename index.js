@@ -7,6 +7,7 @@ let globalUserQuestionSheet = {
   gifts: "-placeholder-",
   travel: "-placeholder-",
   travelMethod: "-placeholder-",
+  travelMiles: "-placeholder-",
   energy: "-placeholder-",
   energyTypes: "-placeholder-",
   totalCost: "-placeholder-"
@@ -36,41 +37,15 @@ function expandPageElements() {
   let footer = document.querySelector("footer");
   footer.classList.remove("footerRegular");
   footer.classList.add("footerExpanded");
-  document.querySelector("#goRight").style.opacity = 100;
-  document.querySelector("#goRight").style.pointerEvents = "all";
+
   startCalc();
-  makeCalcButtons();
 }
-function makeCalcButtons() {
-  document.querySelector("#goRight").addEventListener("click", () => {
-    console.log("GO RIGHT ONCE");
-    changeDirection(1);
-  });
-  document.querySelector("#goLeft").addEventListener("click", () => {
-    console.log("GO LEFT ONCE");
-    changeDirection(-1);
-  });
-}
+
 let slideCounter = 1;
 function changeDirection(dir) {
   slideCounter = slideCounter + dir;
   console.log(slideCounter);
-  if (slideCounter == 1) {
-    document.querySelector("#goLeft").style.opacity = 0;
-    document.querySelector("#goLeft").style.pointerEvents = "none";
-  }
-  if (slideCounter > 1) {
-    document.querySelector("#goLeft").style.opacity = 100;
-    document.querySelector("#goLeft").style.pointerEvents = "all";
-  }
-  if (slideCounter == 4) {
-    document.querySelector("#goRight").style.opacity = 0;
-    document.querySelector("#goRight").style.pointerEvents = "none";
-  }
-  if (slideCounter < 4) {
-    document.querySelector("#goRight").style.opacity = 100;
-    document.querySelector("#goRight").style.pointerEvents = "all";
-  }
+
   let slider = document.querySelector("#questionSlider");
   switch (slideCounter) {
     case 1:
@@ -99,21 +74,22 @@ function startCalc() {
   qBoxes.forEach(item => {
     item.addEventListener("click", () => {
       qBoxes.forEach(box => {
-        box.style.backgroundColor = "white";
+        box.classList = "";
+        box.classList.add("questionBox", "ID1_1");
       });
 
       questionHandler1(item);
     });
   });
+  document.querySelector(".next1").addEventListener("click", () => {
+    displayQuestion2(globalUserQuestionSheet.diet);
+  });
 }
 function questionHandler1(item) {
   console.log(item);
-  item.style.backgroundColor = "blue";
+  item.classList.add("ID1_1Selected");
   globalUserQuestionSheet.diet = item.dataset.type;
   console.log(globalUserQuestionSheet);
-  document.querySelector(".next1").addEventListener("click", () => {
-    displayQuestion2(item.dataset.type);
-  });
 }
 function displayQuestion2(food) {
   console.log("Q 2");
@@ -140,16 +116,11 @@ function questionHandler2() {
   console.log(qBoxes);
   let foodArrayMeat = [];
   qBoxes.forEach(item => {
-    item.style.backgroundColor = "white";
     item.addEventListener("click", () => {
-      if (item.style.backgroundColor == "white") {
-        item.style.backgroundColor = "blue";
-      } else {
-        item.style.backgroundColor = "white";
-      }
+      item.classList.toggle("ID1_2Selected");
       foodArrayMeat = [];
       qBoxes.forEach(obj => {
-        if (obj.style.backgroundColor == "blue") {
+        if (obj.classList.contains("ID1_2Selected") == true) {
           foodArrayMeat.push(obj.dataset.type);
           console.log(foodArrayMeat);
         }
@@ -179,16 +150,11 @@ function questionHandler3() {
   console.log(qBoxes);
   let foodArrayVeg = [];
   qBoxes.forEach(item => {
-    item.style.backgroundColor = "white";
     item.addEventListener("click", () => {
-      if (item.style.backgroundColor == "white") {
-        item.style.backgroundColor = "blue";
-      } else {
-        item.style.backgroundColor = "white";
-      }
+      item.classList.toggle("ID1_3Selected");
       foodArrayVeg = [];
       qBoxes.forEach(obj => {
-        if (obj.style.backgroundColor == "blue") {
+        if (obj.classList.contains("ID1_3Selected") == true) {
           foodArrayVeg.push(obj.dataset.type);
           console.log(foodArrayVeg);
         }
@@ -207,13 +173,8 @@ function startQuestion2() {
   console.log(qBoxes);
 
   qBoxes.forEach(item => {
-    item.style.backgroundColor = "white";
     item.addEventListener("click", () => {
-      if (item.style.backgroundColor == "white") {
-        item.style.backgroundColor = "blue";
-      } else {
-        item.style.backgroundColor = "white";
-      }
+      item.classList.toggle("ID2_1Selected");
     });
   });
   document.querySelector(".next4").addEventListener("click", () => {
@@ -223,7 +184,7 @@ function startQuestion2() {
 function questionHandler4(array) {
   let varr = [];
   array.forEach(item => {
-    if (item.style.backgroundColor == "blue") {
+    if (item.classList.contains("ID2_1Selected") == true) {
       varr.push(item.dataset.type);
     }
   });
@@ -254,27 +215,15 @@ function chooseGiftType(array) {
 }
 function questionHandler5() {
   let giftArray = [];
-  let qBoxes = document.querySelectorAll(".valueBox");
-  qBoxes.forEach(item => {
-    item.style.backgroundColor = "white";
-    item.addEventListener("click", () => {
-      if (item.style.backgroundColor == "white") {
-        item.style.backgroundColor = "blue";
-      } else {
-        item.style.backgroundColor = "white";
-      }
-    });
-  });
-  giftArray = [];
+  let inputTargets = document.querySelectorAll(".valueInput");
 
-  console.log(giftArray);
   globalUserQuestionSheet.gifts = giftArray;
   console.log(globalUserQuestionSheet);
   document.querySelector(".next5").addEventListener("click", () => {
-    qBoxes.forEach(item => {
-      if (item.style.backgroundColor == "blue") {
-        giftArray.push(item.dataset.type);
-        console.log(giftArray);
+    inputTargets.forEach(input => {
+      if (input.value != "") {
+        let inputID = `${input.id}:${input.value}`;
+        giftArray.push(inputID);
       }
     });
     startQuestion3();
@@ -286,10 +235,6 @@ function startQuestion3() {
   let qBoxes = document.querySelectorAll(".ID3_1");
   qBoxes.forEach(item => {
     item.addEventListener("click", () => {
-      qBoxes.forEach(obj => {
-        obj.classList = "";
-        obj.classList.add("ID3_1", "questionBox");
-      });
       item.classList.toggle("ID3_1Selected");
     });
   });
@@ -336,6 +281,9 @@ function questionHandler7() {
     globalUserQuestionSheet.travelMethod = document.querySelector(
       ".ID3_2Selected"
     ).dataset.type;
+    globalUserQuestionSheet.travelMiles = document.querySelector(
+      "#miles"
+    ).value;
     console.log(globalUserQuestionSheet);
     changeDirection(1);
     startQuestion4();
@@ -407,4 +355,161 @@ function displayEndCard() {
   console.log(globalUserQuestionSheet);
   document.querySelector("#endCard").classList.remove("up");
   document.querySelector("#endCard").classList.add("down");
+  calcTotal();
+}
+function calcTotal() {
+  let totalCO2 = 0;
+  if (globalUserQuestionSheet.foodSelectionMeat != "-placeholder-") {
+    globalUserQuestionSheet.foodSelectionMeat.forEach(food => {
+      if (food == "flaeskesteg") {
+        totalCO2 = totalCO2 + 34;
+      }
+      if (food == "gaas") {
+        totalCO2 = totalCO2 + 24;
+      }
+      if (food == "medister") {
+        totalCO2 = totalCO2 + 16;
+      }
+      if (food == "frikadeller") {
+        totalCO2 = totalCO2 + 42;
+      }
+      if (food == "leverpostej") {
+        totalCO2 = totalCO2 + 11;
+      }
+      if (food == "sild") {
+        totalCO2 = totalCO2 + 3;
+      }
+    });
+  }
+  console.log(totalCO2);
+  if (globalUserQuestionSheet.foodSelectionVeg != "-placeholder-") {
+    globalUserQuestionSheet.foodSelectionVeg.forEach(food => {
+      if (food == "kaal") {
+        totalCO2 = totalCO2 + 7;
+      }
+      if (food == "kartofler") {
+        totalCO2 = totalCO2 + 2;
+      }
+      if (food == "rKaal") {
+        totalCO2 = totalCO2 + 2;
+      }
+      if (food == "nutPaste") {
+        totalCO2 = totalCO2 + 3;
+      }
+      if (food == "piske") {
+        totalCO2 = totalCO2 + 9;
+      }
+    });
+  }
+  console.log(totalCO2);
+  globalUserQuestionSheet.gifts.forEach(gift => {
+    console.log(gift);
+    let localText = gift.split(":");
+    if (localText[0] == "telefon") {
+      totalCO2 = totalCO2 + localText[1] * 50;
+    }
+    if (localText[0] == "TV") {
+      totalCO2 = totalCO2 + localText[1] * 300;
+    }
+    if (localText[0] == "hvidvare") {
+      totalCO2 = totalCO2 + localText[1] * 326;
+    }
+    if (localText[0] == "console") {
+      totalCO2 = totalCO2 + localText[1] * 300;
+    }
+    if (localText[0] == "lToej") {
+      totalCO2 = totalCO2 + localText[1] * 5;
+    }
+    if (localText[0] == "sToej") {
+      totalCO2 = totalCO2 + localText[1] * 7;
+    }
+    if (localText[0] == "fGift") {
+      totalCO2 = totalCO2 + localText[1] * 1.0002;
+    }
+    if (localText[0] == "dGift") {
+      totalCO2 = totalCO2 + localText[1] * 1;
+    }
+    if (localText[0] == "sub") {
+      totalCO2 = totalCO2 + localText[1] * 1;
+    }
+    if (localText[0] == "recycle") {
+      totalCO2 = totalCO2 + localText[1] * 1;
+    }
+    if (localText[0] == "discount") {
+      totalCO2 = totalCO2 + localText[1] * 21.24;
+    }
+    if (localText[0] == "designer") {
+      totalCO2 = totalCO2 + localText[1] * 13.9;
+    }
+  });
+  console.log(totalCO2);
+  if (globalUserQuestionSheet.energy == "el") {
+    if (globalUserQuestionSheet.energyTypes.ovn != "-placeholder-") {
+      let ovnValue = parseInt(globalUserQuestionSheet.energyTypes.ovn);
+      totalCO2 = totalCO2 + ovnValue * 1.333;
+      console.log(totalCO2);
+    }
+    if (globalUserQuestionSheet.energyTypes.led != "-placeholder-") {
+      let ledValue = parseInt(globalUserQuestionSheet.energyTypes.led);
+      totalCO2 = totalCO2 + ledValue * 1.333;
+      console.log(totalCO2);
+    }
+
+    if (globalUserQuestionSheet.energyTypes.lamp != "-placeholder-") {
+      let lampValue = parseInt(globalUserQuestionSheet.energyTypes.lamp);
+      totalCO2 = totalCO2 + lampValue * 1.333;
+      console.log(totalCO2);
+    }
+    if (globalUserQuestionSheet.energyTypes.radiator != "-placeholder-") {
+      let radiatorValue = parseInt(
+        globalUserQuestionSheet.energyTypes.radiator
+      );
+      totalCO2 = totalCO2 + radiatorValue * 1.333;
+      console.log(totalCO2);
+    }
+  } else {
+    if (globalUserQuestionSheet.energyTypes.ovnF != "-placeholder-") {
+      let ovnFValue = parseInt(globalUserQuestionSheet.energyTypes.ovnF);
+      totalCO2 = totalCO2 + ovnFValue * 1.333;
+      console.log(totalCO2);
+    }
+    if (globalUserQuestionSheet.energyTypes.radiatorF != "-placeholder-") {
+      let radiatorFValue = parseInt(
+        globalUserQuestionSheet.energyTypes.radiatorF
+      );
+      totalCO2 = totalCO2 + radiatorFValue * 1.333;
+      console.log(totalCO2);
+    }
+  }
+
+  console.log(totalCO2);
+  if (globalUserQuestionSheet.travelMethod == "fly") {
+    let flyValue = parseInt(globalUserQuestionSheet.travelMiles);
+    totalCO2 = totalCO2 + flyValue * 12350;
+  }
+  if (globalUserQuestionSheet.travelMethod == "tog") {
+    let togValue = parseInt(globalUserQuestionSheet.travelMiles);
+    totalCO2 = totalCO2 + togValue * 1.44;
+  }
+  if (globalUserQuestionSheet.travelMethod == "bil") {
+    let bilValue = parseInt(globalUserQuestionSheet.travelMiles);
+    totalCO2 = totalCO2 + bilValue * 1.17353;
+  }
+
+  console.log(totalCO2);
+  sendToRestDB();
+}
+function sendToRestDB() {
+  const postData = JSON.stringify(globalUserQuestionSheet);
+  fetch("https://contactme-6795.restdb.io/rest/purchaselist", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "5c94ca6adf5d634f46ecadc2",
+      "cache-control": "no-cache"
+    },
+    body: postData
+  })
+    .then(res => res.json())
+    .then(data => console.log(data));
 }

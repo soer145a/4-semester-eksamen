@@ -127,34 +127,6 @@ body main .expanded {
   height: 80vh;
 }
 
-body main #goLeft {
-  z-index: 30;
-  opacity: 0;
-  top: 1vw;
-  position: absolute;
-  pointer-events: none;
-  width: 10vw;
-}
-
-body main #goLeft #goLeftImg {
-  width: 100%;
-}
-
-body main #goRight {
-  z-index: 30;
-  position: absolute;
-  top: 1vw;
-  width: 10vw;
-  left: 90vw;
-  pointer-events: none;
-  opacity: 0;
-}
-
-body main #goRight #goRightImg {
-  width: 100%;
-  transform: rotate(180deg);
-}
-
 body main #calcCO2 {
   z-index: -10vw;
   border: solid black 2px;
@@ -231,6 +203,14 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Mai
   gap: 5vw;
 }
 
+body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1MainArea .ID1_1Selected {
+  background-color: blue !important;
+}
+
+body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1MainArea .ID1_1 {
+  background-color: white;
+}
+
 body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Nav .goBackOnce1 {
   width: 20vw;
   height: 3vh;
@@ -264,6 +244,14 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Mai
   gap: 5vw;
 }
 
+body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2MainArea .ID1_2Selected {
+  background-color: blue !important;
+}
+
+body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2MainArea .ID1_2 {
+  background-color: white;
+}
+
 body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .goBackOnce2 {
   width: 20vw;
   height: 3vh;
@@ -295,6 +283,10 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Mai
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
+}
+
+body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3MainArea .ID1_3Selected {
+  background-color: blue;
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Nav .goBackOnce3 {
@@ -332,6 +324,10 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Mai
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1MainArea .ID2_1Selected {
+  background-color: blue;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .goBackOnce4 {
@@ -375,6 +371,10 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Mai
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .answerBoxHeadline {
   font-size: 0.8em;
   font-family: fontBlack;
+}
+
+body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBoxSelected {
+  background-color: blue !important;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBox {
