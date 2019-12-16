@@ -1,5 +1,5 @@
 "use strict";
-import gsap from "gsap";
+
 let globalUserQuestionSheet = {
   diet: "-placeholder-",
   foodSelectionMeat: "-placeholder-",
@@ -12,6 +12,8 @@ let globalUserQuestionSheet = {
   energyTypes: "-placeholder-",
   totalCost: "-placeholder-"
 };
+let allUserData = [];
+let totalSales = "";
 window.addEventListener("DOMContentLoaded", init);
 function init() {
   console.log("Hello World!");
@@ -21,7 +23,30 @@ function init() {
     expandPageElements();
   });
 }
-function getRestDBData() {}
+function getRestDBData() {
+  fetch("https://contactme-6795.restdb.io/rest/purchaselist", {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "5df74bccbf46220df655db83",
+      "cache-control": "no-cache"
+    }
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      allUserData = data;
+      let localCounter = 0;
+      data.forEach(user => {
+        localCounter = localCounter + user.totalCost;
+      });
+
+      let roundedTotal = Math.round(localCounter);
+      console.log(roundedTotal);
+
+      totalSales = `${roundedTotal}DKK,-`;
+    });
+}
 function expandPageElements() {
   console.log("OPEN");
   let questionArea = document.querySelector("#calcCO2");
@@ -357,6 +382,9 @@ function displayEndCard() {
   console.log(globalUserQuestionSheet);
   document.querySelector("#endCard").classList.remove("up");
   document.querySelector("#endCard").classList.add("down");
+  document.querySelector("#buy").addEventListener("click", () => {
+    sendToRestDB();
+  });
   calcTotal();
 }
 function calcTotal() {
@@ -469,16 +497,15 @@ function calcTotal() {
       totalCO2 = totalCO2 + radiatorValue * 1.333;
       console.log(totalCO2);
     }
-  } else {
+  }
+  if (globalUserQuestionSheet.energy == "varme") {
     if (globalUserQuestionSheet.energyTypes.ovnF != "-placeholder-") {
       let ovnFValue = parseInt(globalUserQuestionSheet.energyTypes.ovnF);
       totalCO2 = totalCO2 + ovnFValue * 1.333;
       console.log(totalCO2);
     }
     if (globalUserQuestionSheet.energyTypes.radiatorF != "-placeholder-") {
-      let radiatorFValue = parseInt(
-        globalUserQuestionSheet.energyTypes.radiatorF
-      );
+      let radiatorFValue = parseInt(globalUserQuestionSheet.energyTypes.ledF);
       totalCO2 = totalCO2 + radiatorFValue * 1.333;
       console.log(totalCO2);
     }
@@ -500,7 +527,6 @@ function calcTotal() {
   globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
 
   console.log(totalCO2);
-  sendToRestDB();
 }
 function sendToRestDB() {
   const postData = JSON.stringify(globalUserQuestionSheet);
@@ -508,7 +534,7 @@ function sendToRestDB() {
     method: "post",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "5c94ca6adf5d634f46ecadc2",
+      "x-apikey": "5df74bccbf46220df655db83",
       "cache-control": "no-cache"
     },
     body: postData
