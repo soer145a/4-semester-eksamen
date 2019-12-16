@@ -736,13 +736,18 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Mai
   gap: 3vw;
 }
 
-body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .ID4_2Selected {
-  background-color: #06729e;
+body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .incrementalCounter label {
+  font-family: sans-serif;
+  color: #06729e;
+  font-weight: bold;
 }
 
-body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .ID4_2 {
-  display: block;
-  background-color: #7cccea;
+body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .incrementalCounter input {
+  margin: 0.5vh;
+  border-radius: 4px;
+  padding-top: 0.4vh;
+  padding-bottom: 0.4vh;
+  text-align: center;
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav .next9 {
@@ -781,13 +786,18 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Mai
   gap: 3vw;
 }
 
-body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .ID4_3Selected {
-  background-color: #06729e;
+body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .incrementalCounter label {
+  font-family: sans-serif;
+  color: #06729e;
+  font-weight: bold;
 }
 
-body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .ID4_3 {
-  display: block;
-  background-color: white;
+body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .incrementalCounter input {
+  margin: 0.5vh;
+  border-radius: 4px;
+  padding-top: 0.4vh;
+  padding-bottom: 0.4vh;
+  text-align: center;
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Nav .next10 {
@@ -813,13 +823,158 @@ body main #calcCO2 .down {
   top: 0;
 }
 
+body main #calcCO2 .up {
+  top: -80vh;
+}
+
+body main #calcCO2 .down {
+  top: 0;
+}
+
 body main #calcCO2 #endCard {
   position: absolute;
   z-index: 2;
   transition: 0.3s;
   width: 100vw;
   height: 100%;
-  background-color: blueviolet;
+  background-color: white;
+}
+
+body main #calcCO2 #endCard #buy {
+  position: relative;
+  top: 7vh;
+  left: 37.5vw;
+  width: 25vw;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #7cccea;
+}
+
+body main #calcCO2 #endCard #buy p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+  color: black;
+}
+
+body main #calcCO2 #endCard #endCardOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 8vw;
+  gap: 3vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions .presentSelected {
+  transform: scale(1.1);
+  border: 2px solid #06729e;
+}
+
+body main #calcCO2 #endCard #endCardOptions .present {
+  width: 20vw;
+  padding: 3vw;
+  height: 20vw;
+  background-color: white;
+  margin: auto;
+  display: grid;
+  text-align: center;
+}
+
+body main #calcCO2 #endCard #endCardOptions .presentText {
+  font-size: 0.7em;
+  margin-top: 1vh;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_1 {
+  grid-column-start: 2;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_2 {
+  grid-column-start: 1;
+  grid-row: 2;
+  margin-top: 5vw;
+  width: 20vw;
+  height: 20vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_2 img {
+  width: 13vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_3 {
+  grid-column-start: 2;
+  grid-row: 2;
+  margin-top: 5vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_3 img {
+  width: 20vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_4 {
+  grid-column-start: 3;
+  grid-row: 2;
+  margin-top: 5vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions #present_4 img {
+  width: 16vw;
+}
+
+body main #calcCO2 #endCard #endCardOptions .presentImg {
+  width: 30vw;
+  text-align: center;
+  margin: auto;
+}
+
+body main #calcCO2 .paymentUp {
+  top: -100%;
+}
+
+body main #calcCO2 .paymentDown {
+  top: 0vw;
+}
+
+body main #calcCO2 #payment {
+  position: absolute;
+  z-index: 2;
+  transition: 0.3s;
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+}
+
+body main #calcCO2 #payment #paymentIMG {
+  width: 80%;
+  margin-left: 10%;
+}
+
+body main #calcCO2 .thankYouUp {
+  top: -200%;
+}
+
+body main #calcCO2 .thankYouDown {
+  top: 0%;
+}
+
+body main #calcCO2 #thankYou {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  transition: 0.3s;
+  width: 100vw;
+  height: 100%;
+  background-color: white;
+}
+
+body main #calcCO2 #thankYou #thankYouImgContainer {
+  width: 60%;
+  margin-left: 10vw;
+}
+
+body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
+  width: 60%;
 }
 
 body main .infoRegular {

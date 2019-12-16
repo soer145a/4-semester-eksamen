@@ -555,7 +555,7 @@ function calcTotal() {
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
   globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
-  document.querySelector("#present_4").textContent =
+  document.querySelector("#present_1").textContent =
     globalUserQuestionSheet.totalCost;
   console.log(totalCO2);
 }
