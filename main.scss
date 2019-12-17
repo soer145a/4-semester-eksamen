@@ -940,23 +940,25 @@ body {
         background-color: white;
         #cardLabel {
           font-family: sans-serif;
-          color: $deepblue;
+          color: $softblack;
           font-weight: bold;
           display: grid;
           margin-left: 3vw;
           grid-template-rows: 1fr 1fr;
           #cardInput {
-            margin: 0.5vh;
+            margin: 0.2vh;
+
             border-radius: 4px;
-            padding-top: 0.4vh;
-            padding-bottom: 0.4vh;
-            width: 50vw;
+            padding-top: 0.6vh;
+            padding-bottom: 0.6vh;
+            width: 90vw;
+            border: 1px solid #abb0b2;
           }
         }
 
         #expireDate {
           font-family: sans-serif;
-          color: $deepblue;
+          color: $softblack;
           font-weight: bold;
           position: relative;
           left: 3vw;
@@ -965,16 +967,19 @@ body {
             border-radius: 4px;
             padding-top: 0.4vh;
             padding-bottom: 0.4vh;
+            border: 1px solid #abb0b2;
           }
         }
         #CVV {
           margin-left: 3.5vw;
           font-family: sans-serif;
-          color: $deepblue;
+          color: $softblack;
           font-weight: bold;
 
           .CVVInput {
+            border: 1px solid #abb0b2;
             margin: 0.5vh;
+            margin-left: 4vw;
             border-radius: 4px;
             padding-top: 0.4vh;
             padding-bottom: 0.4vh;
@@ -989,8 +994,9 @@ body {
           text-align: center;
         }
         #paymentTagLine {
-          margin-left: 3vw;
-          margin-top: 4vh;
+          margin-left: 0vw;
+          margin-top: 3vh;
+          width: 90%;
           #makeMeGreen {
             color: green;
           }
@@ -1028,7 +1034,7 @@ body {
         }
         #thankYouText {
           margin-top: 4vh;
-          font-size: 0.8em;
+          font-size: 1.2em;
           margin-bottom: 3vh;
           font-family: fontBold;
           text-align: center;
@@ -1135,7 +1141,7 @@ body {
       #infoHeadline3 {
         position: absolute;
         top: 38vh;
-        left: 0%;
+        left: 15%;
         width: 100vw;
         #InfoHeadline3Text {
           margin: 0;

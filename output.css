@@ -981,7 +981,7 @@ body main #calcCO2 #payment {
 
 body main #calcCO2 #payment #cardLabel {
   font-family: sans-serif;
-  color: #06729e;
+  color: #232a29;
   font-weight: bold;
   display: grid;
   margin-left: 3vw;
@@ -989,16 +989,17 @@ body main #calcCO2 #payment #cardLabel {
 }
 
 body main #calcCO2 #payment #cardLabel #cardInput {
-  margin: 0.5vh;
+  margin: 0.2vh;
   border-radius: 4px;
-  padding-top: 0.4vh;
-  padding-bottom: 0.4vh;
-  width: 50vw;
+  padding-top: 0.6vh;
+  padding-bottom: 0.6vh;
+  width: 90vw;
+  border: 1px solid #abb0b2;
 }
 
 body main #calcCO2 #payment #expireDate {
   font-family: sans-serif;
-  color: #06729e;
+  color: #232a29;
   font-weight: bold;
   position: relative;
   left: 3vw;
@@ -1009,17 +1010,20 @@ body main #calcCO2 #payment #expireDate .birthday {
   border-radius: 4px;
   padding-top: 0.4vh;
   padding-bottom: 0.4vh;
+  border: 1px solid #abb0b2;
 }
 
 body main #calcCO2 #payment #CVV {
   margin-left: 3.5vw;
   font-family: sans-serif;
-  color: #06729e;
+  color: #232a29;
   font-weight: bold;
 }
 
 body main #calcCO2 #payment #CVV .CVVInput {
+  border: 1px solid #abb0b2;
   margin: 0.5vh;
+  margin-left: 4vw;
   border-radius: 4px;
   padding-top: 0.4vh;
   padding-bottom: 0.4vh;
@@ -1034,8 +1038,9 @@ body main #calcCO2 #payment #paymentHeadline {
 }
 
 body main #calcCO2 #payment #paymentTagLine {
-  margin-left: 3vw;
-  margin-top: 4vh;
+  margin-left: 0vw;
+  margin-top: 3vh;
+  width: 90%;
 }
 
 body main #calcCO2 #payment #paymentTagLine #makeMeGreen {
@@ -1081,7 +1086,7 @@ body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
 
 body main #calcCO2 #thankYou #thankYouText {
   margin-top: 4vh;
-  font-size: 0.8em;
+  font-size: 1.2em;
   margin-bottom: 3vh;
   font-family: fontBold;
   text-align: center;
@@ -1199,7 +1204,7 @@ body main #info #infoText #mere {
 body main #info #infoHeadline3 {
   position: absolute;
   top: 38vh;
-  left: 0%;
+  left: 15%;
   width: 100vw;
 }
 
