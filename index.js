@@ -45,12 +45,10 @@ function getRestDBData() {
       console.log(roundedTotal);
 
       totalSales = `${roundedTotal}DKK,-`;
-      document.querySelector(
-        "#infoHeadline1"
-      ).textContent = `Der er i alt blevet samlet ${totalSales} ind.`;
     });
 }
 function expandPageElements() {
+  document.querySelector("#q1Headline").style.opacity = 100;
   console.log("OPEN");
   let questionArea = document.querySelector("#calcCO2");
   questionArea.classList.remove("regular");
@@ -555,7 +553,9 @@ function calcTotal() {
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
   globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
-  document.querySelector("#present_1").textContent =
+  document.querySelector("#resultat1").textContent =
+    globalUserQuestionSheet.totalCost;
+  document.querySelector("#resultat2").textContent =
     globalUserQuestionSheet.totalCost;
   console.log(totalCO2);
 }

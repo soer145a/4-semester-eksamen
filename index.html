@@ -58,7 +58,7 @@
       <div id="calcCO2" class="regular">
         <div id="questionSlider">
           <div class="question" id="questionID1">
-            <div id="start"></div>
+            <div id="start"><p>Start</p></div>
             <h1 id="q1Headline">Madvaner</h1>
             <div id="questionID1_1" class="subQuestion">
               <div id="questionID1_1Headline">
@@ -220,7 +220,7 @@
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="TV">
                     <div class="incrementalCounter">
-                      <label for="TV">Antal TV </label
+                      <label for="TV">Antal TV/Konsoler</label
                       ><input
                         id="TV"
                         type="number"
@@ -231,24 +231,12 @@
                   </div>
                   <div class="valueBox" id="valueBox_3" data-type="hvidvare">
                     <div class="incrementalCounter">
-                      <label for="hvidvare">Antal Hvidevare </label
-                      ><input
-                        id="hvidvare"
-                        type="number"
-                        value="0"
-                        class="valueInput"
-                      />
+                  
                     </div>
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="konsoller">
                     <div class="incrementalCounter">
-                      <label for="console">Antal Konsoller </label
-                      ><input
-                        id="console"
-                        type="number"
-                        value="0"
-                        class="valueInput"
-                      />
+                   
                     </div>
                   </div>
                 </div>
@@ -257,7 +245,7 @@
                     <h2>Legetøj</h2>
                   </div>
                   <div class="valueBox" id="valueBox_1" data-type="lToej">
-                    <label for="lToej">Antal lejetøj (småt) </label
+                    <label for="lToej">Antal legetøj (småt) </label
                     ><input
                       id="lToej"
                       type="number"
@@ -266,7 +254,7 @@
                     />
                   </div>
                   <div class="valueBox" id="valueBox_2" data-type="sToej">
-                    <label for="sToej">Antal lejetøj (stort) </label
+                    <label for="sToej">Antal legetøj (stort) </label
                     ><input
                       id="sToej"
                       type="number"
@@ -289,7 +277,7 @@
                     />
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="dGift">
-                    <label for="dGift">Antal Gavekort(digitalt) </label
+                    <label for="dGift">Antal Abonnomenter </label
                     ><input
                       id="dGift"
                       type="number"
@@ -298,13 +286,7 @@
                     />
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="sub">
-                    <label for="sub">Online Abonnementer </label
-                    ><input
-                      id="sub"
-                      type="number"
-                      value="0"
-                      class="valueInput"
-                    />
+                
                   </div>
                 </div>
                 <div id="answerBox4" class="ID2_2" data-type="toej">
@@ -321,7 +303,7 @@
                     />
                   </div>
                   <div class="valueBox" id="valueBox_4" data-type="discount">
-                    <label for="discount">Mængde discount tøj </label
+                    <label for="discount">Tøj (nyt) </label
                     ><input
                       id="discount"
                       type="number"
@@ -330,13 +312,7 @@
                     />
                   </div>
                   <div class="valueBox" id="valueBox_5" data-type="designer">
-                    <label for="designer">Mængde discount tøj </label
-                    ><input
-                      id="designer"
-                      type="number"
-                      value="0"
-                      class="valueInput"
-                    />
+                
                   </div>
                 </div>
               </div>
@@ -452,23 +428,25 @@
         <div id="endCard" class="up">
           <div id="endCardHeadline">
             <h2>Vælg en gave</h2>
+            <p id="resultatTekst">Din udledning er  <span id="resultat1"> </span>DKK! </p>
+
           </div>
           <div id="endCardMain">
             <div id="endCardOptions">
               <div class="present" id="present_1">
-               
+             <p id="resultatTekst"> Betal <span id="resultat2"> </span> </p>
               </div>
               <div class="present" id="present_2">
                 <img src="assets/imgs/Lille Pakke.png" alt="lillePAkke" id="present_2Img" class="presentImg">
-                <p class="presentText">Giv en stor pakke</p>
+                <p class="presentText">Giv en stor pakke (50,- DKK)</p>
               </div>
               <div class="present" id="present_3">
                 <img src="assets/imgs/Mellem Pakke.png" alt="mellemPakke" id="present_3Img" class="presentImg">
-                <p class="presentText">Giv en større pakke</p>
+                <p class="presentText">Giv en større pakke (100,- DKK)</p>
               </div>
               <div class="present" id="present_4">
                 <img src="assets/imgs/Stor Pakke.png" alt="storpakke" id="present_2Img" class="presentImg">
-                <p class="presentText">Giv den største pakke</p>
+                <p class="presentText">Giv den største pakke (150,- DKK)</p>
               </div>
             </div>
             <div id="buy">
@@ -540,7 +518,6 @@
         </div>
       </div>
       <div id="info" class="infoRegular">
-        <div id="infoHeadline1"></div>
         <div id="grafikArea1">
           <div class="grafikElement1" id="grafikElement1_1">
             <img id="Stig_1" src="assets/imgs/Infografic_1.png" alt="Stig_1" />
@@ -555,11 +532,7 @@
         <div id="infoHeadline2"><h2 id="InfoHeadline2Text">Hvordan?</h2></div>
         <div id="infoText">
           <p id="infoTextTxt">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-            perspiciatis nesciunt sint blanditiis ipsa facilis! Quasi dolorum
-            voluptatibus ab, nam iusto fuga? Doloremque id cum numquam natus.
-            Temporibus, id error! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            Hos Climaider tilbyder vi vores kunder at støtte beplantning og beskyttelse af skove. Vi er afhængige af vores kunder, og kan faktisk ikke eksisterer uden jer! Vi bestræber os på at administrere jeres tillid på den bedste og mest gennemsigtige måde. Da der altid vil være noget spekulation involveret i at bedømme hvor meget CO2, der spares, støtter vi kun projekter som er verificeret af The Golden Standard - et uafhængigt verificerings-program startet af verdensnaturfonden.
           </p>
         </div>
         <div id="grafikArea2">
@@ -569,7 +542,7 @@
               src="assets/imgs/Lille Pakke.png"
               alt="Lille Pakke"
             />
-            <h3 id="PakkeTekst_1">Stor Pakke</h3>
+            <h3 id="PakkeTekst_1">Stor Pakke (50,- DKK)</h3>
           </div>
 
           <div class="grafikElement2" id="grafikElement2_2">
@@ -578,7 +551,7 @@
               src="assets/imgs/Mellem Pakke.png"
               alt="Mellem Pakke"
             />
-            <h3 id="PakkeTekst_2">Større Pakke</h3>
+            <h3 id="PakkeTekst_2">Større Pakke (100,- DKK)</h3>
           </div>
 
           <div class="grafikElement2" id="grafikElement2_3">
@@ -587,7 +560,7 @@
               src="assets/imgs/Stor Pakke.png"
               alt="Stor Pakke"
             />
-            <h3 id="PakkeTekst_3">Største Pakke</h3>
+            <h3 id="PakkeTekst_3">Største Pakke (150,- DKK)</h3>
           </div>
         </div>
       </div>

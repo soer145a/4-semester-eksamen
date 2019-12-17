@@ -59,7 +59,7 @@ body header #splash {
 
 body header #splash #splashMobilImage img {
   width: 100vw;
-  height: auto;
+  height: 500vh;
 }
 
 body header #splash #splashDesktopImage {
@@ -86,10 +86,10 @@ body header #splash #splashHeadline #SplashedHeadlineText2 {
   padding: 0;
   text-align: center;
   font-family: fontBold;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: white;
   position: relative;
-  top: 4vh;
+  top: 5vh;
 }
 
 body header #splash #splashHeadline #SplashedHeadlineText2 #green {
@@ -98,12 +98,12 @@ body header #splash #splashHeadline #SplashedHeadlineText2 #green {
 
 body header #splash #splashText {
   position: absolute;
-  top: 22vw;
+  top: 32vw;
   left: 5vw;
   line-height: 2em;
   margin-top: 6vh;
-  padding-left: 11vw;
-  padding-right: 11vw;
+  padding-left: 10vw;
+  padding-right: 9vw;
   color: white;
 }
 
@@ -279,18 +279,43 @@ body main #calcCO2 #questionSlider .question {
   height: 100%;
 }
 
-body main #calcCO2 #questionSlider #questionID1 {
-  background-color: white;
+body main #calcCO2 #questionSlider #questionID1 #start {
+  display: flex;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+  width: 37vw;
+  border-radius: 10vw;
+  position: absolute;
+  right: 35vw;
+  z-index: 10;
+  top: 5vw;
+  animation: pulse 2s infinite;
+  background-color: #f74d48;
+  cursor: pointer;
 }
 
-body main #calcCO2 #questionSlider #questionID1 #start {
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
-  right: 1vw;
-  top: 1vw;
-  background-color: black;
-  cursor: pointer;
+body main #calcCO2 #questionSlider #questionID1 #start p {
+  font-family: fontBold;
+  font-size: 1em;
+  color: white;
+}
+
+body main #calcCO2 #questionSlider #questionID1 #q1Headline {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_1 {
@@ -318,6 +343,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Mai
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Nav .next1 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -364,6 +390,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .next2 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -409,6 +436,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Mai
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Nav .next3 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -421,10 +449,6 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Nav
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-body main #calcCO2 #questionSlider #questionID2 {
-  background-color: white;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_1 {
@@ -464,6 +488,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -496,8 +521,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Hea
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0vw;
-  width: 1%;
+  height: 20vw;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 {
@@ -506,7 +530,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Mai
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .answerBoxHeadline {
-  font-size: 0.7em;
+  font-size: 0.8em;
   position: relative;
   left: 2vw;
   font-family: fontRegular;
@@ -524,7 +548,6 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Mai
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueInput {
   padding: 1vw;
-  margin-bottom: 1vh;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 label {
@@ -537,25 +560,23 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav
   width: 20vw;
   height: 3vh;
   background-color: hotpink;
+  transform: translateY(2vh);
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .next5 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
   position: relative;
   left: 35vw;
   right: 50vw;
-  top: 4vh;
+  top: 33vh;
   color: white;
   background-color: hotpink;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-body main #calcCO2 #questionSlider #questionID3 {
-  background-color: white;
 }
 
 body main #calcCO2 #questionSlider #questionID3 #questionID3_1 {
@@ -590,6 +611,7 @@ body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Mai
 }
 
 body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Nav .next6 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -652,6 +674,7 @@ body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Mai
 }
 
 body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Nav .next7 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -664,10 +687,6 @@ body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Nav
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-body main #calcCO2 #questionSlider #questionID4 {
-  background-color: white;
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_1 {
@@ -701,6 +720,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Mai
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Nav .next8 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -751,6 +771,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Mai
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav .next9 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -801,6 +822,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Mai
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Nav .next10 {
+  z-index: 9999;
   width: 30vw;
   height: 4.3vh;
   border-radius: 8px;
@@ -838,6 +860,14 @@ body main #calcCO2 #endCard {
   width: 100vw;
   height: 100%;
   background-color: white;
+}
+
+body main #calcCO2 #endCard h2 {
+  margin-top: 5vh;
+  font-size: 1.3em;
+  margin-bottom: 7vh;
+  text-align: center;
+  font-family: fontRegular;
 }
 
 body main #calcCO2 #endCard #buy {
@@ -950,6 +980,14 @@ body main #calcCO2 #payment #paymentIMG {
   margin-left: 10%;
 }
 
+body main #calcCO2 #payment #paymentHeadline {
+  margin-top: 5vh;
+  font-size: 1.3em;
+  margin-bottom: 7vh;
+  font-family: fontBold;
+  text-align: center;
+}
+
 body main #calcCO2 .thankYouUp {
   top: -200%;
 }
@@ -982,7 +1020,7 @@ body main .infoRegular {
 }
 
 body main .infoExpanded {
-  top: 79.5vh;
+  top: 80.5vh;
 }
 
 body main #info {
@@ -1023,17 +1061,16 @@ body main #info #grafikArea1 .grafikElement1 {
 body main #info #grafikArea1 .grafikElement1 #Stig_1 {
   width: 58vw;
   position: relative;
-  top: 8vh;
   margin: auto;
 }
 
 body main #info #grafikArea1 .grafikElement1 #Stig_2 {
-  width: 25vw;
+  width: 58vw;
   margin: auto;
 }
 
 body main #info #grafikArea1 .grafikElement1 #Stig_3 {
-  width: 38vw;
+  width: 58vw;
   margin: auto;
 }
 
@@ -1069,7 +1106,7 @@ body main #info #infoText #infoTextTxt {
 
 body main #info #grafikArea2 {
   position: absolute;
-  top: 160vh;
+  top: 180vh;
   left: 7.5vw;
   width: 85vw;
 }
@@ -1096,7 +1133,7 @@ body main #info #grafikArea2 .grafikElement2 #Pakke_3 {
   width: 100%;
   margin: auto;
   margin-top: 12vh;
-  transform: scale(0.8 0.5);
+  transform: scale(0.7);
 }
 
 body main #info #grafikArea2 #PakkeTekst_1 {
@@ -1117,14 +1154,15 @@ body main #info #grafikArea2 #PakkeTekst_3 {
   font-family: fontBold;
   text-align: center;
   position: relative;
+  transform: translatey(-10vw);
 }
 
 body main .collabHeadlineRegular {
-  top: 295vh;
+  top: 311vh;
 }
 
 body main .collabHeadlineExpanded {
-  top: 355vh;
+  top: 375vh;
 }
 
 body main #collabHeadline {
@@ -1137,66 +1175,59 @@ body main #collabHeadline #collabHeadlineText {
   text-align: center;
   font-family: fontBold;
   color: #f74d48;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
 body main .collaboratorsRegular {
-  top: 305vh;
+  top: 325vh;
 }
 
 body main .collaboratorsExpanded {
-  top: 365vh;
+  top: 385vh;
 }
 
 body main #collaborators {
   position: absolute;
   transition: 1s;
-  left: 15vw;
-  width: 70vw;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
 }
 
 body main #collaborators .collabElement {
-  height: 30vh;
-  margin: 4vw;
-  margin-top: -10vw;
+  height: 15vh;
+  margin-top: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 body main #collaborators .collabElement #collab_1 {
-  width: 35vw;
-  margin: auto;
+  width: 25vw;
 }
 
 body main #collaborators .collabElement #collab_2 {
   width: 50vw;
-  margin: auto;
   position: relative;
-  top: -15vw;
 }
 
 body main #collaborators .collabElement #collab_3 {
-  width: 50vw;
-  margin: auto;
+  width: 40vw;
   position: relative;
-  top: -35vw;
 }
 
 body main #collaborators .collabElement #collab_4 {
-  width: 50vw;
-  margin: auto;
+  width: 30vw;
   position: relative;
-  top: -55vw;
 }
 
 body .footerRegular {
-  top: 440vh;
+  top: 470vh;
 }
 
 body .footerExpanded {
-  top: 495vh;
+  top: 515vh;
 }
 
 body footer {
@@ -1266,6 +1297,24 @@ body footer #toMainPage {
     position: relative;
     top: 13vh;
   }
+  body header #splash #start {
+    display: flex;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10vw;
+    position: absolute;
+    right: 35vw;
+    z-index: 10000;
+    top: 5vw;
+    background-color: #f74d48;
+    cursor: pointer;
+  }
+  body header #splash #start p {
+    font-family: fontBold;
+    font-size: 1em;
+    color: white;
+  }
   body header #splash #splashText {
     position: absolute;
     top: 35vh;
@@ -1297,43 +1346,739 @@ body footer #toMainPage {
   }
   body main {
     position: absolute;
-    top: 100vh;
+    top: 50vh;
   }
-  body main .expanded {
-    height: 80vh;
+  body main .questionBox {
+    width: 8vw;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  body main .questionBox p {
+    height: 5vh;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  body main p {
+    margin: 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    font-weight: bold;
   }
   body main .regular {
-    height: 15.5vh;
+    height: 10.5vh;
+  }
+  body main .expanded {
+    height: 100vh;
+  }
+  body main #goLeft {
+    z-index: 30;
+    opacity: 0;
+    top: 1vw;
+    position: absolute;
+    pointer-events: none;
+    width: 10vw;
+  }
+  body main #goLeft #goLeftImg {
+    width: 100%;
+  }
+  body main #goRight {
+    z-index: 30;
+    position: absolute;
+    top: 1vw;
+    width: 10vw;
+    left: 90vw;
+    pointer-events: none;
+    opacity: 0;
+  }
+  body main #goRight #goRightImg {
+    width: 100%;
+    transform: rotate(180deg);
   }
   body main #calcCO2 {
-    border: solid black 2px;
+    z-index: -10vw;
     transition: 1s;
     box-sizing: border-box;
     position: absolute;
-    top: 0vh;
+    top: 0vw;
     width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
   }
+  body main #calcCO2 .q1H2 {
+    margin-top: 5vh;
+    font-size: 1.3em;
+    margin-bottom: 7vh;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 .slide1 {
+    transform: translateX(0vw);
+  }
+  body main #calcCO2 .slide2 {
+    transform: translateX(-100vw);
+  }
+  body main #calcCO2 .slide3 {
+    transform: translateX(-200vw);
+  }
+  body main #calcCO2 .slide4 {
+    transform: translateX(-300vw);
+  }
+  body main #calcCO2 #q1Headline {
+    font-family: "fontBlack";
+    text-align: center;
+    margin-top: 8vh;
+  }
+  body main #calcCO2 #q2Headline {
+    font-family: "fontBlack";
+    text-align: center;
+    margin-top: 8vh;
+  }
+  body main #calcCO2 #q3Headline {
+    font-family: "fontBlack";
+    text-align: center;
+    margin-top: 8vh;
+  }
+  body main #calcCO2 #q4Headline {
+    font-family: "fontBlack";
+    text-align: center;
+    margin-top: 8vh;
+  }
   body main #calcCO2 #questionSlider {
-    width: 400%;
+    z-index: 1;
+    transition: 0.5s;
+    width: 200vw;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   body main #calcCO2 #questionSlider .question {
     width: 100vw;
     height: 100%;
   }
-  body main #calcCO2 #questionSlider #questionID1 {
-    background-color: blue;
+  body main #calcCO2 #questionSlider #questionID1 #start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32vw;
+    border-radius: 10vw;
+    position: absolute;
+    right: 35vw;
+    z-index: 10;
+    top: 5vw;
+    background-color: #f74d48;
+    cursor: pointer;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #start p {
+    font-family: fontBold;
+    font-size: 1em;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 {
+    transition: 0.2s;
+    opacity: 100;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+    background-color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1MainArea .ID1_1Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1MainArea .ID1_1 {
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Nav .next1 {
+    z-index: 9999;
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 41vw;
+    margin-right: 41vw;
+    gap: 1vw;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2MainArea .ID1_2Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2MainArea .ID1_2 {
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .goBackOnce2 {
+    width: 20vw;
+    height: 3vh;
+    background-color: hotpink;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .next2 {
+    z-index: 9999;
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3MainArea .ID1_3Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3MainArea .ID1_3 {
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Nav .next3 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body main #calcCO2 #questionSlider #questionID2 {
-    background-color: green;
+    background-color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 {
+    display: block;
+    opacity: 100;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1MainArea .ID2_1Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1MainArea .ID2_1 {
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .goBackOnce4 {
+    width: 20vw;
+    height: 3vh;
+    background-color: hotpink;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 {
+    display: none;
+    transform: scale(0.9);
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .answerBoxHeadline {
+    font-size: 0.7em;
+    position: relative;
+    left: 2vw;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBoxSelected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBox {
+    height: 20%;
+    margin: 2vw;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueInput {
+    padding: 1vw;
+    margin-bottom: 1vh;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 label {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #06729e;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .goBackOnce5 {
+    width: 20vw;
+    height: 3vh;
+    background-color: hotpink;
+  }
+  body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .next5 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body main #calcCO2 #questionSlider #questionID3 {
-    background-color: red;
+    background-color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 {
+    display: block;
+    opacity: 100;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1MainArea .ID3_1Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1MainArea .ID3_1 {
+    display: block;
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Nav .next6 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea .ID3_2Selected {
+    background-color: #06729e !important;
+    color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea .ID3_2 {
+    display: block;
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea #miles {
+    width: 15vw;
+    height: 2.5vh;
+    text-align: center;
+    position: relative;
+    left: 42.5vw;
+    border-radius: 5px;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea label {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Nav .next7 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   body main #calcCO2 #questionSlider #questionID4 {
+    background-color: white;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 {
+    display: block;
+    opacity: 100;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontRegular;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1Selected {
+    background-color: #06729e !important;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1 {
+    display: block;
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Nav .next8 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
     background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontBlack;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .incrementalCounter label {
+    font-family: sans-serif;
+    color: #06729e;
+    font-weight: bold;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2MainArea .incrementalCounter input {
+    margin: 0.5vh;
+    border-radius: 4px;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav .next9 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 {
+    display: none;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Headline {
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Headline .q1H2 {
+    font-size: 1.5em;
+    font-family: fontBlack;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .incrementalCounter label {
+    font-family: sans-serif;
+    color: #06729e;
+    font-weight: bold;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3MainArea .incrementalCounter input {
+    margin: 0.5vh;
+    border-radius: 4px;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    text-align: center;
+  }
+  body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Nav .next10 {
+    width: 9vw;
+    height: 4.3vh;
+    border-radius: 8px;
+    position: relative;
+    left: 45.5vw;
+    top: 4vh;
+    color: white;
+    z-index: 999;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main #calcCO2 .up {
+    top: -100%;
+  }
+  body main #calcCO2 .down {
+    top: 0;
+  }
+  body main #calcCO2 .up {
+    top: -80vh;
+  }
+  body main #calcCO2 .down {
+    top: 0;
+  }
+  body main #calcCO2 #endCard {
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+  }
+  body main #calcCO2 #endCard #buy {
+    position: relative;
+    top: 7vh;
+    left: 37.5vw;
+    width: 25vw;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: #7cccea;
+  }
+  body main #calcCO2 #endCard #buy p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+    color: black;
+  }
+  body main #calcCO2 #endCard #endCardOptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 8vw;
+    gap: 3vw;
+    display: none;
+  }
+  body main #calcCO2 #endCard #endCardOptions .presentSelected {
+    transform: scale(1.1);
+    border: 2px solid #06729e;
+  }
+  body main #calcCO2 #endCard #endCardOptions .present {
+    width: 20vw;
+    padding: 3vw;
+    height: 20vw;
+    margin: auto;
+    display: grid;
+    text-align: center;
+  }
+  body main #calcCO2 #endCard #endCardOptions .presentText {
+    font-size: 0.7em;
+    margin-top: 1vh;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_1 {
+    grid-column-start: 2;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_2 {
+    grid-column-start: 1;
+    grid-row: 2;
+    margin-top: 5vw;
+    width: 20vw;
+    height: 20vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_2 img {
+    width: 13vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_3 {
+    grid-column-start: 2;
+    grid-row: 2;
+    margin-top: 5vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_3 img {
+    width: 20vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_4 {
+    grid-column-start: 3;
+    grid-row: 2;
+    margin-top: 5vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions #present_4 img {
+    width: 16vw;
+  }
+  body main #calcCO2 #endCard #endCardOptions .presentImg {
+    width: 30vw;
+    text-align: center;
+    margin: auto;
+  }
+  body main #calcCO2 .paymentUp {
+    top: -100%;
+  }
+  body main #calcCO2 .paymentDown {
+    top: 0vw;
+  }
+  body main #calcCO2 #payment {
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+  }
+  body main #calcCO2 #payment #paymentIMG {
+    width: 80%;
+    margin-left: 10%;
+  }
+  body main #calcCO2 .thankYouUp {
+    top: -200%;
+  }
+  body main #calcCO2 .thankYouDown {
+    top: 0%;
+  }
+  body main #calcCO2 #thankYou {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+  }
+  body main #calcCO2 #thankYou #thankYouImgContainer {
+    width: 60%;
+    margin-left: 10vw;
+  }
+  body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
+    width: 60%;
   }
   body main .infoRegular {
     top: 15vh;
@@ -1343,6 +2088,7 @@ body footer #toMainPage {
   }
   body main #info {
     position: absolute;
+    transition: 1s;
   }
   body main #info #infoHeadline1 {
     position: absolute;
@@ -1350,6 +2096,8 @@ body footer #toMainPage {
     top: 2vh;
   }
   body main #info #infoHeadline1 #infoHeadline1Text {
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
   body main #info #grafikArea1 {
@@ -1372,11 +2120,11 @@ body footer #toMainPage {
     margin: auto;
   }
   body main #info #grafikArea1 .grafikElement1 #Stig_2 {
-    width: 10vw;
+    width: 30vw;
     margin: auto;
   }
   body main #info #grafikArea1 .grafikElement1 #Stig_3 {
-    width: 12vw;
+    width: 30vw;
   }
   body main #info #infoHeadline2 {
     position: absolute;
@@ -1518,7 +2266,7 @@ body footer #toMainPage {
     top: 0vh;
   }
   .footerRegular {
-    top: 370vh !important;
+    top: 300vh !important;
   }
   .footerExpanded {
     top: 344.5vh;
