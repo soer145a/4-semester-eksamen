@@ -289,7 +289,7 @@ body main #calcCO2 #questionSlider #questionID1 #start {
   position: absolute;
   right: 35vw;
   z-index: 10;
-  top: 5vw;
+  top: 0vw;
   animation: pulse 2s infinite;
   background-color: #f74d48;
   cursor: pointer;
@@ -1007,6 +1007,7 @@ body main #calcCO2 #thankYou {
 }
 
 body main #calcCO2 #thankYou #thankYouImgContainer {
+  pointer-events: none;
   width: 60%;
   margin-left: 10vw;
 }
@@ -1267,15 +1268,12 @@ body footer #toMainPage {
     position: absolute;
     top: 0;
   }
-  body header #splash {
-    height: 200%;
-  }
   body header #splash #splashDesktopImage {
     display: block;
   }
   body header #splash #splashDesktopImage img {
     width: 100vw;
-    height: auto;
+    height: 150vh;
   }
   body header #splash #splashMobilImage {
     display: none;
@@ -1286,20 +1284,21 @@ body footer #toMainPage {
   }
   body header #splash #splashHeadline #splashHeadlineText {
     font-family: fontBold;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.5vw;
     font-size: 3em;
     text-align: center;
   }
   body header #splash #splashHeadline #SplashedHeadlineText2 {
     font-family: fontBold;
     letter-spacing: 0.1vw;
-    font-size: 4em;
+    font-size: 3.7em;
     position: relative;
     top: 13vh;
   }
   body header #splash #start {
     display: flex;
     height: 4vh;
+    width: 10%;
     justify-content: center;
     align-items: center;
     border-radius: 10vw;
@@ -1331,7 +1330,7 @@ body footer #toMainPage {
     width: 18vw;
     height: 4vw;
     left: 41vw;
-    top: -100vw;
+    margin-top: 2vw;
     background-color: black;
     cursor: pointer;
     display: block;
@@ -1345,6 +1344,7 @@ body footer #toMainPage {
     text-align: center;
   }
   body main {
+    margin-top: 7vw;
     position: absolute;
     top: 50vh;
   }
@@ -1378,7 +1378,7 @@ body footer #toMainPage {
     height: 10.5vh;
   }
   body main .expanded {
-    height: 100vh;
+    height: 80vh;
   }
   body main #goLeft {
     z-index: 30;
@@ -1416,7 +1416,7 @@ body footer #toMainPage {
   }
   body main #calcCO2 .q1H2 {
     margin-top: 5vh;
-    font-size: 1.3em;
+    font-size: 1.8em;
     margin-bottom: 7vh;
     font-family: fontRegular;
   }
@@ -1436,6 +1436,7 @@ body footer #toMainPage {
     font-family: "fontBlack";
     text-align: center;
     margin-top: 8vh;
+    font-size: 3em;
   }
   body main #calcCO2 #q2Headline {
     font-family: "fontBlack";
@@ -1468,18 +1469,18 @@ body footer #toMainPage {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32vw;
-    border-radius: 10vw;
+    width: 14vw;
+    height: 6vh;
+    border-radius: 18px;
     position: absolute;
-    right: 35vw;
+    right: 43vw;
     z-index: 10;
-    top: 5vw;
     background-color: #f74d48;
     cursor: pointer;
   }
   body main #calcCO2 #questionSlider #questionID1 #start p {
     font-family: fontBold;
-    font-size: 1em;
+    font-size: 1.4em;
     color: white;
   }
   body main #calcCO2 #questionSlider #questionID1 #questionID1_1 {
@@ -1514,6 +1515,7 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
@@ -1548,6 +1550,7 @@ body footer #toMainPage {
   }
   body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .next2 {
     z-index: 9999;
+    cursor: pointer;
     width: 9vw;
     height: 4.3vh;
     border-radius: 8px;
@@ -1596,13 +1599,11 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  body main #calcCO2 #questionSlider #questionID2 {
-    background-color: white;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_1 {
     display: block;
@@ -1634,6 +1635,7 @@ body footer #toMainPage {
     width: 20vw;
     height: 3vh;
     background-color: hotpink;
+    cursor: pointer;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
     width: 9vw;
@@ -1644,6 +1646,7 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
@@ -1709,13 +1712,11 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  body main #calcCO2 #questionSlider #questionID3 {
-    background-color: white;
   }
   body main #calcCO2 #questionSlider #questionID3 #questionID3_1 {
     display: block;
@@ -1753,6 +1754,7 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
@@ -1807,14 +1809,12 @@ body footer #toMainPage {
     left: 45.5vw;
     top: 4vh;
     color: white;
+    cursor: pointer;
     z-index: 999;
     background-color: hotpink;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  body main #calcCO2 #questionSlider #questionID4 {
-    background-color: white;
   }
   body main #calcCO2 #questionSlider #questionID4 #questionID4_1 {
     display: block;
@@ -1851,6 +1851,7 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
@@ -1886,6 +1887,7 @@ body footer #toMainPage {
     padding-top: 0.4vh;
     padding-bottom: 0.4vh;
     text-align: center;
+    cursor: pointer;
   }
   body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav .next9 {
     width: 9vw;
@@ -1941,6 +1943,7 @@ body footer #toMainPage {
     top: 4vh;
     color: white;
     z-index: 999;
+    cursor: pointer;
     background-color: hotpink;
     display: flex;
     justify-content: center;
@@ -1948,15 +1951,13 @@ body footer #toMainPage {
   }
   body main #calcCO2 .up {
     top: -100%;
+    opacity: 0;
+    pointer-events: none;
   }
   body main #calcCO2 .down {
     top: 0;
-  }
-  body main #calcCO2 .up {
-    top: -80vh;
-  }
-  body main #calcCO2 .down {
-    top: 0;
+    opacity: 100;
+    pointer-events: all;
   }
   body main #calcCO2 #endCard {
     position: absolute;
@@ -1965,6 +1966,17 @@ body footer #toMainPage {
     width: 100vw;
     height: 100%;
     background-color: white;
+  }
+  body main #calcCO2 #endCard #endCardMain {
+    width: 50vw;
+    height: 80vh;
+  }
+  body main #calcCO2 #endCard #endCardMain .present {
+    width: 10%;
+    height: 10%;
+  }
+  body main #calcCO2 #endCard #endCardMain .present .presentImg {
+    width: 10%;
   }
   body main #calcCO2 #endCard #buy {
     position: relative;
@@ -1986,18 +1998,17 @@ body footer #toMainPage {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-row-gap: 8vw;
-    gap: 3vw;
-    display: none;
+    width: 50vw;
+    height: 50vh;
   }
   body main #calcCO2 #endCard #endCardOptions .presentSelected {
-    transform: scale(1.1);
+    transform: scale(1);
     border: 2px solid #06729e;
   }
   body main #calcCO2 #endCard #endCardOptions .present {
-    width: 20vw;
+    width: 10vw;
     padding: 3vw;
-    height: 20vw;
+    height: 10vw;
     margin: auto;
     display: grid;
     text-align: center;
@@ -2012,12 +2023,12 @@ body footer #toMainPage {
   body main #calcCO2 #endCard #endCardOptions #present_2 {
     grid-column-start: 1;
     grid-row: 2;
-    margin-top: 5vw;
-    width: 20vw;
-    height: 20vw;
+    margin-top: 0vw;
+    width: 10vw;
+    height: 10vw;
   }
   body main #calcCO2 #endCard #endCardOptions #present_2 img {
-    width: 13vw;
+    width: 100%;
   }
   body main #calcCO2 #endCard #endCardOptions #present_3 {
     grid-column-start: 2;
@@ -2025,7 +2036,7 @@ body footer #toMainPage {
     margin-top: 5vw;
   }
   body main #calcCO2 #endCard #endCardOptions #present_3 img {
-    width: 20vw;
+    width: 100%;
   }
   body main #calcCO2 #endCard #endCardOptions #present_4 {
     grid-column-start: 3;
@@ -2104,7 +2115,7 @@ body footer #toMainPage {
     position: absolute;
     top: 8vh;
     left: 7.5vw;
-    width: 85vw;
+    width: 20vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2116,15 +2127,15 @@ body footer #toMainPage {
     align-items: center;
   }
   body main #info #grafikArea1 .grafikElement1 #Stig_1 {
-    width: 20vw;
+    width: 10vw;
     margin: auto;
   }
   body main #info #grafikArea1 .grafikElement1 #Stig_2 {
-    width: 30vw;
+    width: 10vw;
     margin: auto;
   }
   body main #info #grafikArea1 .grafikElement1 #Stig_3 {
-    width: 30vw;
+    width: 10vw;
   }
   body main #info #infoHeadline2 {
     position: absolute;
