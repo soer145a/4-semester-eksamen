@@ -62,7 +62,6 @@ body {
       #splashMobilImage {
         img {
           width: 100vw;
-          height: 500vh;
         }
       }
 
@@ -92,9 +91,6 @@ body {
           color: white;
           position: relative;
           top: 5vh;
-          #green {
-            color: green;
-          }
         }
       }
       #splashText {
@@ -275,9 +271,9 @@ body {
             width: 37vw;
             border-radius: 10vw;
             position: absolute;
-            right: 35vw;
+            right: 31vw;
             z-index: 10;
-            top: 0vw;
+            top: 2vw;
             animation: pulse 2s infinite;
             background-color: $aidred;
 
@@ -836,6 +832,12 @@ body {
           text-align: center;
           font-family: fontRegular;
         }
+        #resultatTekst {
+          font-family: fontLight;
+          color: black;
+          font-weight: bold;
+          margin-left: 8vw;
+        }
 
         #buy {
           position: relative;
@@ -860,20 +862,21 @@ body {
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: 1fr 1fr;
           grid-row-gap: 8vw;
-          gap: 3vw;
+          gap: 2vw;
 
           .presentSelected {
             transform: scale(1.1);
             border: 2px solid $deepblue;
           }
           .present {
-            width: 20vw;
+            width: 22vw;
             padding: 3vw;
-            height: 20vw;
+            height: 22vw;
             background-color: white;
             margin: auto;
             display: grid;
             text-align: center;
+            margin-bottom: 1vw;
           }
 
           .presentText {
@@ -883,6 +886,7 @@ body {
 
           #present_1 {
             grid-column-start: 2;
+            pointer-events: none;
           }
           #present_2 {
             grid-column-start: 1;
@@ -892,7 +896,7 @@ body {
             height: 20vw;
 
             img {
-              width: 13vw;
+              width: 10vw;
             }
           }
           #present_3 {
@@ -901,7 +905,7 @@ body {
             margin-top: 5vw;
 
             img {
-              width: 20vw;
+              width: 22vw;
             }
           }
           #present_4 {
@@ -934,17 +938,62 @@ body {
         width: 100vw;
         height: 100%;
         background-color: white;
-        #paymentIMG {
-          width: 80%;
-          margin-left: 10%;
+        #cardLabel {
+          font-family: sans-serif;
+          color: $deepblue;
+          font-weight: bold;
+          display: grid;
+          margin-left: 3vw;
+          grid-template-rows: 1fr 1fr;
+          #cardInput {
+            margin: 0.5vh;
+            border-radius: 4px;
+            padding-top: 0.4vh;
+            padding-bottom: 0.4vh;
+            width: 50vw;
+          }
+        }
+
+        #expireDate {
+          font-family: sans-serif;
+          color: $deepblue;
+          font-weight: bold;
+          position: relative;
+          left: 3vw;
+          .birthday {
+            margin: 0.5vh;
+            border-radius: 4px;
+            padding-top: 0.4vh;
+            padding-bottom: 0.4vh;
+          }
+        }
+        #CVV {
+          margin-left: 3.5vw;
+          font-family: sans-serif;
+          color: $deepblue;
+          font-weight: bold;
+
+          .CVVInput {
+            margin: 0.5vh;
+            border-radius: 4px;
+            padding-top: 0.4vh;
+            padding-bottom: 0.4vh;
+          }
         }
 
         #paymentHeadline {
-          margin-top: 5vh;
+          margin-top: 4vh;
           font-size: 1.3em;
-          margin-bottom: 7vh;
+          margin-bottom: 3vh;
           font-family: fontBold;
           text-align: center;
+        }
+        #paymentTagLine {
+          margin-left: 3vw;
+          margin-top: 4vh;
+          #makeMeGreen {
+            color: green;
+          }
         }
       }
       .thankYouUp {
@@ -961,13 +1010,28 @@ body {
         width: 100vw;
         height: 100%;
         background-color: white;
+        #thankYouHeadline {
+          margin-top: 4vh;
+          font-size: 1.3em;
+          margin-bottom: 3vh;
+          font-family: fontBold;
+          text-align: center;
+        }
         #thankYouImgContainer {
           pointer-events: none;
-          width: 60%;
+          width: 100%;
           margin-left: 10vw;
           #thankYouIMG {
-            width: 60%;
+            width: 35%;
+            margin-left: 23vw;
           }
+        }
+        #thankYouText {
+          margin-top: 4vh;
+          font-size: 0.8em;
+          margin-bottom: 3vh;
+          font-family: fontBold;
+          text-align: center;
         }
       }
     }
@@ -1034,6 +1098,7 @@ body {
           color: $aidred;
         }
       }
+
       #infoText {
         position: absolute;
         top: 110vh;
@@ -1041,6 +1106,52 @@ body {
         width: 80vw;
         line-height: 1.8em;
         #infoTextTxt {
+          margin: 0;
+          padding: 0;
+          font-family: fontRegular;
+          letter-spacing: 0.1vw;
+          font-size: 1.1em;
+        }
+        a {
+          text-decoration: none;
+        }
+
+        #mere {
+          width: 30vw;
+          height: 4.3vh;
+          border-radius: 8px;
+          position: relative;
+          top: 5vh;
+          right: 1vw;
+          color: white;
+          font-family: fontRegular;
+          margin: auto;
+          background-color: $aidred;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      #infoHeadline3 {
+        position: absolute;
+        top: 38vh;
+        left: 0%;
+        width: 100vw;
+        #InfoHeadline3Text {
+          margin: 0;
+          padding: 0;
+
+          font-family: fontBold;
+          color: $aidred;
+        }
+      }
+      #infoText3 {
+        position: absolute;
+        top: 44vh;
+        left: 0vw;
+        width: 80vw;
+        line-height: 1.8em;
+        #infoTextTxt3 {
           margin: 0;
           padding: 0;
           font-family: fontRegular;
@@ -1183,6 +1294,14 @@ body {
       font-family: fontRegular;
       color: white;
     }
+    #socialMediaIcons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .someIcon {
+        width: 15vw;
+      }
+    }
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -1198,7 +1317,6 @@ body {
           display: block;
           img {
             width: 100vw;
-            height: 150vh;
           }
         }
         #splashMobilImage {
@@ -1210,7 +1328,6 @@ body {
 
           #splashHeadlineText {
             font-family: fontBold;
-            letter-spacing: 0.5vw;
             font-size: 3em;
             text-align: center;
           }
@@ -2119,6 +2236,7 @@ body {
       #info {
         position: absolute;
         transition: 1s;
+        width: 100vw;
 
         #infoHeadline1 {
           position: absolute;
@@ -2133,120 +2251,167 @@ body {
 
         #grafikArea1 {
           position: absolute;
-          top: 8vh;
-          left: 7.5vw;
+          top: 15vh;
+          left: 23%;
           width: 20vw;
 
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           .grafikElement1 {
             height: 30vh;
-            margin: 4vw;
+            margin: 0.9vw;
             display: flex;
             justify-content: center;
             align-items: center;
             #Stig_1 {
-              width: 10vw;
-              margin: auto;
+              width: 18vw;
             }
             #Stig_2 {
-              width: 10vw;
-              margin: auto;
+              width: 18vw;
             }
             #Stig_3 {
-              width: 10vw;
+              width: 18vw;
             }
           }
         }
         #infoHeadline2 {
           position: absolute;
-          top: 95vh;
+          top: 65vh;
           width: 100vw;
           #InfoHeadline2Text {
             text-align: center;
-            font-size: 2vw;
+            font-size: 2.9vw;
           }
         }
         #infoText {
           position: absolute;
-          top: 105vh;
-          width: 50vw;
+          top: 75vh;
+          width: 35vw;
           line-height: 1.8em;
-          left: 26vw;
-          right: 17vw;
+          left: 32.5vw;
 
           #infoTextTxt {
             margin: 0;
             padding: 0;
             font-family: fontRegular;
             letter-spacing: 0.1vw;
-            font-size: 1.1em;
+            font-size: 0.9em;
 
             font-family: fontRegular;
             font-size: 1.6em;
             line-height: 1.4em;
           }
+
+          #infoText3 {
+            position: absolute;
+            top: 47vh;
+            left: 0vw;
+            width: 35vw;
+            line-height: 1.8em;
+            #infoTextTxt3 {
+              margin: 0;
+              padding: 0;
+              font-family: fontRegular;
+              letter-spacing: 0.1vw;
+              font-size: 0.9em;
+
+              font-family: fontRegular;
+              font-size: 1.6em;
+              line-height: 1.4em;
+            }
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          #mere {
+            width: 10vw;
+            height: 5vh;
+            border-radius: 8px;
+            position: relative;
+            top: 4vh;
+            right: 1vw;
+            color: white;
+            font-family: fontRegular;
+            margin: auto;
+            background-color: $aidred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        #infoHeadline3 {
+          position: absolute;
+          font-size: 2.9em;
+          left: 10%;
+          #InfoHeadline3Text {
+            margin: 0;
+            padding: 0;
+            font-family: fontBold;
+            color: $aidred;
+          }
+        }
+        #infoText3 {
+          width: 30vw;
         }
         #grafikArea2 {
           position: absolute;
-          top: 175vh;
-          left: 7.5vw;
-          width: 85vw;
+          top: 150vh;
+          left: 20vw;
+          width: 60vw;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-
           .grafikElement2 {
             height: 30vh;
-            margin: 4vw;
-            margin-top: -20vw;
+            margin: auto;
+            width: 100%;
 
             #Pakke_1 {
-              width: 10vw;
+              width: 100%;
               margin: auto;
-              position: relative;
-              right: -5vw;
+              transform: scale(0.3);
+              margin-top: -8vw;
             }
             #Pakke_2 {
-              width: 20vw;
+              width: 100%;
               margin: auto;
-              position: relative;
-              right: -5vw;
+              margin-top: -4vw;
+              transform: scale(0.5);
             }
             #Pakke_3 {
-              width: 20vw;
+              width: 100%;
               margin: auto;
-              position: relative;
-              right: -5vw;
+              margin-top: -7vw;
+              transform: scale(0.5);
             }
           }
           #PakkeTekst_1 {
             font-family: fontBold;
             text-align: center;
             position: relative;
-            top: 10vw;
-            left: -2vw;
+            top: -8vw;
           }
           #PakkeTekst_2 {
             font-family: fontBold;
             text-align: center;
             position: relative;
-            top: 10vw;
-            left: -6vw;
+            top: -3.5vw;
           }
           #PakkeTekst_3 {
             font-family: fontBold;
             text-align: center;
+            margin-top: 6vw;
             position: relative;
-            top: 10vw;
-            left: -5vw;
           }
         }
       }
       .collabHeadlineRegular {
-        top: 210vh;
+        top: 190vh;
       }
       .collabHeadlineExpanded {
-        top: 280vh;
+        top: 260vh;
       }
       #collabHeadline {
         position: absolute;
@@ -2260,10 +2425,10 @@ body {
         }
       }
       .collaboratorsRegular {
-        top: 250vh;
+        top: 230vh;
       }
       .collaboratorsExpanded {
-        top: 315vh;
+        top: 295vh;
       }
       #collaborators {
         position: absolute;
@@ -2314,7 +2479,7 @@ body {
 
   footer {
     position: absolute;
-    height: 30vh;
+    height: 19vh !important;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2323,11 +2488,34 @@ body {
       font-family: fontBold;
       font-family: fontBold;
       text-align: center;
+      h3 {
+        transform: translateX(-7vw);
+      }
+      p {
+        transform: translateX(-7vw);
+      }
+      a {
+        margin-right: 14vw;
+      }
     }
     #toMainPage {
       background-color: $skycyan !important;
       font-family: fontBold;
       text-align: center;
+    }
+    #socialMediaIcons {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr !important;
+      margin-left: 10vw;
+      margin-top: -6vw;
+      a {
+        transform: translateX(5vw);
+      }
+
+      .someIcon {
+        width: 3vw !important;
+      }
     }
   }
 }

@@ -552,11 +552,13 @@ function calcTotal() {
     let bilValue = parseInt(globalUserQuestionSheet.travelMiles);
     totalCO2 = totalCO2 + bilValue * 1.17353;
   }
+
   globalUserQuestionSheet.totalCost = totalCO2 * 0.75;
-  document.querySelector("#resultat1").textContent =
-    globalUserQuestionSheet.totalCost;
-  document.querySelector("#resultat2").textContent =
-    globalUserQuestionSheet.totalCost;
+  let roundedTotal = Math.round(globalUserQuestionSheet.totalCost);
+  let roundedCO2 = Math.round(totalCO2);
+  document.querySelector("#resultat1").textContent = roundedTotal;
+  document.querySelector("#kgCO2").textContent = roundedCO2;
+
   console.log(totalCO2);
 }
 function sendToRestDB() {
