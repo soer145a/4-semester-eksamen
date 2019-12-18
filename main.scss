@@ -851,6 +851,9 @@ body {
           border: 1px solid white;
           border-radius: 8px;
           background-color: $skycyan;
+          & :hover {
+            cursor: pointer;
+          }
 
           p {
             display: flex;
@@ -2144,6 +2147,9 @@ body {
             border: 1px solid white;
             border-radius: 8px;
             background-color: $skycyan;
+            & :hover {
+              cursor: pointer;
+            }
 
             p {
               display: flex;
@@ -2221,10 +2227,14 @@ body {
           }
         }
         .paymentUp {
-          top: -100%;
+          top: -400%;
+          opacity: 0;
+          pointer-events: none;
         }
         .paymentDown {
           top: 0vw;
+          opacity: 100;
+          pointer-events: all;
         }
         #payment {
           position: absolute;
@@ -2323,6 +2333,7 @@ body {
         }
         #thankYou {
           opacity: 0;
+          pointer-events: none;
           position: absolute;
           z-index: 2;
           transition: 0.3s;
@@ -3481,6 +3492,9 @@ body {
             border: 1px solid white;
             border-radius: 8px;
             background-color: $skycyan;
+            & :hover {
+              cursor: pointer;
+            }
 
             p {
               display: flex;
@@ -3558,10 +3572,14 @@ body {
           }
         }
         .paymentUp {
-          top: -100%;
+          top: -400%;
+          opacity: 0;
+          pointer-events: none;
         }
         .paymentDown {
           top: 0vw;
+          opacity: 100;
+          pointer-events: all;
         }
         #payment {
           position: absolute;
@@ -3654,9 +3672,13 @@ body {
         }
         .thankYouUp {
           top: -200%;
+          opacity: 0;
+          pointer-events: none;
         }
         .thankYouDown {
           top: 0%;
+          opacity: 100;
+          pointer-events: all;
         }
         #thankYou {
           opacity: 0;
