@@ -51,8 +51,6 @@ body {
   overflow-x: hidden;
 }
 body {
-}
-body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -85,7 +83,7 @@ body {
           font-family: fontBlack;
           // letter-spacing: 1vw;
           font-size: 2em;
-          color: $aidred;
+          color: white;
         }
         #SplashedHeadlineText2 {
           margin: 0;
@@ -830,7 +828,6 @@ body {
         transition: 0.3s;
         width: 100vw;
         height: 100%;
-        background-color: white;
 
         h2 {
           margin-top: 5vh;
@@ -944,7 +941,7 @@ body {
         transition: 0.3s;
         width: 100vw;
         height: 100%;
-        background-color: white;
+
         #cardLabel {
           font-family: sans-serif;
           color: $softblack;
@@ -1035,8 +1032,8 @@ body {
           width: 100%;
           margin-left: 10vw;
           #thankYouIMG {
-            width: 35%;
-            margin-left: 23vw;
+            width: 15% !important;
+            margin-left: 35vw;
           }
         }
         #thankYouText {
@@ -1143,12 +1140,16 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          &:hover {
+            transform: scale(1.05);
+            transform: 0.4s;
+          }
         }
       }
       #infoHeadline3 {
         position: absolute;
         top: 38vh;
-        left: 15%;
+        left: 0%;
         width: 100vw;
         #InfoHeadline3Text {
           margin: 0;
@@ -1233,7 +1234,7 @@ body {
       #collabHeadlineText {
         text-align: center;
         font-family: fontBold;
-        color: $aidred;
+        color: $reddirt;
         padding-top: 4vh;
         padding-bottom: 4vh;
       }
@@ -1341,7 +1342,7 @@ body {
 
           #splashHeadlineText {
             font-family: fontBold;
-            font-size: 2em;
+            font-size: 1.5em;
             text-align: center;
           }
           #SplashedHeadlineText2 {
@@ -2111,7 +2112,7 @@ body {
           transition: 0.3s;
           width: 100vw;
           height: 100%;
-          background-color: white;
+
           #endCardHeadline {
             width: 100vw;
             h2 {
@@ -2231,7 +2232,7 @@ body {
           transition: 0.3s;
           width: 100vw;
           height: 100%;
-          background-color: white;
+
           #cardLabel {
             font-family: sans-serif;
             color: $softblack;
@@ -2455,12 +2456,13 @@ body {
         #infoHeadline3 {
           position: absolute;
           font-size: 2.4vw;
-          left: 10%;
+          left: 0%;
           #InfoHeadline3Text {
             margin: 0;
             padding: 0;
             font-family: fontBold;
             color: $aidred;
+            font-size: 2.9vw;
           }
         }
         #infoText3 {
@@ -2530,8 +2532,9 @@ body {
         #collabHeadlineText {
           text-align: center;
           font-family: fontBold;
-          color: $aidred;
-          font-size: 2.5em;
+          color: $reddirt;
+          font-size: 1.9em;
+          font-weight: bold;
         }
       }
       .collaboratorsRegular {
@@ -2584,7 +2587,7 @@ body {
     top: 300vh !important;
   }
   .footerExpanded {
-    top: 344.5vh;
+    top: 364.5vh !important;
   }
 
   footer {
@@ -2624,7 +2627,10 @@ body {
       }
 
       .someIcon {
-        width: 3vw !important;
+        width: 1vw !important;
+      }
+      #instagram {
+        margin-top: 0.5vw;
       }
     }
   }
@@ -2653,7 +2659,7 @@ body {
 
           #splashHeadlineText {
             font-family: fontBold;
-            font-size: 2em;
+            font-size: 1.5em;
             text-align: center;
           }
           #SplashedHeadlineText2 {
@@ -3202,9 +3208,10 @@ body {
               }
               #questionID3_2MainArea {
                 display: grid;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
                 gap: 1vw;
-                margin-left: 38vw;
+                margin-left: 33vw;
                 margin-right: 38vw;
                 .ID3_2Selected {
                   background-color: $deepblue !important;
@@ -3220,15 +3227,20 @@ body {
                   height: 2.5vh;
                   text-align: center;
                   position: relative;
-                  left: 42.5vw;
+                  left: 0vw;
+
                   border-radius: 5px;
                 }
 
                 label {
+                  grid-column-start: 2;
                   text-align: center;
                   font-family: sans-serif;
                   margin-top: 3vh;
                   margin-bottom: 3vh;
+                }
+                #miles {
+                  grid-column-start: 2;
                 }
               }
               #questionID3_2Nav {
@@ -3423,7 +3435,7 @@ body {
           transition: 0.3s;
           width: 100vw;
           height: 100%;
-          background-color: white;
+
           #endCardHeadline {
             width: 100vw;
             h2 {
@@ -3543,7 +3555,7 @@ body {
           transition: 0.3s;
           width: 100vw;
           height: 100%;
-          background-color: white;
+
           #cardLabel {
             font-family: sans-serif;
             color: $softblack;
@@ -3767,7 +3779,7 @@ body {
         #infoHeadline3 {
           position: absolute;
           font-size: 2.4vw;
-          left: 10%;
+          left: 0%;
           #InfoHeadline3Text {
             margin: 0;
             padding: 0;
@@ -3830,10 +3842,10 @@ body {
         }
       }
       .collabHeadlineRegular {
-        top: 190vh;
+        top: 185vh;
       }
       .collabHeadlineExpanded {
-        top: 260vh;
+        top: 255vh;
       }
       #collabHeadline {
         position: absolute;
@@ -3843,14 +3855,15 @@ body {
           text-align: center;
           font-family: fontBold;
           color: $aidred;
-          font-size: 2.5em;
+          font-size: 2.9vw;
+          font-weight: bold;
         }
       }
       .collaboratorsRegular {
-        top: 230vh;
+        top: 235vh;
       }
       .collaboratorsExpanded {
-        top: 295vh;
+        top: 300vh;
       }
       #collaborators {
         position: absolute;
@@ -3893,7 +3906,7 @@ body {
     }
   }
   .footerRegular {
-    top: 300vh !important;
+    top: 310vh !important;
   }
   .footerExpanded {
     top: 344.5vh;
@@ -3936,7 +3949,10 @@ body {
       }
 
       .someIcon {
-        width: 3vw !important;
+        width: 1.5vw !important;
+      }
+      #instagram {
+        margin-top: 0.5vw;
       }
     }
   }

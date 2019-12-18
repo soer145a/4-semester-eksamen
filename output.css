@@ -82,7 +82,7 @@ body header #splash #splashHeadline #splashHeadlineText {
   text-align: center;
   font-family: fontBlack;
   font-size: 2em;
-  color: #f74d48;
+  color: white;
 }
 
 body header #splash #splashHeadline #SplashedHeadlineText2 {
@@ -861,7 +861,6 @@ body main #calcCO2 #endCard {
   transition: 0.3s;
   width: 100vw;
   height: 100%;
-  background-color: white;
 }
 
 body main #calcCO2 #endCard h2 {
@@ -983,7 +982,6 @@ body main #calcCO2 #payment {
   transition: 0.3s;
   width: 100vw;
   height: 100%;
-  background-color: white;
 }
 
 body main #calcCO2 #payment #cardLabel {
@@ -1087,8 +1085,8 @@ body main #calcCO2 #thankYou #thankYouImgContainer {
 }
 
 body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
-  width: 35%;
-  margin-left: 23vw;
+  width: 15% !important;
+  margin-left: 35vw;
 }
 
 body main #calcCO2 #thankYou #thankYouText {
@@ -1208,10 +1206,15 @@ body main #info #infoText #mere {
   align-items: center;
 }
 
+body main #info #infoText #mere:hover {
+  transform: scale(1.05);
+  transform: 0.4s;
+}
+
 body main #info #infoHeadline3 {
   position: absolute;
   top: 38vh;
-  left: 15%;
+  left: 0%;
   width: 100vw;
 }
 
@@ -1308,7 +1311,7 @@ body main #collabHeadline {
 body main #collabHeadline #collabHeadlineText {
   text-align: center;
   font-family: fontBold;
-  color: #f74d48;
+  color: #994a40;
   padding-top: 4vh;
   padding-bottom: 4vh;
 }
@@ -1425,7 +1428,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #splashHeadline #splashHeadlineText {
     font-family: fontBold;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
   }
   body header #splash #splashHeadline #SplashedHeadlineText2 {
@@ -2113,7 +2116,6 @@ body footer #socialMediaIcons .someIcon {
     transition: 0.3s;
     width: 100vw;
     height: 100%;
-    background-color: white;
   }
   body main #calcCO2 #endCard #endCardHeadline {
     width: 100vw;
@@ -2223,7 +2225,6 @@ body footer #socialMediaIcons .someIcon {
     transition: 0.3s;
     width: 100vw;
     height: 100%;
-    background-color: white;
   }
   body main #calcCO2 #payment #cardLabel {
     font-family: sans-serif;
@@ -2434,13 +2435,14 @@ body footer #socialMediaIcons .someIcon {
   body main #info #infoHeadline3 {
     position: absolute;
     font-size: 2.4vw;
-    left: 10%;
+    left: 0%;
   }
   body main #info #infoHeadline3 #InfoHeadline3Text {
     margin: 0;
     padding: 0;
     font-family: fontBold;
     color: #f74d48;
+    font-size: 2.9vw;
   }
   body main #info #infoText3 {
     width: 30vw;
@@ -2508,8 +2510,9 @@ body footer #socialMediaIcons .someIcon {
   body main #collabHeadline #collabHeadlineText {
     text-align: center;
     font-family: fontBold;
-    color: #f74d48;
-    font-size: 2.5em;
+    color: #994a40;
+    font-size: 1.9em;
+    font-weight: bold;
   }
   body main .collaboratorsRegular {
     top: 230vh;
@@ -2558,7 +2561,7 @@ body footer #socialMediaIcons .someIcon {
     top: 300vh !important;
   }
   .footerExpanded {
-    top: 344.5vh;
+    top: 364.5vh !important;
   }
   footer {
     position: absolute;
@@ -2598,7 +2601,10 @@ body footer #socialMediaIcons .someIcon {
     transform: translateX(5vw);
   }
   footer #socialMediaIcons .someIcon {
-    width: 3vw !important;
+    width: 1vw !important;
+  }
+  footer #socialMediaIcons #instagram {
+    margin-top: 0.5vw;
   }
 }
 
@@ -2625,7 +2631,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #splashHeadline #splashHeadlineText {
     font-family: fontBold;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
   }
   body header #splash #splashHeadline #SplashedHeadlineText2 {
@@ -3121,9 +3127,10 @@ body footer #socialMediaIcons .someIcon {
   }
   body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1vw;
-    margin-left: 38vw;
+    margin-left: 33vw;
     margin-right: 38vw;
   }
   body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea .ID3_2Selected {
@@ -3139,14 +3146,18 @@ body footer #socialMediaIcons .someIcon {
     height: 2.5vh;
     text-align: center;
     position: relative;
-    left: 42.5vw;
+    left: 0vw;
     border-radius: 5px;
   }
   body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea label {
+    grid-column-start: 2;
     text-align: center;
     font-family: sans-serif;
     margin-top: 3vh;
     margin-bottom: 3vh;
+  }
+  body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2MainArea #miles {
+    grid-column-start: 2;
   }
   body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Nav .next7 {
     width: 9vw;
@@ -3313,7 +3324,6 @@ body footer #socialMediaIcons .someIcon {
     transition: 0.3s;
     width: 100vw;
     height: 100%;
-    background-color: white;
   }
   body main #calcCO2 #endCard #endCardHeadline {
     width: 100vw;
@@ -3423,7 +3433,6 @@ body footer #socialMediaIcons .someIcon {
     transition: 0.3s;
     width: 100vw;
     height: 100%;
-    background-color: white;
   }
   body main #calcCO2 #payment #cardLabel {
     font-family: sans-serif;
@@ -3634,7 +3643,7 @@ body footer #socialMediaIcons .someIcon {
   body main #info #infoHeadline3 {
     position: absolute;
     font-size: 2.4vw;
-    left: 10%;
+    left: 0%;
   }
   body main #info #infoHeadline3 #InfoHeadline3Text {
     margin: 0;
@@ -3695,10 +3704,10 @@ body footer #socialMediaIcons .someIcon {
     position: relative;
   }
   body main .collabHeadlineRegular {
-    top: 190vh;
+    top: 185vh;
   }
   body main .collabHeadlineExpanded {
-    top: 260vh;
+    top: 255vh;
   }
   body main #collabHeadline {
     position: absolute;
@@ -3709,13 +3718,14 @@ body footer #socialMediaIcons .someIcon {
     text-align: center;
     font-family: fontBold;
     color: #f74d48;
-    font-size: 2.5em;
+    font-size: 2.9vw;
+    font-weight: bold;
   }
   body main .collaboratorsRegular {
-    top: 230vh;
+    top: 235vh;
   }
   body main .collaboratorsExpanded {
-    top: 295vh;
+    top: 300vh;
   }
   body main #collaborators {
     position: absolute;
@@ -3755,7 +3765,7 @@ body footer #socialMediaIcons .someIcon {
     top: 0vh;
   }
   .footerRegular {
-    top: 300vh !important;
+    top: 310vh !important;
   }
   .footerExpanded {
     top: 344.5vh;
@@ -3798,6 +3808,9 @@ body footer #socialMediaIcons .someIcon {
     transform: translateX(5vw);
   }
   footer #socialMediaIcons .someIcon {
-    width: 3vw !important;
+    width: 1.5vw !important;
+  }
+  footer #socialMediaIcons #instagram {
+    margin-top: 0.5vw;
   }
 }

@@ -381,6 +381,8 @@ function questionHandler9() {
 
 function displayEndCard() {
   console.log(globalUserQuestionSheet);
+  document.querySelector("#questionID4").style.opacity = 0;
+  document.querySelector("#questionID4").style.pointerEvents = "none";
   document.querySelector("#endCard").classList.remove("up");
   document.querySelector("#endCard").classList.add("down");
 
@@ -400,6 +402,8 @@ function displayEndCard() {
   });
 }
 function displayPurchase(ID) {
+  document.querySelector("#endCard").style.opacity = 0;
+  document.querySelector("#endCard").style.pointerEvents = "none";
   document.querySelector("#payment").classList.remove("paymentUp");
   document.querySelector("#payment").classList.add("paymentDown");
 
