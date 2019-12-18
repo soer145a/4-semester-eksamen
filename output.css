@@ -46,10 +46,6 @@ body {
 }
 
 body {
-  position: relative;
-}
-
-body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
