@@ -67,7 +67,7 @@ body header #splash #splashDesktopImage {
 
 body header #splash #splashHeadline {
   position: absolute;
-  top: 5vw;
+  top: 10vw;
   width: 100%;
 }
 
@@ -96,10 +96,11 @@ body header #splash #splashText {
   top: 32vw;
   left: 5vw;
   line-height: 2em;
-  margin-top: 6vh;
+  margin-top: 5vh;
   padding-left: 10vw;
   padding-right: 9vw;
   color: white;
+  font-size: 0.9em;
 }
 
 body header #splash #splashText #splashTextTxt {
@@ -279,10 +280,10 @@ body main #calcCO2 #questionSlider #questionID1 #start {
   height: 6vh;
   justify-content: center;
   align-items: center;
-  width: 37vw;
+  width: 57vw;
   border-radius: 10vw;
   position: absolute;
-  right: 31vw;
+  right: 21vw;
   z-index: 10;
   top: 2vw;
   animation: pulse 2s infinite;
@@ -292,7 +293,7 @@ body main #calcCO2 #questionSlider #questionID1 #start {
 
 body main #calcCO2 #questionSlider #questionID1 #start p {
   font-family: fontBold;
-  font-size: 1em;
+  font-size: 0.95em;
   color: white;
 }
 
@@ -347,7 +348,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_1 #questionID1_1Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,7 +382,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Mai
 body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .goBackOnce2 {
   width: 20vw;
   height: 3vh;
-  background-color: hotpink;
+  background-color: #f74d48;
 }
 
 body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .next2 {
@@ -394,7 +395,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -440,7 +441,7 @@ body main #calcCO2 #questionSlider #questionID1 #questionID1_3 #questionID1_3Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -479,7 +480,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Mai
 body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .goBackOnce4 {
   width: 20vw;
   height: 3vh;
-  background-color: hotpink;
+  background-color: #f74d48;
 }
 
 body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
@@ -492,7 +493,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -554,7 +555,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Mai
 body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .goBackOnce5 {
   width: 20vw;
   height: 3vh;
-  background-color: hotpink;
+  background-color: #f74d48;
   transform: translateY(2vh);
 }
 
@@ -568,7 +569,7 @@ body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav
   right: 50vw;
   top: 33vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -615,7 +616,7 @@ body main #calcCO2 #questionSlider #questionID3 #questionID3_1 #questionID3_1Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,7 +679,7 @@ body main #calcCO2 #questionSlider #questionID3 #questionID3_2 #questionID3_2Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -707,6 +708,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Mai
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1Selected {
   background-color: #06729e !important;
+  color: white;
 }
 
 body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1 {
@@ -724,7 +726,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -775,7 +777,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -826,7 +828,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_3 #questionID4_3Nav
   right: 50vw;
   top: 4vh;
   color: white;
-  background-color: hotpink;
+  background-color: #f74d48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1414,11 +1416,11 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #splashHeadline {
     position: absolute;
-    top: 4vw;
+    top: 0.5vw;
   }
   body header #splash #splashHeadline #splashHeadlineText {
     font-family: fontBold;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
   }
   body header #splash #splashHeadline #SplashedHeadlineText2 {
@@ -1426,16 +1428,17 @@ body footer #socialMediaIcons .someIcon {
     letter-spacing: 0.1vw;
     font-size: 3.7em;
     position: relative;
-    top: 13vh;
+    top: 19vh;
   }
   body header #splash #start {
     display: flex;
     height: 4vh;
-    width: 10%;
+    width: 15%;
     justify-content: center;
     align-items: center;
     border-radius: 10vw;
     position: absolute;
+    padding: 0.5vw;
     right: 35vw;
     z-index: 10000;
     top: 5vw;
@@ -1446,16 +1449,17 @@ body footer #socialMediaIcons .someIcon {
     font-family: fontBold;
     font-size: 1em;
     color: white;
+    padding: 0.5vw;
   }
   body header #splash #splashText {
     position: absolute;
-    top: 35vh;
+    top: 30vh;
     left: 17vw;
     right: 17vw;
   }
   body header #splash #splashText #splashTextTxt {
     font-family: fontRegular;
-    font-size: 1.6em;
+    font-size: 1.7em;
     line-height: 1.4em;
   }
   body header #splash #goToCalc {
@@ -1602,9 +1606,9 @@ body footer #socialMediaIcons .someIcon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 14vw;
+    width: 16vw;
     height: 6vh;
-    border-radius: 18px;
+    border-radius: 19px;
     position: absolute;
     right: 43vw;
     z-index: 10;
@@ -1649,7 +1653,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1679,7 +1683,7 @@ body footer #socialMediaIcons .someIcon {
   body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .goBackOnce2 {
     width: 20vw;
     height: 3vh;
-    background-color: hotpink;
+    background-color: #f74d48;
   }
   body main #calcCO2 #questionSlider #questionID1 #questionID1_2 #questionID1_2Nav .next2 {
     z-index: 9999;
@@ -1692,7 +1696,7 @@ body footer #socialMediaIcons .someIcon {
     top: 4vh;
     color: white;
     z-index: 999;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1733,7 +1737,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1767,7 +1771,7 @@ body footer #socialMediaIcons .someIcon {
   body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .goBackOnce4 {
     width: 20vw;
     height: 3vh;
-    background-color: hotpink;
+    background-color: #f74d48;
     cursor: pointer;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_1 #questionID2_1Nav .next4 {
@@ -1780,7 +1784,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1806,12 +1810,13 @@ body footer #socialMediaIcons .someIcon {
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 {
     display: none;
+    margin-top: -2.5vw;
     transform: scale(0.9);
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .answerBoxHeadline {
-    font-size: 0.7em;
+    font-size: 0.8em;
     position: relative;
-    left: 2vw;
+    left: 3vw;
     font-family: fontRegular;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBoxSelected {
@@ -1819,22 +1824,26 @@ body footer #socialMediaIcons .someIcon {
     color: white;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueBox {
-    height: 20%;
-    margin: 2vw;
+    height: 25%;
+    margin: 0.6vw;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 .valueInput {
-    padding: 1vw;
-    margin-bottom: 1vh;
+    padding: 0.9vw;
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+    margin-bottom: 0.7vh;
+    margin-top: 0.5vw;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2MainArea .ID2_2 label {
     font-family: sans-serif;
     font-weight: bold;
     color: #06729e;
+    font-size: 1.1em;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .goBackOnce5 {
     width: 20vw;
     height: 3vh;
-    background-color: hotpink;
+    background-color: #f74d48;
   }
   body main #calcCO2 #questionSlider #questionID2 #questionID2_2 #questionID2_2Nav .next5 {
     width: 9vw;
@@ -1846,7 +1855,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1883,12 +1892,12 @@ body footer #socialMediaIcons .someIcon {
     height: 4.3vh;
     border-radius: 8px;
     position: relative;
-    left: 45.5vw;
+    left: 7.5vw;
     top: 4vh;
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1944,7 +1953,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     cursor: pointer;
     z-index: 999;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1970,6 +1979,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1Selected {
     background-color: #06729e !important;
+    color: white;
   }
   body main #calcCO2 #questionSlider #questionID4 #questionID4_1 #questionID4_1MainArea .ID4_1 {
     display: block;
@@ -1985,7 +1995,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2031,7 +2041,7 @@ body footer #socialMediaIcons .someIcon {
     top: 4vh;
     color: white;
     z-index: 999;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2077,7 +2087,7 @@ body footer #socialMediaIcons .someIcon {
     color: white;
     z-index: 999;
     cursor: pointer;
-    background-color: hotpink;
+    background-color: #f74d48;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2099,6 +2109,17 @@ body footer #socialMediaIcons .someIcon {
     width: 100vw;
     height: 100%;
     background-color: white;
+  }
+  body main #calcCO2 #endCard #endCardHeadline {
+    width: 100vw;
+  }
+  body main #calcCO2 #endCard #endCardHeadline h2 {
+    font-size: 2.1em;
+  }
+  body main #calcCO2 #endCard #endCardHeadline #resultatTekst {
+    width: 25vw;
+    font-size: 1.2em;
+    margin: auto;
   }
   body main #calcCO2 #endCard #endCardMain {
     width: 50vw;
@@ -2130,9 +2151,10 @@ body footer #socialMediaIcons .someIcon {
   body main #calcCO2 #endCard #endCardOptions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    width: 50vw;
-    height: 50vh;
+    grid-template-rows: 1fr;
+    width: 80vw;
+    margin-left: 14vw;
+    height: 40vh;
   }
   body main #calcCO2 #endCard #endCardOptions .presentSelected {
     transform: scale(1);
@@ -2142,45 +2164,45 @@ body footer #socialMediaIcons .someIcon {
     width: 10vw;
     padding: 3vw;
     height: 10vw;
-    margin: auto;
+    margin: 0;
     display: grid;
     text-align: center;
   }
   body main #calcCO2 #endCard #endCardOptions .presentText {
-    font-size: 0.7em;
+    font-size: 1.2em;
     margin-top: 1vh;
-  }
-  body main #calcCO2 #endCard #endCardOptions #present_1 {
-    grid-column-start: 2;
+    font-family: fontBold;
   }
   body main #calcCO2 #endCard #endCardOptions #present_2 {
     grid-column-start: 1;
-    grid-row: 2;
-    margin-top: 0vw;
-    width: 10vw;
-    height: 10vw;
+    grid-row: 1;
+    margin-top: 5.5vw;
+    width: 8vw;
+    height: 8vw;
+    padding: 1.5vw 3vw 5vw 3vw;
   }
   body main #calcCO2 #endCard #endCardOptions #present_2 img {
     width: 100%;
   }
   body main #calcCO2 #endCard #endCardOptions #present_3 {
     grid-column-start: 2;
-    grid-row: 2;
+    grid-row: 1;
     margin-top: 5vw;
   }
   body main #calcCO2 #endCard #endCardOptions #present_3 img {
+    transform: scale(1.3);
     width: 100%;
   }
   body main #calcCO2 #endCard #endCardOptions #present_4 {
     grid-column-start: 3;
-    grid-row: 2;
+    grid-row: 1;
     margin-top: 5vw;
   }
   body main #calcCO2 #endCard #endCardOptions #present_4 img {
-    width: 16vw;
+    width: 100%;
   }
   body main #calcCO2 #endCard #endCardOptions .presentImg {
-    width: 30vw;
+    width: 10vw;
     text-align: center;
     margin: auto;
   }
@@ -2198,9 +2220,83 @@ body footer #socialMediaIcons .someIcon {
     height: 100%;
     background-color: white;
   }
-  body main #calcCO2 #payment #paymentIMG {
-    width: 80%;
-    margin-left: 10%;
+  body main #calcCO2 #payment #cardLabel {
+    font-family: sans-serif;
+    color: #232a29;
+    font-weight: bold;
+    display: grid;
+    font-size: 1.4em;
+    margin-left: 30vw;
+    grid-template-rows: 1fr 1fr;
+  }
+  body main #calcCO2 #payment #cardLabel #cardInput {
+    margin: 0.2vh;
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    width: 15vw;
+    border: 1px solid #abb0b2;
+  }
+  body main #calcCO2 #payment #expireDate {
+    font-family: sans-serif;
+    color: #232a29;
+    font-weight: bold;
+    margin-left: 27.2vw;
+    font-size: 1.4em;
+  }
+  body main #calcCO2 #payment #expireDate .birthday {
+    margin: 0.5vh;
+    border-radius: 4px;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    border: 1px solid #044a6667;
+    text-align: center;
+  }
+  body main #calcCO2 #payment #expireDate #birthday1 {
+    margin-left: 27.2vw;
+  }
+  body main #calcCO2 #payment #CVV {
+    margin-left: 3.5vw;
+    font-family: sans-serif;
+    color: #232a29;
+    font-weight: bold;
+  }
+  body main #calcCO2 #payment #CVV .CVVInput {
+    border: 1px solid #abb0b2;
+    margin: 0.5vh;
+    margin-left: 0vw;
+    border-radius: 4px;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+  }
+  body main #calcCO2 #payment #paymentHeadline {
+    margin-top: 4vh;
+    font-size: 1.3em;
+    margin-bottom: 3vh;
+    font-family: fontBold;
+    text-align: center;
+  }
+  body main #calcCO2 #payment #paymentTagLine {
+    margin-left: 0vw;
+    margin-top: 3vh;
+    width: 90%;
+    font-size: 1em;
+  }
+  body main #calcCO2 #payment #paymentTagLine #makeMeGreen {
+    color: green;
+  }
+  body main #calcCO2 #payment #mc_embed_signup_scroll {
+    margin-left: 27.5vw;
+  }
+  body main #calcCO2 #payment .required {
+    width: 35vw;
+  }
+  body main #calcCO2 #payment .inputName {
+    width: 35vw;
+  }
+  body main #calcCO2 #payment .indicates-required {
+    margin-right: 34.5vw;
   }
   body main #calcCO2 .thankYouUp {
     top: -200%;
@@ -2332,7 +2428,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body main #info #infoHeadline3 {
     position: absolute;
-    font-size: 2.9em;
+    font-size: 2.4vw;
     left: 10%;
   }
   body main #info #infoHeadline3 #InfoHeadline3Text {

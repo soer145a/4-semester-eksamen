@@ -71,7 +71,7 @@ body {
 
       #splashHeadline {
         position: absolute;
-        top: 5vw;
+        top: 10vw;
         width: 100%;
         #splashHeadlineText {
           margin: 0;
@@ -98,10 +98,11 @@ body {
         top: 32vw;
         left: 5vw;
         line-height: 2em;
-        margin-top: 6vh;
+        margin-top: 5vh;
         padding-left: 10vw;
         padding-right: 9vw;
         color: white;
+        font-size: 0.9em;
         #splashTextTxt {
           margin: 0;
           padding: 0;
@@ -268,10 +269,10 @@ body {
             height: 6vh;
             justify-content: center;
             align-items: center;
-            width: 37vw;
+            width: 57vw;
             border-radius: 10vw;
             position: absolute;
-            right: 31vw;
+            right: 21vw;
             z-index: 10;
             top: 2vw;
             animation: pulse 2s infinite;
@@ -281,7 +282,7 @@ body {
 
             p {
               font-family: fontBold;
-              font-size: 1em;
+              font-size: 0.95em;
               color: white;
             }
           }
@@ -333,7 +334,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -364,7 +365,7 @@ body {
               .goBackOnce2 {
                 width: 20vw;
                 height: 3vh;
-                background-color: hotpink;
+                background-color: $aidred;
               }
               .next2 {
                 z-index: 9999;
@@ -378,7 +379,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -421,7 +422,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -458,7 +459,7 @@ body {
               .goBackOnce4 {
                 width: 20vw;
                 height: 3vh;
-                background-color: hotpink;
+                background-color: $aidred;
               }
               .next4 {
                 z-index: 9999;
@@ -472,7 +473,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -526,7 +527,7 @@ body {
               .goBackOnce5 {
                 width: 20vw;
                 height: 3vh;
-                background-color: hotpink;
+                background-color: $aidred;
                 transform: translateY(2vh);
               }
               .next5 {
@@ -541,7 +542,7 @@ body {
                 top: 33vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -587,7 +588,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -647,7 +648,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -673,6 +674,7 @@ body {
               gap: 3vw;
               .ID4_1Selected {
                 background-color: $deepblue !important;
+                color: white;
               }
               .ID4_1 {
                 display: block;
@@ -692,7 +694,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -744,7 +746,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -795,7 +797,7 @@ body {
                 top: 4vh;
                 color: white;
 
-                background-color: hotpink;
+                background-color: $aidred;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -1330,11 +1332,11 @@ body {
         }
         #splashHeadline {
           position: absolute;
-          top: 4vw;
+          top: 0.5vw;
 
           #splashHeadlineText {
             font-family: fontBold;
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
           }
           #SplashedHeadlineText2 {
@@ -1342,18 +1344,19 @@ body {
             letter-spacing: 0.1vw;
             font-size: 3.7em;
             position: relative;
-            top: 13vh;
+            top: 19vh;
           }
         }
 
         #start {
           display: flex;
           height: 4vh;
-          width: 10%;
+          width: 15%;
           justify-content: center;
           align-items: center;
           border-radius: 10vw;
           position: absolute;
+          padding: 0.5vw;
           right: 35vw;
           z-index: 10000;
           top: 5vw;
@@ -1365,16 +1368,17 @@ body {
             font-family: fontBold;
             font-size: 1em;
             color: white;
+            padding: 0.5vw;
           }
         }
         #splashText {
           position: absolute;
-          top: 35vh;
+          top: 30vh;
           left: 17vw;
           right: 17vw;
           #splashTextTxt {
             font-family: fontRegular;
-            font-size: 1.6em;
+            font-size: 1.7em;
             line-height: 1.4em;
           }
         }
@@ -1539,9 +1543,9 @@ body {
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 14vw;
+              width: 16vw;
               height: 6vh;
-              border-radius: 18px;
+              border-radius: 19px;
               position: absolute;
               right: 43vw;
               z-index: 10;
@@ -1592,7 +1596,7 @@ body {
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1626,7 +1630,7 @@ body {
                 .goBackOnce2 {
                   width: 20vw;
                   height: 3vh;
-                  background-color: hotpink;
+                  background-color: $aidred;
                 }
                 .next2 {
                   z-index: 9999;
@@ -1641,7 +1645,7 @@ body {
                   color: white;
                   z-index: 999;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1685,7 +1689,7 @@ body {
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1724,7 +1728,7 @@ body {
                 .goBackOnce4 {
                   width: 20vw;
                   height: 3vh;
-                  background-color: hotpink;
+                  background-color: $aidred;
                   cursor: pointer;
                 }
                 .next4 {
@@ -1738,7 +1742,7 @@ body {
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1765,11 +1769,12 @@ body {
 
                 .ID2_2 {
                   display: none;
+                  margin-top: -2.5vw;
                   transform: scale(0.9);
                   .answerBoxHeadline {
-                    font-size: 0.7em;
+                    font-size: 0.8em;
                     position: relative;
-                    left: 2vw;
+                    left: 3vw;
                     font-family: fontRegular;
                   }
                   .valueBoxSelected {
@@ -1777,18 +1782,22 @@ body {
                     color: white;
                   }
                   .valueBox {
-                    height: 20%;
-                    margin: 2vw;
+                    height: 25%;
+                    margin: 0.6vw;
                   }
                   .valueInput {
-                    padding: 1vw;
-                    margin-bottom: 1vh;
+                    padding: 0.9vw;
+                    padding-top: 0.6vw;
+                    padding-bottom: 0.6vw;
+                    margin-bottom: 0.7vh;
+                    margin-top: 0.5vw;
                   }
 
                   label {
                     font-family: sans-serif;
                     font-weight: bold;
                     color: $deepblue;
+                    font-size: 1.1em;
                   }
                 }
               }
@@ -1796,7 +1805,7 @@ body {
                 .goBackOnce5 {
                   width: 20vw;
                   height: 3vh;
-                  background-color: hotpink;
+                  background-color: $aidred;
                 }
                 .next5 {
                   width: 9vw;
@@ -1809,7 +1818,7 @@ body {
                   z-index: 999;
 
                   cursor: pointer;
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1850,13 +1859,13 @@ body {
                   height: 4.3vh;
                   border-radius: 8px;
                   position: relative;
-                  left: 45.5vw;
+                  left: 7.5vw;
                   top: 4vh;
                   color: white;
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1917,7 +1926,7 @@ body {
                   cursor: pointer;
                   z-index: 999;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -1945,6 +1954,7 @@ body {
                 margin-right: 38vw;
                 .ID4_1Selected {
                   background-color: $deepblue !important;
+                  color: white;
                 }
                 .ID4_1 {
                   display: block;
@@ -1963,7 +1973,7 @@ body {
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -2016,7 +2026,7 @@ body {
                   color: white;
                   z-index: 999;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -2069,7 +2079,7 @@ body {
                   z-index: 999;
                   cursor: pointer;
 
-                  background-color: hotpink;
+                  background-color: $aidred;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -2097,6 +2107,17 @@ body {
           width: 100vw;
           height: 100%;
           background-color: white;
+          #endCardHeadline {
+            width: 100vw;
+            h2 {
+              font-size: 2.1em;
+            }
+            #resultatTekst {
+              width: 25vw;
+              font-size: 1.2em;
+              margin: auto;
+            }
+          }
           #endCardMain {
             width: 50vw;
             height: 80vh;
@@ -2130,9 +2151,10 @@ body {
           #endCardOptions {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 1fr;
-            width: 50vw;
-            height: 50vh;
+            grid-template-rows: 1fr;
+            width: 80vw;
+            margin-left: 14vw;
+            height: 40vh;
 
             .presentSelected {
               transform: scale(1);
@@ -2142,25 +2164,24 @@ body {
               width: 10vw;
               padding: 3vw;
               height: 10vw;
-              margin: auto;
+              margin: 0;
               display: grid;
               text-align: center;
             }
 
             .presentText {
-              font-size: 0.7em;
+              font-size: 1.2em;
               margin-top: 1vh;
+              font-family: fontBold;
             }
 
-            #present_1 {
-              grid-column-start: 2;
-            }
             #present_2 {
               grid-column-start: 1;
-              grid-row: 2;
-              margin-top: 0vw;
-              width: 10vw;
-              height: 10vw;
+              grid-row: 1;
+              margin-top: 5.5vw;
+              width: 8vw;
+              height: 8vw;
+              padding: 1.5vw 3vw 5vw 3vw;
 
               img {
                 width: 100%;
@@ -2168,25 +2189,26 @@ body {
             }
             #present_3 {
               grid-column-start: 2;
-              grid-row: 2;
+              grid-row: 1;
+              margin-top: 5vw;
+
+              img {
+                transform: scale(1.3);
+                width: 100%;
+              }
+            }
+            #present_4 {
+              grid-column-start: 3;
+              grid-row: 1;
               margin-top: 5vw;
 
               img {
                 width: 100%;
               }
             }
-            #present_4 {
-              grid-column-start: 3;
-              grid-row: 2;
-              margin-top: 5vw;
-
-              img {
-                width: 16vw;
-              }
-            }
 
             .presentImg {
-              width: 30vw;
+              width: 10vw;
               text-align: center;
               margin: auto;
             }
@@ -2205,9 +2227,86 @@ body {
           width: 100vw;
           height: 100%;
           background-color: white;
-          #paymentIMG {
-            width: 80%;
-            margin-left: 10%;
+          #cardLabel {
+            font-family: sans-serif;
+            color: $softblack;
+            font-weight: bold;
+            display: grid;
+            font-size: 1.4em;
+            margin-left: 30vw;
+            grid-template-rows: 1fr 1fr;
+            #cardInput {
+              margin: 0.2vh;
+              text-align: center;
+              border-radius: 4px;
+              padding-top: 0.6vh;
+              padding-bottom: 0.6vh;
+              width: 15vw;
+              border: 1px solid #abb0b2;
+            }
+          }
+
+          #expireDate {
+            font-family: sans-serif;
+            color: $softblack;
+            font-weight: bold;
+            margin-left: 27.2vw;
+            font-size: 1.4em;
+            .birthday {
+              margin: 0.5vh;
+              border-radius: 4px;
+              padding-top: 0.4vh;
+              padding-bottom: 0.4vh;
+              border: 1px solid #044a6667;
+              text-align: center;
+            }
+            #birthday1 {
+              margin-left: 27.2vw;
+            }
+          }
+          #CVV {
+            margin-left: 3.5vw;
+            font-family: sans-serif;
+            color: $softblack;
+            font-weight: bold;
+
+            .CVVInput {
+              border: 1px solid #abb0b2;
+              margin: 0.5vh;
+              margin-left: 0vw;
+              border-radius: 4px;
+              padding-top: 0.4vh;
+              padding-bottom: 0.4vh;
+            }
+          }
+
+          #paymentHeadline {
+            margin-top: 4vh;
+            font-size: 1.3em;
+            margin-bottom: 3vh;
+            font-family: fontBold;
+            text-align: center;
+          }
+          #paymentTagLine {
+            margin-left: 0vw;
+            margin-top: 3vh;
+            width: 90%;
+            font-size: 1em;
+            #makeMeGreen {
+              color: green;
+            }
+          }
+          #mc_embed_signup_scroll {
+            margin-left: 27.5vw;
+          }
+          .required {
+            width: 35vw;
+          }
+          .inputName {
+            width: 35vw;
+          }
+          .indicates-required {
+            margin-right: 34.5vw;
           }
         }
         .thankYouUp {
@@ -2350,7 +2449,7 @@ body {
 
         #infoHeadline3 {
           position: absolute;
-          font-size: 2.9em;
+          font-size: 2.4vw;
           left: 10%;
           #InfoHeadline3Text {
             margin: 0;

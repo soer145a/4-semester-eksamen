@@ -39,7 +39,7 @@
         <div id="splashText">
           <p id="splashTextTxt">
             Julen er forbrugernes højtid! Gaver, mad og juletræer høre til. Men
-            hvad betyder det for klimaet? Prøv vores CO2 beregner og find ud af
+            hvad betyder det for klimaet? Prøv vores CO2-beregner og find ud af
             hvad dit forbrug udgør i CO2!
           </p>
         </div>
@@ -56,7 +56,7 @@
       <div id="calcCO2" class="regular">
         <div id="questionSlider">
           <div class="question" id="questionID1">
-            <div id="start"><p>Start</p></div>
+            <div id="start"><p>Start CO2-beregner</p></div>
             <h1 id="q1Headline">Madvaner</h1>
             <div id="questionID1_1" class="subQuestion">
               <div id="questionID1_1Headline">
@@ -139,7 +139,7 @@
 
             <div id="questionID1_3" class="subQuestion">
               <div id="questionID1_3Headline">
-                <h2 class="q1H2">Hvad spiser du?(vælg flere)</h2>
+                <h2 class="q1H2">Hvad spiser du? (vælg flere)</h2>
               </div>
               <div id="questionID1_3MainArea">
                 <div class="questionBox ID1_3" id="option3_1" data-type="kaal">
@@ -176,7 +176,7 @@
             <h1 id="q2Headline">Forbrug</h1>
             <div id="questionID2_1" class="subquestion">
               <div id="questionID2_1Headline">
-                <div class="q1H2">Hvilke typer af Gaver Køber du?(vælg flere)</div>
+                <div class="q1H2">Hvilke typer af Gaver Køber du? (vælg flere)</div>
               </div>
               <div id="questionID2_1MainArea">
                 <div class="questionBox ID2_1" data-type="Elektronik">
@@ -405,15 +405,15 @@
             </div>
             <div id="questionID4_3" class="subquestion">
               <div id="questionID4_3Headline">
-                <div class="q1H2">Hvilken form for Energi bruger du?</div>
+                <div class="q1H2">Hvilken form for Energi bruger du i timen?</div>
               </div>
               <div id="questionID4_3MainArea">
                 <div class="incrementalCounter">
-                  <label for="ovnF">Timer Fjernvarme med Ovn: </label>
+                  <label for="ovnF">Ovn: </label>
                   <input id="ovnF" type="number" value="0" />
                 </div>
                 <div class="incrementalCounter">
-                  <label for="radiatorF">Timer Fjernvarme med radiator: </label>
+                  <label for="radiatorF">Radiator: </label>
                   <input id="radiatorF" type="number" value="0" />
                 </div>
               </div>
@@ -462,14 +462,14 @@
           <br>
           <label id="expireDate">Udløbsdato <br>
 	
-		<span ><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="01" size="2" maxlength="2" name="BIRTHDAY[month]" ></span> / 
+		<span ><input class="birthday " id="birthday1" type="text" pattern="[0-9]*" value="" placeholder="01" size="2" maxlength="2" name="BIRTHDAY[month]" ></span> / 
 		<span ><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="01" size="2" maxlength="2" name="BIRTHDAY[day]"></span> 
-		<span >( Måned / Dag )</span>
+		
   </label>
-  <br> <br>
-  <label id="CVV">CVV <br>
+  
+  <label id="CVV">CVV
 	
-		<span ><input class="CVVInput " type="text" pattern="[0-9]*" value="" placeholder="XXX" size="2" maxlength="2" name="BIRTHDAY[month]" ></span> 
+		<span ><input class="CVVInput " type="text" pattern="[0-9]*" value="" placeholder="XXX" size="3" maxlength="3" name="BIRTHDAY[month]" ></span> 
 		
 		
   </label>
@@ -496,11 +496,11 @@
 </div>
 <div class="mc-field-group">
 	<label for="mce-FNAME">Fornavn </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+	<input type="text" value="" name="FNAME" class="inputName" id="mce-FNAME">
 </div>
 <div class="mc-field-group">
 	<label for="mce-LNAME">Efternavn</label>
-	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+	<input type="text" value="" name="LNAME" class="inputName" id="mce-LNAME">
 </div>
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
