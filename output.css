@@ -1482,7 +1482,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -2699,7 +2699,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -3797,7 +3797,7 @@ body footer #socialMediaIcons .someIcon {
     top: 310vh !important;
   }
   .footerExpanded {
-    top: 344.5vh;
+    top: 380vh !important;
   }
   footer {
     position: absolute;
