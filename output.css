@@ -76,7 +76,11 @@ body header #splash #splashHeadline {
   width: 100%;
 }
 
-body header #splash #splashHeadline #splashHeadlineText {
+body header #splash #splashHeadline a {
+  text-decoration: none;
+}
+
+body header #splash #splashHeadline a #splashHeadlineText {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -782,6 +786,7 @@ body main #calcCO2 #questionSlider #questionID4 #questionID4_2 #questionID4_2Nav
   right: 50vw;
   top: 4vh;
   color: white;
+  cursor: pointer;
   background-color: #f74d48;
   display: flex;
   justify-content: center;
@@ -885,10 +890,10 @@ body main #calcCO2 #endCard #buy {
   width: 25vw;
   border: 1px solid white;
   border-radius: 8px;
-  background-color: #7cccea;
+  background-color: #f74d48;
 }
 
-body main #calcCO2 #endCard #buy :hover {
+body main #calcCO2 #endCard #buyhover {
   cursor: pointer;
 }
 
@@ -922,6 +927,7 @@ body main #calcCO2 #endCard #endCardOptions .present {
   display: grid;
   text-align: center;
   margin-bottom: 1vw;
+  cursor: pointer;
 }
 
 body main #calcCO2 #endCard #endCardOptions .presentText {
@@ -974,10 +980,12 @@ body main #calcCO2 #endCard #endCardOptions .presentImg {
 
 body main #calcCO2 .paymentUp {
   top: -100%;
+  opacity: 0;
 }
 
 body main #calcCO2 .paymentDown {
   top: 0vw;
+  opacity: 100;
 }
 
 body main #calcCO2 #payment {
@@ -1071,12 +1079,13 @@ body main #calcCO2 #thankYou {
   transition: 0.3s;
   width: 100vw;
   height: 100%;
+  margin-top: 9.5vw;
   background-color: white;
 }
 
 body main #calcCO2 #thankYou #thankYouHeadline {
-  margin-top: 4vh;
-  font-size: 1.3em;
+  margin-top: 2vh;
+  font-size: 1.2em;
   margin-bottom: 3vh;
   font-family: fontBold;
   text-align: center;
@@ -1085,17 +1094,18 @@ body main #calcCO2 #thankYou #thankYouHeadline {
 body main #calcCO2 #thankYou #thankYouImgContainer {
   pointer-events: none;
   width: 100%;
+  margin-top: 8vw;
   margin-left: 10vw;
 }
 
 body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
-  width: 15% !important;
-  margin-left: 35vw;
+  width: 25% !important;
+  margin-left: 27vw;
 }
 
 body main #calcCO2 #thankYou #thankYouText {
   margin-top: 4vh;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 3vh;
   font-family: fontBold;
   text-align: center;
@@ -1315,7 +1325,7 @@ body main #collabHeadline {
 body main #collabHeadline #collabHeadlineText {
   text-align: center;
   font-family: fontBold;
-  color: #994a40;
+  color: #f74d48;
   padding-top: 4vh;
   padding-bottom: 4vh;
 }
@@ -1364,7 +1374,7 @@ body main #collaborators .collabElement #collab_4 {
 }
 
 body .footerRegular {
-  top: 470vh;
+  top: 450vh;
 }
 
 body .footerExpanded {
@@ -1406,7 +1416,7 @@ body footer #socialMediaIcons {
 }
 
 body footer #socialMediaIcons .someIcon {
-  width: 15vw;
+  width: 10vw;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -1486,7 +1496,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -2139,6 +2149,7 @@ body footer #socialMediaIcons .someIcon {
   body main #calcCO2 #endCard #endCardMain .present {
     width: 10%;
     height: 10%;
+    cursor: pointer;
   }
   body main #calcCO2 #endCard #endCardMain .present .presentImg {
     width: 10%;
@@ -2150,7 +2161,7 @@ body footer #socialMediaIcons .someIcon {
     width: 25vw;
     border: 1px solid white;
     border-radius: 8px;
-    background-color: #7cccea;
+    background-color: #f74d48;
   }
   body main #calcCO2 #endCard #buy :hover {
     cursor: pointer;
@@ -2376,7 +2387,7 @@ body footer #socialMediaIcons .someIcon {
   body main #info #grafikArea1 {
     position: absolute;
     top: 15vh;
-    left: 23%;
+    left: 18%;
     width: 20vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2711,7 +2722,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -3380,7 +3391,7 @@ body footer #socialMediaIcons .someIcon {
     width: 25vw;
     border: 1px solid white;
     border-radius: 8px;
-    background-color: #7cccea;
+    background-color: #f74d48;
   }
   body main #calcCO2 #endCard #buy :hover {
     cursor: pointer;
@@ -3411,6 +3422,7 @@ body footer #socialMediaIcons .someIcon {
     margin: 0;
     display: grid;
     text-align: center;
+    cursor: pointer;
   }
   body main #calcCO2 #endCard #endCardOptions .presentText {
     font-size: 1.2em;
@@ -3610,7 +3622,7 @@ body footer #socialMediaIcons .someIcon {
   body main #info #grafikArea1 {
     position: absolute;
     top: 15vh;
-    left: 23%;
+    left: 20%;
     width: 20vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

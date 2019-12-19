@@ -71,19 +71,21 @@ body {
       #splashDesktopImage {
         display: none;
       }
-
       #splashHeadline {
         position: absolute;
         top: 10vw;
         width: 100%;
-        #splashHeadlineText {
-          margin: 0;
-          padding: 0;
-          text-align: center;
-          font-family: fontBlack;
-          // letter-spacing: 1vw;
-          font-size: 2em;
-          color: white;
+        a {
+          text-decoration: none;
+          #splashHeadlineText {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: fontBlack;
+            // letter-spacing: 1vw;
+            font-size: 2em;
+            color: white;
+          }
         }
         #SplashedHeadlineText2 {
           margin: 0;
@@ -748,7 +750,7 @@ body {
                 right: 50vw;
                 top: 4vh;
                 color: white;
-
+                cursor: pointer;
                 background-color: $aidred;
                 display: flex;
                 justify-content: center;
@@ -850,8 +852,8 @@ body {
           width: 25vw;
           border: 1px solid white;
           border-radius: 8px;
-          background-color: $skycyan;
-          & :hover {
+          background-color: $aidred;
+          &hover {
             cursor: pointer;
           }
 
@@ -884,6 +886,7 @@ body {
             display: grid;
             text-align: center;
             margin-bottom: 1vw;
+            cursor: pointer;
           }
 
           .presentText {
@@ -934,9 +937,11 @@ body {
       }
       .paymentUp {
         top: -100%;
+        opacity: 0;
       }
       .paymentDown {
         top: 0vw;
+        opacity: 100;
       }
       #payment {
         position: absolute;
@@ -1022,10 +1027,11 @@ body {
         transition: 0.3s;
         width: 100vw;
         height: 100%;
+        margin-top: 9.5vw;
         background-color: white;
         #thankYouHeadline {
-          margin-top: 4vh;
-          font-size: 1.3em;
+          margin-top: 2vh;
+          font-size: 1.2em;
           margin-bottom: 3vh;
           font-family: fontBold;
           text-align: center;
@@ -1033,15 +1039,16 @@ body {
         #thankYouImgContainer {
           pointer-events: none;
           width: 100%;
+          margin-top: 8vw;
           margin-left: 10vw;
           #thankYouIMG {
-            width: 15% !important;
-            margin-left: 35vw;
+            width: 25% !important;
+            margin-left: 27vw;
           }
         }
         #thankYouText {
           margin-top: 4vh;
-          font-size: 1.2em;
+          font-size: 1.1em;
           margin-bottom: 3vh;
           font-family: fontBold;
           text-align: center;
@@ -1237,7 +1244,7 @@ body {
       #collabHeadlineText {
         text-align: center;
         font-family: fontBold;
-        color: $reddirt;
+        color: $aidred;
         padding-top: 4vh;
         padding-bottom: 4vh;
       }
@@ -1282,7 +1289,7 @@ body {
     }
   }
   .footerRegular {
-    top: 470vh;
+    top: 450vh;
   }
   .footerExpanded {
     top: 515vh;
@@ -1316,7 +1323,7 @@ body {
       grid-template-columns: 1fr 1fr;
 
       .someIcon {
-        width: 15vw;
+        width: 10vw;
       }
     }
   }
@@ -2133,6 +2140,7 @@ body {
             .present {
               width: 10%;
               height: 10%;
+              cursor: pointer;
               .presentImg {
                 width: 10%;
               }
@@ -2146,7 +2154,7 @@ body {
             width: 25vw;
             border: 1px solid white;
             border-radius: 8px;
-            background-color: $skycyan;
+            background-color: $aidred;
             & :hover {
               cursor: pointer;
             }
@@ -2388,7 +2396,7 @@ body {
         #grafikArea1 {
           position: absolute;
           top: 15vh;
-          left: 23%;
+          left: 18%;
           width: 20vw;
 
           display: grid;
@@ -3491,7 +3499,7 @@ body {
             width: 25vw;
             border: 1px solid white;
             border-radius: 8px;
-            background-color: $skycyan;
+            background-color: $aidred;
             & :hover {
               cursor: pointer;
             }
@@ -3524,6 +3532,7 @@ body {
               margin: 0;
               display: grid;
               text-align: center;
+              cursor: pointer;
             }
 
             .presentText {
@@ -3738,7 +3747,7 @@ body {
         #grafikArea1 {
           position: absolute;
           top: 15vh;
-          left: 23%;
+          left: 20%;
           width: 20vw;
 
           display: grid;
