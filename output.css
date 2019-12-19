@@ -891,6 +891,7 @@ body main #calcCO2 #endCard #buy {
   border: 1px solid white;
   border-radius: 8px;
   background-color: #f74d48;
+  color: white;
 }
 
 body main #calcCO2 #endCard #buyhover {
@@ -902,7 +903,6 @@ body main #calcCO2 #endCard #buy p {
   justify-content: center;
   align-items: center;
   margin: 1vh;
-  color: black;
 }
 
 body main #calcCO2 #endCard #endCardOptions {
@@ -1496,7 +1496,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -2162,6 +2162,7 @@ body footer #socialMediaIcons .someIcon {
     border: 1px solid white;
     border-radius: 8px;
     background-color: #f74d48;
+    color: white;
   }
   body main #calcCO2 #endCard #buy :hover {
     cursor: pointer;
@@ -2171,7 +2172,6 @@ body footer #socialMediaIcons .someIcon {
     justify-content: center;
     align-items: center;
     margin: 1vh;
-    color: black;
   }
   body main #calcCO2 #endCard #endCardOptions {
     display: grid;
@@ -2722,7 +2722,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body header #splash #goToCalc #goToCalcText {
     color: white;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     letter-spacing: 1vw;
     font-size: 0.8em;
     transform: translateY(1vw);
@@ -3392,6 +3392,7 @@ body footer #socialMediaIcons .someIcon {
     border: 1px solid white;
     border-radius: 8px;
     background-color: #f74d48;
+    color: white;
   }
   body main #calcCO2 #endCard #buy :hover {
     cursor: pointer;
@@ -3401,7 +3402,6 @@ body footer #socialMediaIcons .someIcon {
     justify-content: center;
     align-items: center;
     margin: 1vh;
-    color: black;
   }
   body main #calcCO2 #endCard #endCardOptions {
     display: grid;
@@ -3569,7 +3569,7 @@ body footer #socialMediaIcons .someIcon {
   }
   body main #calcCO2 #thankYou {
     opacity: 0;
-    top: 2vw;
+    margin-top: 2vw;
     position: absolute;
     z-index: 2;
     transition: 0.3s;
@@ -3578,11 +3578,12 @@ body footer #socialMediaIcons .someIcon {
     background-color: white;
   }
   body main #calcCO2 #thankYou #thankYouImgContainer {
-    width: 60%;
+    width: 100%;
     margin-left: 10vw;
   }
   body main #calcCO2 #thankYou #thankYouImgContainer #thankYouIMG {
-    width: 60%;
+    width: 13% !important;
+    margin-left: 32.5vw;
   }
   body main #calcCO2 #thankYou #thankYouHeadline {
     margin-top: 4vh;
