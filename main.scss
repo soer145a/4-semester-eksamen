@@ -1131,6 +1131,14 @@ body {
           font-family: fontRegular;
           letter-spacing: 0.1vw;
           font-size: 1.1em;
+          #makeMeGreen {
+            color: $forestgreen;
+            font-family: fontBold;
+          }
+          #makeMeLightBlue {
+            color: $skycyan;
+            font-family: fontBold;
+          }
         }
         a {
           text-decoration: none;
@@ -1158,9 +1166,9 @@ body {
       }
       #infoHeadline3 {
         position: absolute;
-        top: 38vh;
+        top: 44vh;
         left: 0%;
-        width: 100vw;
+        width: 87vw;
         #InfoHeadline3Text {
           margin: 0;
           padding: 0;
@@ -1171,7 +1179,7 @@ body {
       }
       #infoText3 {
         position: absolute;
-        top: 44vh;
+        top: 49vh;
         left: 0vw;
         width: 80vw;
         line-height: 1.8em;
@@ -2487,6 +2495,7 @@ body {
         }
 
         #infoHeadline3 {
+          top: 18.5vw;
           position: absolute;
           font-size: 2.4vw;
           left: 0%;
@@ -3839,6 +3848,7 @@ body {
         }
 
         #infoHeadline3 {
+          top: 18.5vw;
           position: absolute;
           font-size: 2.4vw;
           left: 0%;
